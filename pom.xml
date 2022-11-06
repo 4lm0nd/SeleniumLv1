@@ -6,6 +6,7 @@
 
     <groupId>org.example</groupId>
     <artifactId>SeleniumLv1-HanhDao</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
