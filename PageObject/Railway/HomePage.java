@@ -1,11 +1,15 @@
 package Railway;
 
-import Railway.GeneralPage;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
+public class HomePage {
 
-public class Homepage {
+    //Locators
+    private static By lblWelcomeMessage = By.xpath("//div[@class ='account']/strong");
 
-    //Element
-
+    //Elements
+    public final WebElement getLblWelcomeMessage() {
+        return Constant.DRIVER.findElement(lblWelcomeMessage);
+    }
 }

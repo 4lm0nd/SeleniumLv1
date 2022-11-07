@@ -9,26 +9,28 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class LoginPage {
 
-    GeneralPage common;
-
-    //Locator
-    private By _txtemail = By.id("username");
-    private By _txtpass = By.id("password");
-    private By _btnlogin = By.xpath("//input[@title='Login']");
+   //Locator
+    private By _txtEmail = By.id("username");
+    private By _txtPassword = By.id("password");
+    private By _btnLogin = By.xpath("//input[@title='Login']");
 
     //Element
-    public WebElement getemailtxt(){return Constant.DRIVER.findElement(_txtemail);}
-    public WebElement getpasswordtxt() {return Constant.DRIVER.findElement(_txtpass);}
-    public WebElement getloginbtn() {return Constant.DRIVER.findElement(_btnlogin);}
-
-    //Method
-    public void Login(String email, String pass){
-
-       getemailtxt().sendKeys(email);
-       getpasswordtxt().sendKeys(pass);
-       getloginbtn().click();
-
+    public WebElement getTxtEmail() {
+        return Constant.DRIVER.findElement(_txtEmail);
+    }
+    public WebElement getTxtPassword() {
+        return Constant.DRIVER.findElement(_txtPassword);
+    }
+    public WebElement getBtnLogin() {
+        return Constant.DRIVER.findElement(_btnLogin);
     }
 
-
+    //Method
+    public void Login(String email, String pass) {
+        getTxtEmail().click();
+        getTxtEmail().sendKeys(email);
+        getTxtPassword().click();
+        getTxtPassword().sendKeys(pass);
+        getBtnLogin().click();
+    }
 }

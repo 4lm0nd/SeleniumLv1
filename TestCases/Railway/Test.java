@@ -11,6 +11,7 @@ public class Test {
      generalPage = new GeneralPage();
      generalPage.OpenRailway();
      generalPage.GotoTab("Login");
+     generalPage.scrollByPage();
      loginPage = new LoginPage();
      loginPage.Login(Constant.USER_NAME,Constant.PASSWORD);
 
