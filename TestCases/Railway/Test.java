@@ -15,7 +15,7 @@ public class Test {
      common.OpenRailway();
      common.GotoTab("Login");
      login = new LoginPage();
-     login.Login(Constant.username,Constant.password);
+     login.Login(Constant.USER_NAME,Constant.PASSWORD);
 
     }
 

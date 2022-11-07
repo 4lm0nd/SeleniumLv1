@@ -10,29 +10,31 @@ import static org.openqa.selenium.By.*;
 
 public class GeneralPage {
 
+//Loca
+
     public void OpenRailway() {
 
 
 
 //Creating an object of ChromeDriver
-        System.setProperty("webdriver.chrome.driver", "D://chromedriver.exe");
-        Constant.driver.manage().window().maximize();
+        System.setProperty(Constant.CHROMEDRIVER, Constant.CHROMEDRIVER_PATH);
+        Constant.DRIVER.manage().window().maximize();
 
 //Deleting all the cookies
-        Constant.driver.manage().deleteAllCookies();
+        Constant.DRIVER.manage().deleteAllCookies();
 
 //Specifiying pageLoadTimeout and Implicit wait
-        Constant.driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
-        Constant.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        Constant.DRIVER.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
+        Constant.DRIVER.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 //launching the specified URL
-        Constant.driver.get(Constant.Railway_Site);
+        Constant.DRIVER.get(Constant.RAILWAY_SITE);
 
      }
 
      public void GotoTab (String _tab){
 
-    Constant.driver.findElement(By.xpath("//span[text()='"+_tab+"']/ancestor::a")).click();
+    Constant.DRIVER.findElement(By.xpath("//span[text()='"+_tab+"']/ancestor::a")).click();
 
 
      }
