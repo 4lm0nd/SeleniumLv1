@@ -12,15 +12,14 @@ public class LoginPage {
     GeneralPage common;
 
     //Locator
-
     private By _txtemail = By.id("username");
     private By _txtpass = By.id("password");
     private By _btnlogin = By.xpath("//input[@title='Login']");
 
     //Element
-    public WebElement getemailtxt(){return Constant.driver.findElement(_txtemail);}
-    public WebElement getpasswordtxt() {return Constant.driver.findElement(_txtpass);}
-    public WebElement getloginbtn() {return Constant.driver.findElement(_btnlogin);}
+    public WebElement getemailtxt(){return Constant.DRIVER.findElement(_txtemail);}
+    public WebElement getpasswordtxt() {return Constant.DRIVER.findElement(_txtpass);}
+    public WebElement getloginbtn() {return Constant.DRIVER.findElement(_btnlogin);}
 
     //Method
     public void Login(String email, String pass){

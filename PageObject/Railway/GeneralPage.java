@@ -2,6 +2,7 @@ package Railway;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.concurrent.TimeUnit;
 import Railway.Constant;
@@ -10,11 +11,9 @@ import static org.openqa.selenium.By.*;
 
 public class GeneralPage {
 
-//Loca
 
+//Method
     public void OpenRailway() {
-
-
 
 //Creating an object of ChromeDriver
         System.setProperty(Constant.CHROMEDRIVER, Constant.CHROMEDRIVER_PATH);
@@ -31,11 +30,9 @@ public class GeneralPage {
         Constant.DRIVER.get(Constant.RAILWAY_SITE);
 
      }
+     public void GotoTab (String tab){
 
-     public void GotoTab (String _tab){
-
-    Constant.DRIVER.findElement(By.xpath("//span[text()='"+_tab+"']/ancestor::a")).click();
-
+         Constant.DRIVER.findElement(By.xpath("//span[text()='"+tab+"']/ancestor::a")).click();
 
      }
 
