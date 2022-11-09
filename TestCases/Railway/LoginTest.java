@@ -6,10 +6,18 @@ import org.testng.annotations.Test;
 import org.testng.Assert;
 import Railway.Constant;
 
+import java.util.concurrent.TimeUnit;
+
 public class LoginTest {
-    static GeneralPage generalPage;
-    static LoginPage loginPage;
-    static HomePage homePage;
+    GeneralPage generalPage;
+    LoginPage loginPage;
+    HomePage homePage;
+
+    @BeforeMethod
+    public void beforeMethod(){
+        generalPage = new GeneralPage();
+        generalPage.openSite(Constant.RAILWAY_SITE);
+    }
 
     @AfterMethod
     public void afterMethod() {
@@ -19,9 +27,9 @@ public class LoginTest {
     @Test
     public void TC1() {
         System.out.println("TC01_Verify_User can log into Railway with valid username and password");
-        generalPage = new GeneralPage();
-        generalPage.OpenRailway();
-        generalPage.GotoTab("Login");
+       // generalPage = new GeneralPage();
+      // generalPage.openRailway();
+        generalPage.goToTab("Login");
         generalPage.scrollByPage();
         loginPage = new LoginPage();
         loginPage.Login(Constant.USER_NAME, Constant.PASSWORD);

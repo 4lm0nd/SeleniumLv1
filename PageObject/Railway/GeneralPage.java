@@ -11,7 +11,7 @@ import Railway.Constant;
 public class GeneralPage {
 
     //Method
-    public void OpenRailway() {
+    public void openSite(String site) {
         //Creating an object of ChromeDriver
         System.setProperty(Constant.CHROMEDRIVER, Constant.CHROMEDRIVER_PATH);
         Constant.DRIVER.manage().window().maximize();
@@ -21,10 +21,10 @@ public class GeneralPage {
         Constant.DRIVER.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
         Constant.DRIVER.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         //launching the specified URL
-        Constant.DRIVER.get(Constant.RAILWAY_SITE);
+        Constant.DRIVER.get(site);
     }
 
-    public void GotoTab(String tab) {
+    public void goToTab(String tab) {
         Constant.DRIVER.findElement(By.xpath("//span[text()='" + tab + "']/ancestor::a")).click();
     }
 
