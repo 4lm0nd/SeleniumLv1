@@ -1,36 +1,54 @@
 package Railway;
 
-import Railway.GeneralPage;
-import Railway.Constant;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebElement;
 
-public class LoginPage {
 
-   //Locator
-    private By _txtEmail = By.id("username");
-    private By _txtPassword = By.id("password");
-    private By _btnLogin = By.xpath("//input[@title='Login']");
+public class LoginPage extends GeneralPage {
+
+    //Locator
+    private By txtEmail = By.id("username");
+    private By txtPassword = By.id("password");
+    private By btnLogin = By.xpath("//input[@title='Login']");
+    private By msgerror = By.xpath("//p[@class = 'message error LoginForm']");
+    private By pagetitle = By.xpath("//div[@id='content']/h1");
 
     //Element
     public WebElement getTxtEmail() {
-        return Constant.DRIVER.findElement(_txtEmail);
+        return Constant.DRIVER.findElement(txtEmail);
     }
+
     public WebElement getTxtPassword() {
-        return Constant.DRIVER.findElement(_txtPassword);
+        return Constant.DRIVER.findElement(txtPassword);
     }
+
     public WebElement getBtnLogin() {
-        return Constant.DRIVER.findElement(_btnLogin);
+        return Constant.DRIVER.findElement(btnLogin);
+    }
+
+    public WebElement getMsgError() {
+        return Constant.DRIVER.findElement(msgerror);
+    }
+
+    public WebElement getPageTitle() {
+        return Constant.DRIVER.findElement(pagetitle);
     }
 
     //Method
-    public void Login(String email, String pass) {
+    public void login(String email, String pass) {
+        goToTab("Login");
+        scrollByPage();
         getTxtEmail().click();
         getTxtEmail().sendKeys(email);
         getTxtPassword().click();
         getTxtPassword().sendKeys(pass);
         getBtnLogin().click();
+    }
+    public void multipleLogin(String email, String pass, int time) {
+        goToTab("Login");
+        scrollByPage();
+        for (int i = 0; i < time; i++) {
+            login(email, pass);
+        }
     }
 }
