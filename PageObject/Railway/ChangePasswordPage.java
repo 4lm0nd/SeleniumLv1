@@ -3,13 +3,49 @@ package Railway;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class ChangePasswordPage {
+public class ChangePasswordPage extends GeneralPage {
 
     //Locator
-    private By pagetitle = By.xpath("//div[@id='content']/h1");
+    private By pageTitle = By.xpath("//div[@id='content']/h1");
+    private By txtCurrentPassword = By.id("currentPassword");
+    private By txtNewPassword = By.id("newPassword");
+    private By txtConfirmPassword = By.id("confirmPassword");
+    private By btnChangePassword = By.xpath("//input[@title='Change password']");
+    private By msgSuccess = By.xpath("//p[@class='message success']");
+
 
     //Element
     public WebElement getPageTitle() {
-        return Constant.DRIVER.findElement(pagetitle);
+        return Constant.DRIVER.findElement(pageTitle);
+    }
+
+    public WebElement getTxtCurrentPassword() {
+        return Constant.DRIVER.findElement(txtCurrentPassword);
+    }
+
+    public WebElement getTxtNewPassword() {
+        return Constant.DRIVER.findElement(txtNewPassword);
+    }
+
+    public WebElement getTxtConfirmPassword() {
+        return Constant.DRIVER.findElement(txtConfirmPassword);
+    }
+
+    public WebElement getBtnChangePassword() {
+        return Constant.DRIVER.findElement(btnChangePassword);
+    }
+
+    public WebElement getMsgSuccess(){
+        return Constant.DRIVER.findElement(msgSuccess);
+    }
+
+    public void changePassword(String currentPass, String newPass, String confirmPass)
+    {
+        goToTab("Change password");
+        scrollByPage();
+        getTxtCurrentPassword().sendKeys(currentPass);
+        getTxtNewPassword().sendKeys(newPass);
+        getTxtConfirmPassword().sendKeys(confirmPass);
+        getBtnChangePassword().click();
     }
 }

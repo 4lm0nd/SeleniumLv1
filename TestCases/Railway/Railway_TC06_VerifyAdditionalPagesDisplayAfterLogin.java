@@ -1,13 +1,11 @@
 package Railway;
 
-import org.checkerframework.checker.units.qual.C;
-import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 
-public class Railway_TC06_AdditionalPagesDisplayAfterLogin {
+public class Railway_TC06_VerifyAdditionalPagesDisplayAfterLogin {
     GeneralPage generalPage = new GeneralPage();
     LoginPage loginPage = new LoginPage();
     HomePage homePage;
@@ -21,7 +19,6 @@ public class Railway_TC06_AdditionalPagesDisplayAfterLogin {
         driverManager = new DriverManager();
         driverManager.openSite(Constant.RAILWAY_SITE);
     }
-
     @AfterMethod
     public void afterMethod() {
         Constant.DRIVER.close();

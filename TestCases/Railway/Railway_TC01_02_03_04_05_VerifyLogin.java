@@ -11,6 +11,7 @@ public class Railway_TC01_02_03_04_05_VerifyLogin {
     DriverManager driverManager = new DriverManager();
     Utilities utilities = new Utilities();
     BookTicketPage bookTicketPage = new BookTicketPage();
+    GeneralPage generalPage = new GeneralPage();
 
     @BeforeMethod
     public void beforeMethod() {
@@ -47,7 +48,7 @@ public class Railway_TC01_02_03_04_05_VerifyLogin {
     @Test
     public void TC04() {
         System.out.println("TC04_Verify_Login page displays when un-logged User clicks on Book ticket tab");
-        bookTicketPage.goToBookTicketTab();
+        generalPage.goToTab("Book ticket");
         String pageTitle = loginPage.getPageTitle().getText().toString();
         utilities.checkTextContent(pageTitle, "Login page");
     }

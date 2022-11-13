@@ -10,8 +10,8 @@ public class LoginPage extends GeneralPage {
     private By txtEmail = By.id("username");
     private By txtPassword = By.id("password");
     private By btnLogin = By.xpath("//input[@title='Login']");
-    private By msgerror = By.xpath("//p[@class = 'message error LoginForm']");
-    private By pagetitle = By.xpath("//div[@id='content']/h1");
+    private By msgError = By.xpath("//p[@class = 'message error LoginForm']");
+    private By pageTitle = By.xpath("//div[@id='content']/h1");
 
     //Element
     public WebElement getTxtEmail() {
@@ -27,11 +27,11 @@ public class LoginPage extends GeneralPage {
     }
 
     public WebElement getMsgError() {
-        return Constant.DRIVER.findElement(msgerror);
+        return Constant.DRIVER.findElement(msgError);
     }
 
     public WebElement getPageTitle() {
-        return Constant.DRIVER.findElement(pagetitle);
+        return Constant.DRIVER.findElement(pageTitle);
     }
 
     //Method
@@ -44,6 +44,7 @@ public class LoginPage extends GeneralPage {
         getTxtPassword().sendKeys(pass);
         getBtnLogin().click();
     }
+
     public void multipleLogin(String email, String pass, int time) {
         goToTab("Login");
         scrollByPage();
