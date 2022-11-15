@@ -13,15 +13,8 @@ public class Constant {
     public static final String USER_NAME2 = "almond.dh1@yopmail.com";
     public static final String PASSWORD = "Password1@!";
     public static final String PASSWORD2 = "Password1@!2";
-    public static final String CHROMEDRIVER = "webdriver.chrome.driver";
-    public static final String CHROMEDRIVER_PATH = "Executables/chromedriver.exe";
-    public static  String convertDateToString()
-    {
-        java.util.Date date = new java.util.Date();
-        DateFormat dateFormat = new SimpleDateFormat("yyymmmddhhmmss");
-        String strDate = dateFormat.format(date);
-        return strDate;
-    }
+    public static final String WEBDRIVER = "webdriver.chrome.driver";
+    public static final String DRIVER_PATH = "Executables/chromedriver.exe";
 
 }
 

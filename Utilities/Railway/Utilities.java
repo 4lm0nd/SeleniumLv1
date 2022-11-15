@@ -6,8 +6,26 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 
-public class Utilities extends GeneralPage {
+public class Utilities {
+
+    //Variation
+    String tabMenu = "//span[text()='%s']/ancestor::a";
+
+    //Element
+    WebElement getTabMenu(String tabName) {
+        return Constant.DRIVER.findElement(By.xpath(String.format(tabMenu, tabName)));
+    }
+
+    //Method
+    public static String convertDateToString() {
+        java.util.Date date = new java.util.Date();
+        DateFormat dateFormat = new SimpleDateFormat("yyymmmddhhmmss");
+        String strDate = dateFormat.format(date);
+        return strDate;
+    }
 
     public void checkTextContent(String actualMsg, String expectedMsg) {
         SoftAssert softAssert = new SoftAssert();
@@ -21,9 +39,9 @@ public class Utilities extends GeneralPage {
         }
     }
 
-    public boolean doesElementDisplay(By by) {
+    public boolean doesElementDisplay(WebElement element) {
         try {
-            Constant.DRIVER.findElement(by).isDisplayed();
+            element.isDisplayed();
         } catch (NoSuchElementException ex) {
             System.out.println(ex.getMessage());
             return false;
@@ -31,51 +49,29 @@ public class Utilities extends GeneralPage {
         return true;
     }
 
-    public void checkTabExist(String tab) {
-        By item = (By.xpath("//span[text()='" + tab + "']/ancestor::a"));
+    public void checkTabExist(String tabName) {
         try {
-            Assert.assertEquals(doesElementDisplay(item), true);
+
+            Assert.assertTrue(doesElementDisplay(getTabMenu(tabName)));
 
         } catch (AssertionError ex) {
 
             System.out.println(ex.getMessage());
-        }
-
+       }
     }
 
     public void checkSelectedItemList(WebElement selection, String option) {
-        Select selected1 = new Select(selection);
-        WebElement optionA = selected1.getFirstSelectedOption();
-        String a = optionA.getText().toString();
+        Select selectedValue = new Select(selection);
+        WebElement optionA = selectedValue.getFirstSelectedOption();
+        String selectedOption = optionA.getText().toString();
         try {
-            Assert.assertEquals(a, option);
+            Assert.assertEquals(selectedOption, option);
         } catch (AssertionError ex) {
 
             System.out.println(ex.getMessage());
         }
     }
 
-    public void checkBookedTicketInfo(String departDate, String departStation, String arriveStation, String seatType, String ticketAmount) {
-
-        String tableXpath = "MyTable WideTable";
-        String departFrom = getTableCellValue(tableXpath, "Depart Station", 2);
-        String arriveAt = getTableCellValue(tableXpath, "Arrive Station", 2);
-        String seat = getTableCellValue(tableXpath, "Seat Type", 2);
-        String dateDepart = getTableCellValue(tableXpath, "Depart Date", 2);
-        String amountTicket = getTableCellValue(tableXpath, "Amount", 2);
-        try {
-
-            Assert.assertEquals(dateDepart, departDate);
-            Assert.assertEquals(departFrom, departStation);
-            Assert.assertEquals(arriveAt, arriveStation);
-            Assert.assertEquals(seatType, seat);
-            Assert.assertEquals(amountTicket, ticketAmount);
-
-        } catch (AssertionError ex) {
-
-            System.out.println(ex.getMessage());
-        }
-    }
 }
 
 

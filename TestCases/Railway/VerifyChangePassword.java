@@ -4,20 +4,21 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class Railway_TC09_VerifyChangePassword {
+public class VerifyChangePassword {
 
-    DriverManager driverManager = new DriverManager();
+    BrowserManager browserManager = new BrowserManager();
+    GeneralPage generalPage = new GeneralPage();
     Utilities utilities = new Utilities();
     ChangePasswordPage changePasswordPage = new ChangePasswordPage();
     LoginPage loginPage = new LoginPage();
     RegisterPage registerPage = new RegisterPage();
-    String email = "al" + Constant.convertDateToString() + "@yopmail.com";
+    Logger logger = new Logger();
+    String email = "al" + Utilities.convertDateToString() + "@yopmail.com";
 
 
     @BeforeMethod
     public void beforeMethod() {
-        driverManager = new DriverManager();
-        driverManager.openSite(Constant.RAILWAY_SITE);
+        generalPage.openSite(Constant.RAILWAY_SITE);
         registerPage.register(email, Constant.PASSWORD, Constant.PASSWORD, Constant.PASSWORD);
     }
 
@@ -28,10 +29,12 @@ public class Railway_TC09_VerifyChangePassword {
 
     @Test
     public void TC09() {
-        System.out.println("TC06_Verify_User can change password");
+        logger.info("TC06_Verify_User can change password");
+        logger.info("Step 1: Login");
         loginPage.login(email, Constant.PASSWORD);
+        logger.info("Step 2: Change password");
         changePasswordPage.changePassword(Constant.PASSWORD, Constant.PASSWORD2, Constant.PASSWORD2);
-        String actualMsg = changePasswordPage.getMsgSuccess().getText().toString();
-        utilities.checkTextContent(actualMsg, "Your password has been updated!");
+        logger.info("Check success message appear");
+        utilities.checkTextContent(changePasswordPage.getSuccessMsg(), "Your password has been updated!");
     }
 }

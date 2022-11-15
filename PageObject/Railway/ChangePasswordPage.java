@@ -42,10 +42,22 @@ public class ChangePasswordPage extends GeneralPage {
     public void changePassword(String currentPass, String newPass, String confirmPass)
     {
         goToTab("Change password");
-        scrollByPage();
+        scrollDown();
         getTxtCurrentPassword().sendKeys(currentPass);
         getTxtNewPassword().sendKeys(newPass);
         getTxtConfirmPassword().sendKeys(confirmPass);
         getBtnChangePassword().click();
+    }
+
+    public String getChangePasswordPageTitle(){
+
+        String pageTitle =  getTitlePage();
+        return pageTitle;
+    }
+
+    public String getSuccessMsg(){
+
+        String successMsg = getMsgSuccess().getText().toString();
+        return successMsg;
     }
 }

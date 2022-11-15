@@ -37,7 +37,7 @@ public class LoginPage extends GeneralPage {
     //Method
     public void login(String email, String pass) {
         goToTab("Login");
-        scrollByPage();
+        scrollDown();
         getTxtEmail().click();
         getTxtEmail().sendKeys(email);
         getTxtPassword().click();
@@ -47,9 +47,19 @@ public class LoginPage extends GeneralPage {
 
     public void multipleLogin(String email, String pass, int time) {
         goToTab("Login");
-        scrollByPage();
+        scrollDown();
         for (int i = 0; i < time; i++) {
             login(email, pass);
         }
+    }
+
+    public String getErrorMsg() {
+        String errorMsg = getMsgError().getText().toString();
+        return errorMsg;
+    }
+
+    public String getLoginPageTitle(){
+      String pageTitle =  getTitlePage();
+        return pageTitle;
     }
 }

@@ -4,34 +4,20 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 public class TimetablePage extends GeneralPage {
-
     String timeTable = "MyTable WideTable";
+    String bookTicketBtn = "//table[@class='%s']//tr[%d]/td[last()]/a";
 
-    public int getTimeTableRow(String departStation, String arriveStation, int rows, String table) {
-        for (int i = 1; i < rows; i++) {
-            if (getTableCellValue(table, "Depart Station", i) == departStation && getTableCellValue(table, "Arrive Station", i) == arriveStation) {
-
-                i = rows;
-                return rows;
-            }
-        }
-        return 1;
+    WebElement getBtnBookTicket(String table, int row) {
+        return Constant.DRIVER.findElement(By.xpath(String.format(bookTicketBtn, table, row)));
     }
-
-    public void clickBtnBookTicketFromTrainTable(String departStation, String arriveStation) {
-        int a = getTimeTableRow(departStation, arriveStation, 25, timeTable);
-
+    public void selectTrainFromTrainTimeTable(String departStation, String arriveStation) {
+        int a = getTableRow(timeTable,departStation, arriveStation, 25);
         if (a != 0) {
-            WebElement btnBookTicket = Constant.DRIVER.findElement(By.xpath("//table[@class='" + timeTable + "']//tr[" + a + "]/td[7]/a"));
-            btnBookTicket.click();
-
+            getBtnBookTicket(timeTable, a).click();
         } else {
             System.out.println("This train is not found");
-
         }
     }
-
-
 }
 
 

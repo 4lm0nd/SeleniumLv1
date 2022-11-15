@@ -66,7 +66,7 @@ public class RegisterPage extends GeneralPage {
 
     public void register(String email, String password, String confirmPassword, String PID) {
         goToTab("Register");
-        scrollByPage();
+        scrollDown();
         getTxtEmail().sendKeys(email);
         getTxtPassword().sendKeys(password);
         getTxtConfirmPassword().sendKeys(confirmPassword);
@@ -74,4 +74,23 @@ public class RegisterPage extends GeneralPage {
         getBtnRegister().click();
     }
 
+    public String getSuccessMsg(){
+                String successMsg = getMsgSuccess().getText().toString();
+        return successMsg;
+    }
+
+    public String getPIDMsgValidation(){
+        String pidValidationMsg = getMsgPIDValidation().getText().toString();
+        return pidValidationMsg;
+    }
+
+    public String getPasswordMsgValidation(){
+        String passwordValidationMsg = getMsgPasswordValidation().getText().toString();
+        return passwordValidationMsg;
+    }
+
+    public String getErrorMsg(){
+        String errorMsg = getMsgError().getText().toString();
+        return errorMsg;
+    }
 }

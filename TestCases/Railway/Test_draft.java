@@ -1,30 +1,29 @@
 package Railway;
 
-import org.apache.log4j.Logger;
-import org.example.Main;
-
 public class Test_draft {
 
-     private static Logger logger = Logger.getRootLogger();
+    static Logger logger = new Logger();
     static GeneralPage generalPage = new GeneralPage();
     static LoginPage loginPage = new LoginPage();
-    static DriverManager driverManager;
     static Utilities utilities = new Utilities();
     static RegisterPage registerPage = new RegisterPage();
     static BookTicketPage bookTicketPage = new BookTicketPage();
     static MyTicketPage myTicketPage = new MyTicketPage();
     static TimetablePage timetablePage = new TimetablePage();
+    static HomePage homePage = new HomePage();
 
     public static void main(String[] args) {
-        logger.info("This is a test test");
-        System.out.println("hi hi hi");
-        driverManager = new DriverManager();
-        driverManager.openSite(Constant.RAILWAY_SITE);
-        loginPage.login(Constant.USER_NAME2, Constant.PASSWORD);
+        logger.info("TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page");
+        logger.info("Step 1: Login");
+        generalPage.openSite(Constant.RAILWAY_SITE);
+        loginPage.login(Constant.USER_NAME, Constant.PASSWORD);
+        logger.info("Step 2: Go to Timetable page");
         generalPage.goToTab("Timetable");
-        generalPage.scrollByPage();
-        timetablePage.clickBtnBookTicketFromTrainTable("Huế", "Sài Gòn");
+        generalPage.scrollDown();
+        logger.info("Step 3: Click on book ticket button routed from Phan Thiet to Sai Gon");
+        timetablePage.selectTrainFromTrainTimeTable("Huế", "Nha Trang");
+        logger.info("Check book ticket page is loaded with correct Depart From and Arrive At");
         utilities.checkSelectedItemList(bookTicketPage.getListDepartFrom(), "Huế");
-        utilities.checkSelectedItemList(bookTicketPage.getListArriveAt(), "Sài Gòn");
+        utilities.checkSelectedItemList(bookTicketPage.getListArriveAt(), "Nha Trang");
     }
 }
