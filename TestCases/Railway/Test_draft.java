@@ -14,6 +14,6 @@ public class Test_draft {
 
     public static void main(String[] args) {
         logger.info("TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page");
-System.out.println("aaaaa");
+        System.out.println("This for test github");
     }
 }
