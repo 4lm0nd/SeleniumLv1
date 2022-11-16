@@ -6,7 +6,6 @@ import org.openqa.selenium.WebElement;
 public class ChangePasswordPage extends GeneralPage {
 
     //Locator
-    private By pageTitle = By.xpath("//div[@id='content']/h1");
     private By txtCurrentPassword = By.id("currentPassword");
     private By txtNewPassword = By.id("newPassword");
     private By txtConfirmPassword = By.id("confirmPassword");
@@ -15,14 +14,9 @@ public class ChangePasswordPage extends GeneralPage {
 
 
     //Element
-    public WebElement getPageTitle() {
-        return Constant.DRIVER.findElement(pageTitle);
-    }
-
     public WebElement getTxtCurrentPassword() {
         return Constant.DRIVER.findElement(txtCurrentPassword);
     }
-
     public WebElement getTxtNewPassword() {
         return Constant.DRIVER.findElement(txtNewPassword);
     }
@@ -39,8 +33,7 @@ public class ChangePasswordPage extends GeneralPage {
         return Constant.DRIVER.findElement(msgSuccess);
     }
 
-    public void changePassword(String currentPass, String newPass, String confirmPass)
-    {
+    public void changePassword(String currentPass, String newPass, String confirmPass) {
         goToTab("Change password");
         scrollDown();
         getTxtCurrentPassword().sendKeys(currentPass);
@@ -50,13 +43,11 @@ public class ChangePasswordPage extends GeneralPage {
     }
 
     public String getChangePasswordPageTitle(){
-
         String pageTitle =  getTitlePage();
         return pageTitle;
     }
 
     public String getSuccessMsg(){
-
         String successMsg = getMsgSuccess().getText().toString();
         return successMsg;
     }

@@ -9,7 +9,6 @@ public class VerifyCreateNewAccount {
     GeneralPage generalPage = new GeneralPage();
     RegisterPage registerPage = new RegisterPage();
     Utilities utilities = new Utilities();
-    BrowserManager browserManager = new BrowserManager();
     Logger logger = new Logger();
 
     @BeforeMethod

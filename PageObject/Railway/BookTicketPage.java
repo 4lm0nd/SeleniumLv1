@@ -48,11 +48,11 @@ public class BookTicketPage extends GeneralPage {
         scrollDown();
         selectItemFromList(listDepartDate, departDate);
         selectItemFromList(listDepartFrom, departStation);
-        waitForControl(listArriveAt,3);
+        waitForControl(listArriveAt, 3);
         selectItemFromList(listArriveAt, arriveStation);
         selectItemFromList(listSeatType, seatType);
         selectItemFromList(listTicketAmount, ticketAmount);
-        waitForControl(btnBookTicket, 5);
+        waitForControl(btnBookTicket, 3);
         getBtnBookTicket().click();
     }
 
@@ -62,12 +62,9 @@ public class BookTicketPage extends GeneralPage {
     }
 
     public String getBookTicketInfo(String column) {
-
         String value = getTableCellValue("MyTable WideTable", column, 2);
-
         return value;
     }
-
 }
 
 

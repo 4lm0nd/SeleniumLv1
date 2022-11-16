@@ -30,10 +30,6 @@ public class LoginPage extends GeneralPage {
         return Constant.DRIVER.findElement(msgError);
     }
 
-    public WebElement getPageTitle() {
-        return Constant.DRIVER.findElement(pageTitle);
-    }
-
     //Method
     public void login(String email, String pass) {
         goToTab("Login");

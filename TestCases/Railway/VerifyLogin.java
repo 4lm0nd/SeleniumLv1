@@ -7,9 +7,7 @@ import org.testng.annotations.Test;
 public class VerifyLogin {
     LoginPage loginPage = new LoginPage();
     HomePage homePage = new HomePage();
-    BrowserManager browserManager = new BrowserManager();
     Utilities utilities = new Utilities();
-    BookTicketPage bookTicketPage = new BookTicketPage();
     GeneralPage generalPage = new GeneralPage();
     Logger logger = new Logger();
 
@@ -48,7 +46,7 @@ public class VerifyLogin {
         logger.info("Step 1: Login with invalid password");
         loginPage.login(Constant.USER_NAME, "INVALID_PASSWORD");
         logger.info("Check error message appear");
-        utilities.checkTextContent(loginPage.getErrorMsg(), "There was a problem with your login and/or errors exist in your form.");
+        utilities.checkTextContent(loginPage.getErrorMsg(), "Invalid username or password. Please try again.");
     }
 
     @Test

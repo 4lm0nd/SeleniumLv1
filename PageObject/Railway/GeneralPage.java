@@ -19,11 +19,9 @@ public class GeneralPage {
     WebElement getTabMenu(String tabName) {
         return Constant.DRIVER.findElement(By.xpath(String.format(tabMenu, tabName)));
     }
-
     WebElement getPageTitle() {
         return Constant.DRIVER.findElement(pageTitle);
     }
-
     WebElement getCellTable(String table, String column, int row) {
         return Constant.DRIVER.findElement(By.xpath(String.format(cellTable, table, row, column)));
     }
@@ -35,7 +33,7 @@ public class GeneralPage {
     }
 
     public void goToTab(String tab) {
-        getTabMenu(tab).click();
+                getTabMenu(tab).click();
     }
 
     public void selectItemFromList(By list, String option) {
@@ -46,7 +44,6 @@ public class GeneralPage {
     public void waitForControl(By element, int timeoutInSeconds) {
         WebElement myElement = new WebDriverWait(Constant.DRIVER, Duration.ofSeconds(timeoutInSeconds))
                 .until(ExpectedConditions.elementToBeClickable(element));
-
         boolean check = false;
         for (int i = 0; i < timeoutInSeconds; i++) {
             try {
@@ -75,6 +72,7 @@ public class GeneralPage {
         String cellValue = getCellTable(table, column, row).getText().toString();
         return cellValue;
     }
+
     public int getTableRow(String table, String departStation, String arriveStation, int rows) {
         for (int i = 1; i <= rows; i++) {
             if (getTableCellValue(table, "Depart Station", i).equals(departStation))

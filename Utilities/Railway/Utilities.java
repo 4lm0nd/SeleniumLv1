@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
+
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 
@@ -57,7 +58,7 @@ public class Utilities {
         } catch (AssertionError ex) {
 
             System.out.println(ex.getMessage());
-       }
+        }
     }
 
     public void checkSelectedItemList(WebElement selection, String option) {
@@ -72,8 +73,13 @@ public class Utilities {
         }
     }
 
+    public void checkElementDoesNotExist(WebElement element) {
+        try {
+            Assert.assertFalse(doesElementDisplay(element) == true);
+        } catch (AssertionError e) {
+            System.out.println(e.getMessage());
+        }
+    }
 }
-
-
 
 

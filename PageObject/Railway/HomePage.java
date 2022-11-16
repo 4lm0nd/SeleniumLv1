@@ -18,6 +18,5 @@ public class HomePage {
     public String getWelcomeMsg() {
         String welcomeMsg = getLblWelcomeMessage().getText().toString();
         return welcomeMsg;
-
     }
 }

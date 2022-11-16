@@ -7,8 +7,6 @@ import org.testng.annotations.Test;
 public class VerifyAdditionalPagesDisplayAfterLogin {
     GeneralPage generalPage = new GeneralPage();
     LoginPage loginPage = new LoginPage();
-    HomePage homePage;
-    BrowserManager browserManager;
     Utilities utilities = new Utilities();
     MyTicketPage myTicketPage = new MyTicketPage();
     ChangePasswordPage changePasswordPage = new ChangePasswordPage();

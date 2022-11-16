@@ -47,11 +47,6 @@ public class RegisterPage extends GeneralPage {
         return Constant.DRIVER.findElement(msgError);
     }
 
-    public WebElement getPageTitle() {
-
-        return Constant.DRIVER.findElement(pageTitle);
-    }
-
     public WebElement getMsgSuccess() {
         return Constant.DRIVER.findElement(msgSuccess);
     }

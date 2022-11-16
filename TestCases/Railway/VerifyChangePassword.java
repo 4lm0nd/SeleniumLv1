@@ -5,8 +5,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class VerifyChangePassword {
-
-    BrowserManager browserManager = new BrowserManager();
     GeneralPage generalPage = new GeneralPage();
     Utilities utilities = new Utilities();
     ChangePasswordPage changePasswordPage = new ChangePasswordPage();

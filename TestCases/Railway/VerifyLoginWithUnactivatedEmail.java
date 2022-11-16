@@ -5,8 +5,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class VerifyLoginWithUnactivatedEmail {
-
-    BrowserManager browserManager = new BrowserManager();
     GeneralPage generalPage = new GeneralPage();
     RegisterPage registerPage = new RegisterPage();
     Utilities utilities = new Utilities();
@@ -32,6 +30,6 @@ public class VerifyLoginWithUnactivatedEmail {
         logger.info("Step 1: Login with an account that is not activated");
         loginPage.login(email, Constant.PASSWORD);
         logger.info("Check unsuccessfully login");
-        utilities.checkTextContent(loginPage.getLoginPageTitle(), "Login Page");
+        utilities.checkTextContent(loginPage.getLoginPageTitle(), "Login page");
        }
 }
