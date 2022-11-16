@@ -5,13 +5,13 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class VerifyLoginWithUnactivatedEmail {
+    String email = "al" + Utilities.convertDateToString() + "@yopmail.com";
+
     GeneralPage generalPage = new GeneralPage();
     RegisterPage registerPage = new RegisterPage();
     Utilities utilities = new Utilities();
     LoginPage loginPage = new LoginPage();
     Logger logger = new Logger();
-
-    String email = "al" + Utilities.convertDateToString() + "@yopmail.com";
 
     @BeforeMethod
     public void beforeMethod() {
