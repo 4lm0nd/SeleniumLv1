@@ -1,0 +1,13 @@
+<suite name="Suite">
+    <test name="Test">
+        <classes>
+            <class name="Railway.VerifyAdditionalPagesDisplayAfterLogin"/>
+            <class name="Railway.VerifyBookTicket"/>
+            <class name ="Railway.VerifyCancelTicket"/>
+            <class name = "Railway.VerifyLogin"/>
+            <class name ="Railway.VerifyLoginWithUnactivatedEmail"/>
+            <class name ="Railway.VerifyCreateNewAccount"/>
+            <class name ="Railway.VerifyChangePassword"/>.
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->

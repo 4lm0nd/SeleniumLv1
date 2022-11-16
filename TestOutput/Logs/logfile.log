@@ -1,0 +1,508 @@
+2022-11-14 02??52 - INFO: This is a test test
+2022-11-14 02??46 - INFO: This is a test test
+2022-11-14 02??52 - INFO: This is a test test123
+2022-11-14 02??29 - INFO: TC06_Verify_Additional pages display once user logged in
+2022-11-14 02??25 - INFO: TC14_Verify_User can book 1 ticket at a time
+2022-11-14 02??49 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-14 02??13 - INFO: TC06_Verify_User can change password
+2022-11-14 02??33 - INFO: TC07_Verify_User can create new account
+2022-11-14 02??27 - INFO: TC10_Verify_User can't create account with Confirm password is not the same with Password
+2022-11-14 02??36 - INFO: TC11_Verify_User can't create account while password and PID fields are empty
+2022-11-14 02??47 - INFO: TC01_Verify_User can log into Railway with valid username and password
+2022-11-14 03??39 - INFO: TC02_Verify_User cannot login with blank username
+2022-11-14 03??48 - INFO: TC03_Verify_User cannot log into Railway with invalid password 
+2022-11-14 03??56 - INFO: TC04_Verify_Login page displays when un-logged User clicks on Book ticket tab
+2022-11-14 03??04 - INFO: TC05_Verify_System shows message when user enters wrong password several times
+2022-11-14 03??23 - INFO: TC08_Verify_User can't login with an account hasn't been activated
+2022-11-14 06??20 - INFO: This is a test test123
+2022-11-14 11??09 - INFO: This is a test test123
+2022-11-14 11??35 - INFO: Step 1: Login
+2022-11-14 11??31 - INFO: This is a test test123
+2022-11-14 11??38 - INFO: Step 1: Login
+2022-11-14 12??08 - INFO: TC14_Verify_User can book 1 ticket at a time
+2022-11-14 12??08 - INFO: Preconditions: Register new account
+2022-11-14 12??10 - INFO: Step 1: Login
+2022-11-14 12??13 - INFO: Step 2: Book a ticket
+2022-11-14 12??20 - INFO: Verify book ticket successfully
+2022-11-14 12??24 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-14 12??24 - INFO: Step 1: Login
+2022-11-14 12??26 - INFO: Step 2: Go to Timetable page
+2022-11-14 12??27 - INFO: Step 3: Click on book ticket button routed from Phan Thiet to Sai Gon
+2022-11-14 12??27 - INFO: Check book ticket page is loaded with correct Depart From and Arrive At
+2022-11-14 12??17 - INFO: TC06_Verify_Additional pages display once user logged in
+2022-11-14 12??17 - INFO: Step 1: Login with valid account
+2022-11-14 12??20 - INFO: Check My ticket tab is displayed
+2022-11-14 12??20 - INFO: Check user goes to My ticket page when clicking on My ticket tab
+2022-11-14 12??21 - INFO: check Change Password tab is displayed
+2022-11-14 12??21 - INFO: Check user goes to Change Password page when clicking on Change password tab
+2022-11-14 12??21 - INFO: Check Log out tab is displayed
+2022-11-14 12??43 - INFO: TC06_Verify_User can change password
+2022-11-14 12??43 - INFO: Step 1: Login
+2022-11-14 12??45 - INFO: Step 2: Change password
+2022-11-14 12??47 - INFO: Check success message appear
+2022-11-14 12??50 - INFO: TC07_Verify_User can create new account
+2022-11-14 12??50 - INFO: Step 1: Create new account with valid data
+2022-11-14 12??52 - INFO: Check success message appear
+2022-11-14 12??12 - INFO: TC10_Verify_User can't create account with Confirm password is not the same with Password
+2022-11-14 12??12 - INFO: Step 1: Create new account with confirm password is not the same with password
+2022-11-14 12??14 - INFO: Check error message appear
+2022-11-14 12??18 - INFO: TC11_Verify_User can't create account while password and PID fields are empty
+2022-11-14 12??18 - INFO: Step 1: Create new account with blank password and pid
+2022-11-14 12??20 - INFO: Check error message appear
+2022-11-14 12??24 - INFO: TC01_Verify_User can log into Railway with valid username and password
+2022-11-14 12??24 - INFO: Step 1: Login with valid account
+2022-11-14 12??26 - INFO: Check success message
+2022-11-14 12??31 - INFO: TC02_Verify_User cannot login with blank username
+2022-11-14 12??31 - INFO: Step 1: Login with blank user
+2022-11-14 12??32 - INFO: Check error message appear
+2022-11-14 12??36 - INFO: TC03_Verify_User cannot log into Railway with invalid password 
+2022-11-14 12??36 - INFO: Step 1: Login with invalid password
+2022-11-14 12??38 - INFO: Check error message appear
+2022-11-14 12??42 - INFO: TC04_Verify_Login page displays when un-logged User clicks on Book ticket tab
+2022-11-14 12??42 - INFO: Step 1: Go to the book ticket page without login
+2022-11-14 12??44 - INFO: Check Login page is displayed
+2022-11-14 12??47 - INFO: TC05_Verify_System shows message when user enters wrong password several times
+2022-11-14 12??47 - INFO: Step 1: Login multiple(6) times
+2022-11-14 12??58 - INFO: Check error message appear
+2022-11-14 12??04 - INFO: TC08_Verify_User can't login with an account hasn't been activated
+2022-11-14 12??04 - INFO: Step 1: Login with an account that is not activated
+2022-11-14 12??06 - INFO: Check unsuccessfully login
+2022-11-14 12??58 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-14 12??58 - INFO: Step 1: Login
+2022-11-14 12??59 - INFO: Step 2: Go to Timetable page
+2022-11-14 12??00 - INFO: Step 3: Click on book ticket button routed from Phan Thiet to Sai Gon
+2022-11-14 12??01 - INFO: Check book ticket page is loaded with correct Depart From and Arrive At
+2022-11-14 12??56 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-14 12??56 - INFO: Step 1: Login
+2022-11-14 12??42 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-14 12??42 - INFO: Step 1: Login
+2022-11-14 12??48 - INFO: Step 2: Go to Timetable page
+2022-11-14 12??49 - INFO: Step 3: Click on book ticket button routed from Phan Thiet to Sai Gon
+2022-11-14 12??50 - INFO: Check book ticket page is loaded with correct Depart From and Arrive At
+2022-11-14 13??45 - INFO: TC14_Verify_User can book 1 ticket at a time
+2022-11-14 13??45 - INFO: Preconditions: Register new account
+2022-11-14 13??48 - INFO: Step 1: Login
+2022-11-14 13??50 - INFO: Step 2: Book a ticket
+2022-11-14 13??57 - INFO: Verify book ticket successfully
+2022-11-14 13??26 - INFO: TC14_Verify_User can book 1 ticket at a time
+2022-11-14 13??26 - INFO: Preconditions: Register new account
+2022-11-14 13??28 - INFO: Step 1: Login
+2022-11-14 13??30 - INFO: Step 2: Book a ticket
+2022-11-14 13??40 - INFO: Verify book ticket successfully
+2022-11-14 13??05 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-14 13??05 - INFO: Step 1: Login
+2022-11-14 13??07 - INFO: Step 2: Go to Timetable page
+2022-11-14 13??08 - INFO: Step 3: Click on book ticket button routed from Phan Thiet to Sai Gon
+2022-11-14 13??08 - INFO: Check book ticket page is loaded with correct Depart From and Arrive At
+2022-11-14 13??28 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-14 13??28 - INFO: Step 1: Login
+2022-11-14 13??35 - INFO: Step 2: Go to Timetable page
+2022-11-14 13??36 - INFO: Step 3: Click on book ticket button routed from Phan Thiet to Sai Gon
+2022-11-14 13??36 - INFO: Check book ticket page is loaded with correct Depart From and Arrive At
+2022-11-14 13??14 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-14 13??14 - INFO: Step 1: Login
+2022-11-14 13??23 - INFO: Step 2: Go to Timetable page
+2022-11-14 13??23 - INFO: Step 3: Click on book ticket button routed from Phan Thiet to Sai Gon
+2022-11-14 13??24 - INFO: Check book ticket page is loaded with correct Depart From and Arrive At
+2022-11-14 13??19 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-14 13??19 - INFO: Step 1: Login
+2022-11-14 13??21 - INFO: Step 2: Go to Timetable page
+2022-11-14 13??22 - INFO: Step 3: Click on book ticket button routed from Phan Thiet to Sai Gon
+2022-11-14 13??23 - INFO: Check book ticket page is loaded with correct Depart From and Arrive At
+2022-11-14 13??40 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-14 13??40 - INFO: Step 1: Login
+2022-11-14 13??49 - INFO: Step 2: Go to Timetable page
+2022-11-14 13??50 - INFO: Step 3: Click on book ticket button routed from Phan Thiet to Sai Gon
+2022-11-14 13??50 - INFO: Check book ticket page is loaded with correct Depart From and Arrive At
+2022-11-14 13??34 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-14 13??34 - INFO: Step 1: Login
+2022-11-14 13??41 - INFO: Step 2: Go to Timetable page
+2022-11-14 13??42 - INFO: Step 3: Click on book ticket button routed from Phan Thiet to Sai Gon
+2022-11-14 13??42 - INFO: Check book ticket page is loaded with correct Depart From and Arrive At
+2022-11-14 13??37 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-14 13??37 - INFO: Step 1: Login
+2022-11-14 13??44 - INFO: Step 2: Go to Timetable page
+2022-11-14 13??45 - INFO: Step 3: Click on book ticket button routed from Phan Thiet to Sai Gon
+2022-11-14 13??46 - INFO: Check book ticket page is loaded with correct Depart From and Arrive At
+2022-11-14 13??26 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-14 13??26 - INFO: Step 1: Login
+2022-11-14 13??33 - INFO: Step 2: Go to Timetable page
+2022-11-14 13??34 - INFO: Step 3: Click on book ticket button routed from Phan Thiet to Sai Gon
+2022-11-14 13??34 - INFO: Check book ticket page is loaded with correct Depart From and Arrive At
+2022-11-14 13??35 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-14 13??35 - INFO: Step 1: Login
+2022-11-14 13??42 - INFO: Step 2: Go to Timetable page
+2022-11-14 13??43 - INFO: Step 3: Click on book ticket button routed from Phan Thiet to Sai Gon
+2022-11-14 13??43 - INFO: Check book ticket page is loaded with correct Depart From and Arrive At
+2022-11-14 13??59 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-14 13??59 - INFO: Step 1: Login
+2022-11-14 13??07 - INFO: Step 2: Go to Timetable page
+2022-11-14 13??08 - INFO: Step 3: Click on book ticket button routed from Phan Thiet to Sai Gon
+2022-11-14 13??23 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-14 13??23 - INFO: Step 1: Login
+2022-11-14 13??30 - INFO: Step 2: Go to Timetable page
+2022-11-14 13??31 - INFO: Step 3: Click on book ticket button routed from Phan Thiet to Sai Gon
+2022-11-14 13??32 - INFO: Check book ticket page is loaded with correct Depart From and Arrive At
+2022-11-14 21??25 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-14 21??25 - INFO: Step 1: Login
+2022-11-14 21??27 - INFO: Step 2: Go to Timetable page
+2022-11-14 21??28 - INFO: Step 3: Click on book ticket button routed from Phan Thiet to Sai Gon
+2022-11-14 21??29 - INFO: Check book ticket page is loaded with correct Depart From and Arrive At
+2022-11-14 21??19 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-14 21??19 - INFO: Step 1: Login
+2022-11-14 21??30 - INFO: Step 2: Go to Timetable page
+2022-11-14 21??31 - INFO: Step 3: Click on book ticket button routed from Phan Thiet to Sai Gon
+2022-11-14 21??31 - INFO: Check book ticket page is loaded with correct Depart From and Arrive At
+2022-11-14 21??08 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-14 21??08 - INFO: Step 1: Login
+2022-11-14 21??16 - INFO: Step 2: Go to Timetable page
+2022-11-14 21??16 - INFO: Step 3: Click on book ticket button routed from Phan Thiet to Sai Gon
+2022-11-14 21??17 - INFO: Check book ticket page is loaded with correct Depart From and Arrive At
+2022-11-14 21??26 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-14 21??26 - INFO: Step 1: Login
+2022-11-14 21??52 - INFO: Step 2: Go to Timetable page
+2022-11-14 21??53 - INFO: Step 3: Click on book ticket button routed from Phan Thiet to Sai Gon
+2022-11-14 21??54 - INFO: Check book ticket page is loaded with correct Depart From and Arrive At
+2022-11-14 21??06 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-14 21??06 - INFO: Step 1: Login
+2022-11-14 21??16 - INFO: Step 2: Go to Timetable page
+2022-11-14 21??17 - INFO: Step 3: Click on book ticket button routed from Phan Thiet to Sai Gon
+2022-11-14 21??18 - INFO: Check book ticket page is loaded with correct Depart From and Arrive At
+2022-11-14 21??58 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-14 21??58 - INFO: Step 1: Login
+2022-11-14 21??17 - INFO: Step 2: Go to Timetable page
+2022-11-14 21??17 - INFO: Step 3: Click on book ticket button routed from Phan Thiet to Sai Gon
+2022-11-14 21??18 - INFO: Check book ticket page is loaded with correct Depart From and Arrive At
+2022-11-14 21??06 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-14 21??06 - INFO: Step 1: Login
+2022-11-14 21??16 - INFO: Step 2: Go to Timetable page
+2022-11-14 21??17 - INFO: Step 3: Click on book ticket button routed from Phan Thiet to Sai Gon
+2022-11-14 21??18 - INFO: Check book ticket page is loaded with correct Depart From and Arrive At
+2022-11-14 22??13 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-14 22??13 - INFO: Step 1: Login
+2022-11-14 22??42 - INFO: Step 2: Go to Timetable page
+2022-11-14 22??43 - INFO: Step 3: Click on book ticket button routed from Phan Thiet to Sai Gon
+2022-11-14 22??44 - INFO: Check book ticket page is loaded with correct Depart From and Arrive At
+2022-11-14 22??40 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-14 22??40 - INFO: Step 1: Login
+2022-11-14 22??56 - INFO: Step 2: Go to Timetable page
+2022-11-14 22??57 - INFO: Step 3: Click on book ticket button routed from Phan Thiet to Sai Gon
+2022-11-14 22??58 - INFO: Check book ticket page is loaded with correct Depart From and Arrive At
+2022-11-14 22??14 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-14 22??14 - INFO: Step 1: Login
+2022-11-14 22??22 - INFO: Step 2: Go to Timetable page
+2022-11-14 22??23 - INFO: Step 3: Click on book ticket button routed from Phan Thiet to Sai Gon
+2022-11-14 22??23 - INFO: Check book ticket page is loaded with correct Depart From and Arrive At
+2022-11-14 22??40 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-14 22??40 - INFO: Step 1: Login
+2022-11-14 22??50 - INFO: Step 2: Go to Timetable page
+2022-11-14 22??51 - INFO: Step 3: Click on book ticket button routed from Phan Thiet to Sai Gon
+2022-11-14 22??52 - INFO: Check book ticket page is loaded with correct Depart From and Arrive At
+2022-11-14 22??17 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-14 22??17 - INFO: Step 1: Login
+2022-11-14 22??32 - INFO: Step 2: Go to Timetable page
+2022-11-14 22??32 - INFO: Step 3: Click on book ticket button routed from Phan Thiet to Sai Gon
+2022-11-14 22??33 - INFO: Check book ticket page is loaded with correct Depart From and Arrive At
+2022-11-14 22??58 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-14 22??58 - INFO: Step 1: Login
+2022-11-14 23??12 - INFO: Step 2: Go to Timetable page
+2022-11-14 23??13 - INFO: Step 3: Click on book ticket button routed from Phan Thiet to Sai Gon
+2022-11-14 23??14 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-14 23??14 - INFO: Step 1: Login
+2022-11-14 23??25 - INFO: Step 2: Go to Timetable page
+2022-11-14 23??25 - INFO: Step 3: Click on book ticket button routed from Phan Thiet to Sai Gon
+2022-11-14 23??15 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-14 23??15 - INFO: Step 1: Login
+2022-11-14 23??35 - INFO: Step 2: Go to Timetable page
+2022-11-14 23??36 - INFO: Step 3: Click on book ticket button routed from Phan Thiet to Sai Gon
+2022-11-14 23??37 - INFO: Check book ticket page is loaded with correct Depart From and Arrive At
+2022-11-14 23??43 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-14 23??43 - INFO: Step 1: Login
+2022-11-14 23??55 - INFO: Step 2: Go to Timetable page
+2022-11-14 23??57 - INFO: Step 3: Click on book ticket button routed from Phan Thiet to Sai Gon
+2022-11-14 23??46 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-14 23??46 - INFO: Step 1: Login
+2022-11-14 23??08 - INFO: Step 2: Go to Timetable page
+2022-11-14 23??09 - INFO: Step 3: Click on book ticket button routed from Phan Thiet to Sai Gon
+2022-11-14 23??01 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-14 23??01 - INFO: Step 1: Login
+2022-11-14 23??14 - INFO: Step 2: Go to Timetable page
+2022-11-14 23??15 - INFO: Step 3: Click on book ticket button routed from Phan Thiet to Sai Gon
+2022-11-14 23??16 - INFO: Check book ticket page is loaded with correct Depart From and Arrive At
+2022-11-14 23??39 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-14 23??39 - INFO: Step 1: Login
+2022-11-14 23??04 - INFO: Step 2: Go to Timetable page
+2022-11-14 23??05 - INFO: Step 3: Click on book ticket button routed from Phan Thiet to Sai Gon
+2022-11-14 23??06 - INFO: Check book ticket page is loaded with correct Depart From and Arrive At
+2022-11-14 23??53 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-14 23??53 - INFO: Step 1: Login
+2022-11-14 23??09 - INFO: Step 2: Go to Timetable page
+2022-11-14 23??10 - INFO: Step 3: Click on book ticket button routed from Phan Thiet to Sai Gon
+2022-11-14 23??27 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-14 23??27 - INFO: Step 1: Login
+2022-11-14 23??39 - INFO: Step 2: Go to Timetable page
+2022-11-14 23??40 - INFO: Step 3: Click on book ticket button routed from Phan Thiet to Sai Gon
+2022-11-14 23??41 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-14 23??41 - INFO: Step 1: Login
+2022-11-14 23??50 - INFO: Step 2: Go to Timetable page
+2022-11-14 23??51 - INFO: Step 3: Click on book ticket button routed from Phan Thiet to Sai Gon
+2022-11-14 23??54 - INFO: Check book ticket page is loaded with correct Depart From and Arrive At
+2022-11-14 23??05 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-14 23??05 - INFO: Step 1: Login
+2022-11-14 23??13 - INFO: Step 2: Go to Timetable page
+2022-11-14 23??14 - INFO: Step 3: Click on book ticket button routed from Phan Thiet to Sai Gon
+2022-11-14 23??17 - INFO: Check book ticket page is loaded with correct Depart From and Arrive At
+2022-11-14 23??12 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-14 23??12 - INFO: Step 1: Login
+2022-11-14 23??18 - INFO: Step 2: Go to Timetable page
+2022-11-14 23??19 - INFO: Step 3: Click on book ticket button routed from Phan Thiet to Sai Gon
+2022-11-14 23??22 - INFO: Check book ticket page is loaded with correct Depart From and Arrive At
+2022-11-14 23??25 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-14 23??25 - INFO: Step 1: Login
+2022-11-14 23??43 - INFO: Step 2: Go to Timetable page
+2022-11-14 23??44 - INFO: Step 3: Click on book ticket button routed from Phan Thiet to Sai Gon
+2022-11-14 23??01 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-14 23??01 - INFO: Step 1: Login
+2022-11-14 23??14 - INFO: Step 2: Go to Timetable page
+2022-11-14 23??14 - INFO: Step 3: Click on book ticket button routed from Phan Thiet to Sai Gon
+2022-11-15 00??45 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-15 00??45 - INFO: Step 1: Login
+2022-11-15 00??52 - INFO: Step 2: Go to Timetable page
+2022-11-15 00??53 - INFO: Step 3: Click on book ticket button routed from Phan Thiet to Sai Gon
+2022-11-15 00??01 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-15 00??01 - INFO: Step 1: Login
+2022-11-15 00??10 - INFO: Step 2: Go to Timetable page
+2022-11-15 00??11 - INFO: Step 3: Click on book ticket button routed from Phan Thiet to Sai Gon
+2022-11-15 00??38 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-15 00??38 - INFO: Step 1: Login
+2022-11-15 00??45 - INFO: Step 2: Go to Timetable page
+2022-11-15 00??46 - INFO: Step 3: Click on book ticket button routed from Phan Thiet to Sai Gon
+2022-11-15 00??49 - INFO: Check book ticket page is loaded with correct Depart From and Arrive At
+2022-11-15 00??04 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-15 00??04 - INFO: Step 1: Login
+2022-11-15 00??12 - INFO: Step 2: Go to Timetable page
+2022-11-15 00??12 - INFO: Step 3: Click on book ticket button routed from Phan Thiet to Sai Gon
+2022-11-15 00??16 - INFO: Check book ticket page is loaded with correct Depart From and Arrive At
+2022-11-15 00??42 - INFO: TC14_Verify_User can book 1 ticket at a time
+2022-11-15 00??42 - INFO: Preconditions: Register new account
+2022-11-15 00??24 - INFO: Step 1: Login
+2022-11-15 00??27 - INFO: Step 2: Book a ticket
+2022-11-15 00??38 - INFO: Verify book ticket successfully
+2022-11-15 00??12 - INFO: TC14_Verify_User can book 1 ticket at a time
+2022-11-15 00??12 - INFO: Preconditions: Register new account
+2022-11-15 00??27 - INFO: Step 1: Login
+2022-11-15 00??29 - INFO: Step 2: Book a ticket
+2022-11-15 00??40 - INFO: Verify book ticket successfully
+2022-11-15 00??49 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-15 00??49 - INFO: Step 1: Login
+2022-11-15 00??55 - INFO: Step 2: Go to Timetable page
+2022-11-15 00??56 - INFO: Step 3: Click on book ticket button routed from Hue to Nha Trang
+2022-11-15 00??59 - INFO: Check book ticket page is loaded with correct Depart From and Arrive At
+2022-11-15 01??50 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-15 01??50 - INFO: Step 1: Login
+2022-11-15 01??27 - INFO: Step 2: Go to Timetable page
+2022-11-15 01??28 - INFO: Step 3: Click on book ticket button routed from Phan Thiet to Sai Gon
+2022-11-15 01??32 - INFO: Check book ticket page is loaded with correct Depart From and Arrive At
+2022-11-15 01??01 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-15 01??01 - INFO: Step 1: Login
+2022-11-15 01??19 - INFO: Step 2: Go to Timetable page
+2022-11-15 01??20 - INFO: Step 3: Click on book ticket button routed from Phan Thiet to Sai Gon
+2022-11-15 01??49 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-15 01??49 - INFO: Step 1: Login
+2022-11-15 01??59 - INFO: Step 2: Go to Timetable page
+2022-11-15 01??00 - INFO: Step 3: Click on book ticket button routed from Phan Thiet to Sai Gon
+2022-11-15 01??01 - INFO: Check book ticket page is loaded with correct Depart From and Arrive At
+2022-11-15 01??55 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-15 01??55 - INFO: Step 1: Login
+2022-11-15 01??09 - INFO: Step 2: Go to Timetable page
+2022-11-15 01??10 - INFO: Step 3: Click on book ticket button routed from Phan Thiet to Sai Gon
+2022-11-15 01??11 - INFO: Check book ticket page is loaded with correct Depart From and Arrive At
+2022-11-15 10??21 - INFO: TC06_Verify_Additional pages display once user logged in
+2022-11-15 10??21 - INFO: Step 1: Login with valid account
+2022-11-15 10??24 - INFO: Check My ticket tab is displayed
+2022-11-15 10??24 - INFO: Check user goes to My ticket page when clicking on My ticket tab
+2022-11-15 10??24 - INFO: check Change Password tab is displayed
+2022-11-15 10??25 - INFO: Check user goes to Change Password page when clicking on Change password tab
+2022-11-15 10??25 - INFO: Check Log out tab is displayed
+2022-11-15 10??30 - INFO: TC14_Verify_User can book 1 ticket at a time
+2022-11-15 10??30 - INFO: Preconditions: Register new account
+2022-11-15 10??33 - INFO: Step 1: Login
+2022-11-15 10??35 - INFO: Step 2: Book a ticket
+2022-11-15 10??46 - INFO: Verify book ticket successfully
+2022-11-15 10??52 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-15 10??52 - INFO: Step 1: Login
+2022-11-15 10??54 - INFO: Step 2: Go to Timetable page
+2022-11-15 10??55 - INFO: Step 3: Click on book ticket button routed from Hue to Nha Trang
+2022-11-15 10??56 - INFO: Check book ticket page is loaded with correct Depart From and Arrive At
+2022-11-15 10??55 - INFO: TC06_Verify_User can change password
+2022-11-15 10??55 - INFO: Step 1: Login
+2022-11-15 10??57 - INFO: Step 2: Change password
+2022-11-15 10??58 - INFO: Check success message appear
+2022-11-15 10??05 - INFO: TC08_Verify_User can't login with an account hasn't been activated
+2022-11-15 10??05 - INFO: Step 1: Login with an account that is not activated
+2022-11-15 10??07 - INFO: Check unsuccessfully login
+2022-11-15 10??12 - INFO: TC01_Verify_User can log into Railway with valid username and password
+2022-11-15 10??12 - INFO: Step 1: Login with valid account
+2022-11-15 10??14 - INFO: Check success message
+2022-11-15 10??20 - INFO: TC02_Verify_User cannot login with blank username
+2022-11-15 10??20 - INFO: Step 1: Login with blank user
+2022-11-15 10??22 - INFO: Check error message appear
+2022-11-15 10??27 - INFO: TC03_Verify_User cannot log into Railway with invalid password 
+2022-11-15 10??27 - INFO: Step 1: Login with invalid password
+2022-11-15 10??29 - INFO: Check error message appear
+2022-11-15 10??34 - INFO: TC04_Verify_Login page displays when un-logged User clicks on Book ticket tab
+2022-11-15 10??34 - INFO: Step 1: Go to the book ticket page without login
+2022-11-15 10??35 - INFO: Check Login page is displayed
+2022-11-15 10??40 - INFO: TC05_Verify_System shows message when user enters wrong password several times
+2022-11-15 10??40 - INFO: Step 1: Login multiple(6) times
+2022-11-15 10??53 - INFO: Check error message appear
+2022-11-15 10??57 - INFO: TC07_Verify_User can create new account
+2022-11-15 10??57 - INFO: Step 1: Create new account with valid data
+2022-11-15 10??59 - INFO: Check success message appear
+2022-11-15 10??04 - INFO: TC10_Verify_User can't create account with Confirm password is not the same with Password
+2022-11-15 10??04 - INFO: Step 1: Create new account with confirm password is not the same with password
+2022-11-15 10??06 - INFO: Check error message appear
+2022-11-15 10??11 - INFO: TC11_Verify_User can't create account while password and PID fields are empty
+2022-11-15 10??11 - INFO: Step 1: Create new account with blank password and pid
+2022-11-15 10??14 - INFO: Check error message appear
+2022-11-15 11??30 - INFO: TC16_Verify_User can cancel a ticket
+2022-11-15 11??30 - INFO: Step 1: Book a ticket
+2022-11-15 11??41 - INFO: Step 2: go to My Ticket tab
+2022-11-15 11??42 - INFO: Step 3: Cancel ticket
+2022-11-15 11??42 - INFO: Check the ticket disappears
+2022-11-15 11??21 - INFO: TC16_Verify_User can cancel a ticket
+2022-11-15 11??21 - INFO: Step 1: Book a ticket
+2022-11-15 11??33 - INFO: Step 2: go to My Ticket tab
+2022-11-15 11??34 - INFO: Step 3: Cancel ticket
+2022-11-15 11??34 - INFO: Check the ticket disappears
+2022-11-15 11??48 - INFO: TC16_Verify_User can cancel a ticket
+2022-11-15 11??48 - INFO: Step 1: Book a ticket
+2022-11-15 11??59 - INFO: Step 2: go to My Ticket tab
+2022-11-15 11??59 - INFO: Step 3: Cancel ticket
+2022-11-15 11??59 - INFO: Check the ticket disappears
+2022-11-15 11??46 - INFO: TC16_Verify_User can cancel a ticket
+2022-11-15 11??46 - INFO: Step 1: Book a ticket
+2022-11-15 11??56 - INFO: Step 2: go to My Ticket tab
+2022-11-15 11??57 - INFO: Step 3: Cancel ticket
+2022-11-15 11??57 - INFO: Check the ticket disappears
+2022-11-15 11??34 - INFO: TC16_Verify_User can cancel a ticket
+2022-11-15 11??34 - INFO: Step 1: Book a ticket
+2022-11-15 11??45 - INFO: Step 2: go to My Ticket tab
+2022-11-15 11??45 - INFO: Step 3: Cancel ticket
+2022-11-15 11??45 - INFO: Check the ticket disappears
+2022-11-15 11??03 - INFO: TC16_Verify_User can cancel a ticket
+2022-11-15 11??03 - INFO: Step 1: Book a ticket
+2022-11-15 11??13 - INFO: Step 2: go to My Ticket tab
+2022-11-15 11??13 - INFO: Step 3: Cancel ticket
+2022-11-15 11??13 - INFO: Check the ticket disappears
+2022-11-15 11??49 - INFO: TC16_Verify_User can cancel a ticket
+2022-11-15 11??49 - INFO: Step 1: Book a ticket
+2022-11-15 11??59 - INFO: Step 2: go to My Ticket tab
+2022-11-15 11??00 - INFO: Step 3: Cancel ticket
+2022-11-15 11??00 - INFO: Check the ticket disappears
+2022-11-15 11??29 - INFO: TC06_Verify_Additional pages display once user logged in
+2022-11-15 11??29 - INFO: Step 1: Login with valid account
+2022-11-15 11??31 - INFO: Check My ticket tab is displayed
+2022-11-15 11??31 - INFO: Check user goes to My ticket page when clicking on My ticket tab
+2022-11-15 11??32 - INFO: check Change Password tab is displayed
+2022-11-15 11??32 - INFO: Check user goes to Change Password page when clicking on Change password tab
+2022-11-15 11??33 - INFO: Check Log out tab is displayed
+2022-11-15 11??36 - INFO: TC14_Verify_User can book 1 ticket at a time
+2022-11-15 11??36 - INFO: Preconditions: Register new account
+2022-11-15 11??38 - INFO: Step 1: Login
+2022-11-15 11??40 - INFO: Step 2: Book a ticket
+2022-11-15 11??49 - INFO: Verify book ticket successfully
+2022-11-15 11??52 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-15 11??52 - INFO: Step 1: Login
+2022-11-15 11??55 - INFO: Step 2: Go to Timetable page
+2022-11-15 11??56 - INFO: Step 3: Click on book ticket button routed from Hue to Nha Trang
+2022-11-15 11??57 - INFO: Check book ticket page is loaded with correct Depart From and Arrive At
+2022-11-15 11??04 - INFO: TC16_Verify_User can cancel a ticket
+2022-11-15 11??04 - INFO: Step 1: Book a ticket
+2022-11-15 11??13 - INFO: Step 2: go to My Ticket tab
+2022-11-15 11??13 - INFO: Step 3: Cancel ticket
+2022-11-15 11??13 - INFO: Check the ticket disappears
+2022-11-15 11??20 - INFO: TC06_Verify_User can change password
+2022-11-15 11??20 - INFO: Step 1: Login
+2022-11-15 11??22 - INFO: Step 2: Change password
+2022-11-15 11??24 - INFO: Check success message appear
+2022-11-15 11??28 - INFO: TC07_Verify_User can create new account
+2022-11-15 11??28 - INFO: Step 1: Create new account with valid data
+2022-11-15 11??30 - INFO: Check success message appear
+2022-11-15 11??34 - INFO: TC10_Verify_User can't create account with Confirm password is not the same with Password
+2022-11-15 11??34 - INFO: Step 1: Create new account with confirm password is not the same with password
+2022-11-15 11??36 - INFO: Check error message appear
+2022-11-15 11??41 - INFO: TC11_Verify_User can't create account while password and PID fields are empty
+2022-11-15 11??41 - INFO: Step 1: Create new account with blank password and pid
+2022-11-15 11??43 - INFO: Check error message appear
+2022-11-15 11??51 - INFO: TC08_Verify_User can't login with an account hasn't been activated
+2022-11-15 11??51 - INFO: Step 1: Login with an account that is not activated
+2022-11-15 11??53 - INFO: Check unsuccessfully login
+2022-11-15 11??57 - INFO: TC01_Verify_User can log into Railway with valid username and password
+2022-11-15 11??57 - INFO: Step 1: Login with valid account
+2022-11-15 11??00 - INFO: Check success message
+2022-11-15 11??06 - INFO: TC02_Verify_User cannot login with blank username
+2022-11-15 11??06 - INFO: Step 1: Login with blank user
+2022-11-15 11??08 - INFO: Check error message appear
+2022-11-15 11??12 - INFO: TC03_Verify_User cannot log into Railway with invalid password 
+2022-11-15 11??12 - INFO: Step 1: Login with invalid password
+2022-11-15 11??14 - INFO: Check error message appear
+2022-11-15 11??19 - INFO: TC04_Verify_Login page displays when un-logged User clicks on Book ticket tab
+2022-11-15 11??19 - INFO: Step 1: Go to the book ticket page without login
+2022-11-15 11??20 - INFO: Check Login page is displayed
+2022-11-15 11??39 - INFO: TC05_Verify_System shows message when user enters wrong password several times
+2022-11-15 11??39 - INFO: Step 1: Login multiple(6) times
+2022-11-15 11??51 - INFO: Check error message appear
+2022-11-15 12??42 - INFO: TC06_Verify_Additional pages display once user logged in
+2022-11-15 12??42 - INFO: Step 1: Login with valid account
+2022-11-15 12??44 - INFO: Check My ticket tab is displayed
+2022-11-15 12??44 - INFO: Check user goes to My ticket page when clicking on My ticket tab
+2022-11-15 12??45 - INFO: check Change Password tab is displayed
+2022-11-15 12??45 - INFO: Check user goes to Change Password page when clicking on Change password tab
+2022-11-15 12??45 - INFO: Check Log out tab is displayed
+2022-11-15 12??49 - INFO: TC14_Verify_User can book 1 ticket at a time
+2022-11-15 12??49 - INFO: Preconditions: Register new account
+2022-11-15 12??51 - INFO: Step 1: Login
+2022-11-15 12??54 - INFO: Step 2: Book a ticket
+2022-11-15 12??02 - INFO: Verify book ticket successfully
+2022-11-15 12??06 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-15 12??06 - INFO: Step 1: Login
+2022-11-15 12??09 - INFO: Step 2: Go to Timetable page
+2022-11-15 12??10 - INFO: Step 3: Click on book ticket button routed from Hue to Nha Trang
+2022-11-15 12??11 - INFO: Check book ticket page is loaded with correct Depart From and Arrive At
+2022-11-15 12??20 - INFO: TC16_Verify_User can cancel a ticket
+2022-11-15 12??20 - INFO: Step 1: Book a ticket
+2022-11-15 12??28 - INFO: Step 2: go to My Ticket tab
+2022-11-15 12??28 - INFO: Step 3: Cancel ticket
+2022-11-15 12??29 - INFO: Check the ticket disappears
+2022-11-15 12??33 - INFO: TC01_Verify_User can log into Railway with valid username and password
+2022-11-15 12??33 - INFO: Step 1: Login with valid account
+2022-11-15 12??35 - INFO: Check success message
+2022-11-15 12??55 - INFO: TC02_Verify_User cannot login with blank username
+2022-11-15 12??55 - INFO: Step 1: Login with blank user
+2022-11-15 12??56 - INFO: Check error message appear
+2022-11-15 12??01 - INFO: TC03_Verify_User cannot log into Railway with invalid password 
+2022-11-15 12??01 - INFO: Step 1: Login with invalid password
+2022-11-15 12??03 - INFO: Check error message appear
+2022-11-15 12??07 - INFO: TC04_Verify_Login page displays when un-logged User clicks on Book ticket tab
+2022-11-15 12??07 - INFO: Step 1: Go to the book ticket page without login
+2022-11-15 12??08 - INFO: Check Login page is displayed
+2022-11-15 12??28 - INFO: TC05_Verify_System shows message when user enters wrong password several times
+2022-11-15 12??28 - INFO: Step 1: Login multiple(6) times
+2022-11-15 12??40 - INFO: Check error message appear
+2022-11-15 12??46 - INFO: TC08_Verify_User can't login with an account hasn't been activated
+2022-11-15 12??46 - INFO: Step 1: Login with an account that is not activated
+2022-11-15 12??48 - INFO: Check unsuccessfully login
+2022-11-15 12??52 - INFO: TC07_Verify_User can create new account
+2022-11-15 12??52 - INFO: Step 1: Create new account with valid data
+2022-11-15 12??54 - INFO: Check success message appear
+2022-11-15 12??57 - INFO: TC10_Verify_User can't create account with Confirm password is not the same with Password
+2022-11-15 12??57 - INFO: Step 1: Create new account with confirm password is not the same with password
+2022-11-15 12??59 - INFO: Check error message appear
+2022-11-15 12??03 - INFO: TC11_Verify_User can't create account while password and PID fields are empty
+2022-11-15 12??03 - INFO: Step 1: Create new account with blank password and pid
+2022-11-15 12??05 - INFO: Check error message appear
+2022-11-15 12??11 - INFO: TC06_Verify_User can change password
+2022-11-15 12??11 - INFO: Step 1: Login
+2022-11-15 12??13 - INFO: Step 2: Change password
+2022-11-15 12??15 - INFO: Check success message appear
