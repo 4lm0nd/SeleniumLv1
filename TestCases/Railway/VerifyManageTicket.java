@@ -4,20 +4,22 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class VerifyBookTicket {
-
+public class VerifyManageTicket {
+    String email = "al" + Utilities.convertDateToString() + "@yopmail.com";
     Utilities utilities = new Utilities();
+    MyTicketPage myTicketPage = new MyTicketPage();
     LoginPage loginPage = new LoginPage();
     RegisterPage registerPage = new RegisterPage();
     BookTicketPage bookTicketPage = new BookTicketPage();
     TimetablePage timetablePage = new TimetablePage();
     GeneralPage generalPage = new GeneralPage();
     Logger logger = new Logger();
-    String email = "al" + Utilities.convertDateToString() + "@yopmail.com";
 
     @BeforeMethod
     public void beforeMethod() {
         generalPage.openSite(Constant.RAILWAY_SITE);
+        logger.info("Preconditions: Register new account");
+        registerPage.register(email, Constant.PASSWORD, Constant.PASSWORD, Constant.PASSWORD);
     }
 
     @AfterMethod
@@ -28,8 +30,6 @@ public class VerifyBookTicket {
     @Test
     public void TC14() {
         logger.info("TC14_Verify_User can book 1 ticket at a time");
-        logger.info("Preconditions: Register new account");
-        registerPage.register(email, Constant.PASSWORD, Constant.PASSWORD, Constant.PASSWORD);
         logger.info("Step 1: Login");
         loginPage.login(email, Constant.PASSWORD);
         logger.info("Step 2: Book a ticket");
@@ -37,11 +37,11 @@ public class VerifyBookTicket {
         String expectedMsg = "Ticket booked successfully!";
         logger.info("Verify book ticket successfully");
         utilities.checkTextContent(bookTicketPage.getSuccessMsg(), expectedMsg);
-        utilities.checkTextContent(bookTicketPage.getBookTicketInfo("Depart Station"),"Quảng Ngãi");
-        utilities.checkTextContent(bookTicketPage.getBookTicketInfo("Arrive Station"),"Nha Trang");
-        utilities.checkTextContent(bookTicketPage.getBookTicketInfo("Seat Type"),"Soft seat with air conditioner");
-        utilities.checkTextContent(bookTicketPage.getBookTicketInfo("Depart Date"),"11/20/2022");
-        utilities.checkTextContent(bookTicketPage.getBookTicketInfo("Amount"),"1");
+        utilities.checkTextContent(bookTicketPage.getBookTicketInfo("Depart Station"), "Quảng Ngãi");
+        utilities.checkTextContent(bookTicketPage.getBookTicketInfo("Arrive Station"), "Nha Trang");
+        utilities.checkTextContent(bookTicketPage.getBookTicketInfo("Seat Type"), "Soft seat with air conditioner");
+        utilities.checkTextContent(bookTicketPage.getBookTicketInfo("Depart Date"), "11/20/2022");
+        utilities.checkTextContent(bookTicketPage.getBookTicketInfo("Amount"), "1");
     }
 
     @Test
@@ -58,4 +58,18 @@ public class VerifyBookTicket {
         utilities.checkSelectedItemList(bookTicketPage.getListDepartFrom(), "Huế");
         utilities.checkSelectedItemList(bookTicketPage.getListArriveAt(), "Nha Trang");
     }
+
+    @Test
+    public void TC16() {
+        logger.info("TC16_Verify_User can cancel a ticket");
+        logger.info("Step 1: Login");
+        loginPage.login(email, Constant.PASSWORD);
+        logger.info("Step 2: go to My Ticket tab");
+        generalPage.goToTab("My ticket");
+        logger.info("Step 3: Cancel ticket");
+        myTicketPage.cancelTicket();
+        logger.info("Check the ticket disappears");
+        utilities.checkElementDoesNotExist(myTicketPage.getMyTable());
+    }
 }
+

@@ -5,14 +5,14 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class VerifyChangePassword {
+
+    String email = "al" + Utilities.convertDateToString() + "@yopmail.com";
     GeneralPage generalPage = new GeneralPage();
     Utilities utilities = new Utilities();
     ChangePasswordPage changePasswordPage = new ChangePasswordPage();
     LoginPage loginPage = new LoginPage();
     RegisterPage registerPage = new RegisterPage();
     Logger logger = new Logger();
-    String email = "al" + Utilities.convertDateToString() + "@yopmail.com";
-
 
     @BeforeMethod
     public void beforeMethod() {

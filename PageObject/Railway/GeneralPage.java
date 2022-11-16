@@ -63,7 +63,7 @@ public class GeneralPage {
     }
 
     public void openSite(String site) {
-        BrowserManager.openBrowser("Chrome", Constant.WEBDRIVER, Constant.DRIVER_PATH);
+        BrowserManager.openBrowser(Constant.BROWSER, Constant.WEB_DRIVER, Constant.DRIVER_PATH);
         Constant.DRIVER.get(site);
         Constant.DRIVER.navigate();
     }
