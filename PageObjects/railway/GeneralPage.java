@@ -1,16 +1,17 @@
-package Railway;
+package railway;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.time.Duration;
 
 public class GeneralPage {
-    //Variable
+
+    //Locator
     String tabMenu = "//span[text()='%s']/ancestor::a";
     String cellTable = "//table[@class='%s']//tr[%d]/td[count(//tr[@class='TableSmallHeader']/th[contains(text(),'%s')]/preceding-sibling::th)+1]";
     private static By pageTitle = By.xpath("//div[@id='content']/h1");
@@ -19,9 +20,11 @@ public class GeneralPage {
     WebElement getTabMenu(String tabName) {
         return Constant.DRIVER.findElement(By.xpath(String.format(tabMenu, tabName)));
     }
+
     WebElement getPageTitle() {
         return Constant.DRIVER.findElement(pageTitle);
     }
+
     WebElement getCellTable(String table, String column, int row) {
         return Constant.DRIVER.findElement(By.xpath(String.format(cellTable, table, row, column)));
     }
@@ -33,7 +36,7 @@ public class GeneralPage {
     }
 
     public void goToTab(String tab) {
-                getTabMenu(tab).click();
+        getTabMenu(tab).click();
     }
 
     public void selectItemFromList(By list, String option) {
@@ -81,6 +84,10 @@ public class GeneralPage {
                 }
         }
         return 0;
+    }
+
+    public void scrollToFindElement(WebElement element) {
+        element.sendKeys(Keys.PAGE_DOWN);
     }
 }
 

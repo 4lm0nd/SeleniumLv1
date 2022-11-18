@@ -1,14 +1,18 @@
-package Railway;
+package railway;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 public class Utilities {
 
@@ -50,10 +54,10 @@ public class Utilities {
         return true;
     }
 
-    public void checkTabExist(String tabName) {
+    public void checkElementExist(WebElement element) {
         try {
 
-            Assert.assertTrue(doesElementDisplay(getTabMenu(tabName)));
+            Assert.assertTrue(doesElementDisplay(element));
 
         } catch (AssertionError ex) {
 
@@ -80,6 +84,15 @@ public class Utilities {
             System.out.println(e.getMessage());
         }
     }
-}
+
+    public String getDateLaterFromCurrentDate(int days) {
+        DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+        Calendar cal = Calendar.getInstance();
+        cal.add(Calendar.DATE, days);
+        Date fromDate = cal.getTime();
+        String fromDateFormat = dateFormat.format(fromDate);
+        return fromDateFormat;
+    }
+ }
 
 

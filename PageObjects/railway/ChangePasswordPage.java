@@ -1,4 +1,4 @@
-package Railway;
+package railway;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -35,7 +35,7 @@ public class ChangePasswordPage extends GeneralPage {
 
     public void changePassword(String currentPass, String newPass, String confirmPass) {
         goToTab("Change password");
-        scrollDown();
+        scrollToFindElement(getBtnChangePassword());
         getTxtCurrentPassword().sendKeys(currentPass);
         getTxtNewPassword().sendKeys(newPass);
         getTxtConfirmPassword().sendKeys(confirmPass);

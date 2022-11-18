@@ -1,4 +1,4 @@
-package Railway;
+package railway;
 
 public class Test_draft {
 
@@ -15,5 +15,9 @@ public class Test_draft {
     public static void main(String[] args) {
         logger.info("TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page");
         System.out.println("This for test github");
+        generalPage.openSite(Constant.RAILWAY_SITE);
+        loginPage.login(Constant.USER_NAME, Constant.PASSWORD);
+        generalPage.goToTab("Timetable");
+        timetablePage.selectTrainFromTrainTimeTable("Huế", "Nha Trang");
     }
 }

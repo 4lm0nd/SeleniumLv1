@@ -1,10 +1,10 @@
-package Railway;
+package railway;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class VerifyChangePassword {
+public class TestCaseChangePassword {
 
     String email = "al" + Utilities.convertDateToString() + "@yopmail.com";
     GeneralPage generalPage = new GeneralPage();
@@ -26,7 +26,7 @@ public class VerifyChangePassword {
     }
 
     @Test
-    public void TC09() {
+    public void TC09_Change_password() {
         logger.info("TC06_Verify_User can change password");
         logger.info("Step 1: Login");
         loginPage.login(email, Constant.PASSWORD);

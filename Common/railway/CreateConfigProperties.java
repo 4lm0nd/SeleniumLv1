@@ -1,4 +1,4 @@
-package Railway;
+package railway;
 
 import java.io.FileOutputStream;
 import java.io.IOException;

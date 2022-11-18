@@ -1,9 +1,6 @@
-package Railway;
+package railway;
 
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.WebDriver;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 
 public class Constant {
 

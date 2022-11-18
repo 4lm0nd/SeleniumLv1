@@ -1,10 +1,10 @@
-package Railway;
+package railway;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class VerifyLogin {
+public class TestCaseLogin {
     LoginPage loginPage = new LoginPage();
     HomePage homePage = new HomePage();
     Utilities utilities = new Utilities();
@@ -22,7 +22,7 @@ public class VerifyLogin {
     }
 
     @Test
-    public void TC01() {
+    public void TC01_Login_with_valid_data() {
         logger.info("TC01_Verify_User can log into Railway with valid username and password");
         logger.info("Step 1: Login with valid account");
         loginPage.login(Constant.USER_NAME, Constant.PASSWORD);
@@ -32,7 +32,7 @@ public class VerifyLogin {
     }
 
     @Test
-    public void TC02() {
+    public void TC02_Login_without_username() {
         logger.info("TC02_Verify_User cannot login with blank username");
         logger.info("Step 1: Login with blank user");
         loginPage.login("", Constant.PASSWORD);
@@ -41,7 +41,7 @@ public class VerifyLogin {
     }
 
     @Test
-    public void TC03() {
+    public void TC03_Login_with_invalid_password() {
         logger.info("TC03_Verify_User cannot log into Railway with invalid password ");
         logger.info("Step 1: Login with invalid password");
         loginPage.login(Constant.USER_NAME, "INVALID_PASSWORD");
@@ -50,7 +50,7 @@ public class VerifyLogin {
     }
 
     @Test
-    public void TC04() {
+    public void TC04_LoginPage_displays_when_clicking_BookTicket_without_login() {
         logger.info("TC04_Verify_Login page displays when un-logged User clicks on Book ticket tab");
         logger.info("Step 1: Go to the book ticket page without login");
         generalPage.goToTab("Book ticket");
@@ -59,7 +59,7 @@ public class VerifyLogin {
     }
 
     @Test
-    public void TC05() {
+    public void TC05_Login_fails_multiple_times() {
         logger.info("TC05_Verify_System shows message when user enters wrong password several times");
         logger.info("Step 1: Login multiple(6) times");
         loginPage.multipleLogin("INVALID_EMAIL", "INVALID_PASSWORD", 6);
@@ -67,3 +67,4 @@ public class VerifyLogin {
         utilities.checkTextContent(loginPage.getErrorMsg(), "You have used 4 out of 5 login attempts. After all 5 have been used, you will be unable to login for 15 minutes.");
     }
 }
+

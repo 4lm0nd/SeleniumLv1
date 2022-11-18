@@ -1,4 +1,4 @@
-package Railway;
+package railway;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -61,7 +61,7 @@ public class RegisterPage extends GeneralPage {
 
     public void register(String email, String password, String confirmPassword, String PID) {
         goToTab("Register");
-        scrollDown();
+        scrollToFindElement(getBtnRegister());
         getTxtEmail().sendKeys(email);
         getTxtPassword().sendKeys(password);
         getTxtConfirmPassword().sendKeys(confirmPassword);

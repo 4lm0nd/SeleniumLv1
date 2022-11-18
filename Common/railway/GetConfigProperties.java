@@ -1,9 +1,10 @@
-package Railway;
+package railway;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
+
 public class GetConfigProperties {
     public static String getProperty(String key) {
         String configPropertiesPath = "Resources/config.properties";

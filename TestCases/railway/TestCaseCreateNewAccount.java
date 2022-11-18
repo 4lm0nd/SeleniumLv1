@@ -1,10 +1,10 @@
-package Railway;
+package railway;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class VerifyCreateNewAccount {
+public class TestCaseCreateNewAccount {
 
     String emailTC07 = "al07" + Utilities.convertDateToString() + "@yopmail.com";
     String emailTC10 = "al10" + Utilities.convertDateToString() + "@yopmail.com";
@@ -26,7 +26,7 @@ public class VerifyCreateNewAccount {
     }
 
     @Test
-    public void TC07() {
+    public void TC07_Create_account_with_valid_data() {
         logger.info("TC07_Verify_User can create new account");
         logger.info("Step 1: Create new account with valid data");
         registerPage.register(emailTC07, Constant.PASSWORD, Constant.PASSWORD, Constant.PASSWORD);
@@ -34,7 +34,7 @@ public class VerifyCreateNewAccount {
         utilities.checkTextContent(registerPage.getSuccessMsg(), "Registration Confirmed! You can now log in to the site.");
     }
     @Test
-    public void TC10() {
+    public void TC10_Create_account_with_mismatched_passwords() {
         logger.info("TC10_Verify_User can't create account with Confirm password is not the same with Password");
         logger.info("Step 1: Create new account with confirm password is not the same with password");
         registerPage.register(emailTC10, Constant.PASSWORD, Constant.PASSWORD2, Constant.PASSWORD);
@@ -42,7 +42,7 @@ public class VerifyCreateNewAccount {
         utilities.checkTextContent(registerPage.getErrorMsg(), "There're errors in the form. Please correct the errors and try again.");
     }
     @Test
-    public void TC11() {
+    public void TC11_Create_account_without_PID() {
         logger.info("TC11_Verify_User can't create account while password and PID fields are empty");
         logger.info("Step 1: Create new account with blank password and pid");
         registerPage.register(emailTC11, "", "", "");

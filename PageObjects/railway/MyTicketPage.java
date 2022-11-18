@@ -1,4 +1,4 @@
-package Railway;
+package railway;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -7,7 +7,6 @@ import org.openqa.selenium.WebElement;
 public class MyTicketPage extends GeneralPage {
 
     //Locator
-
     By btnCancel = By.xpath("//table[@class='MyTable']//tr[last()]/td[last()]/input");
     By myTable = By.className("MyTable");
 

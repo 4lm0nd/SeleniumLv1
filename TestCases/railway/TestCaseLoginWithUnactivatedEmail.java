@@ -1,10 +1,10 @@
-package Railway;
+package railway;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class VerifyLoginWithUnactivatedEmail {
+public class TestCaseLoginWithUnactivatedEmail {
     String email = "al" + Utilities.convertDateToString() + "@yopmail.com";
 
     GeneralPage generalPage = new GeneralPage();
@@ -25,7 +25,7 @@ public class VerifyLoginWithUnactivatedEmail {
     }
 
     @Test
-    public void TC08() {
+    public void TC08_Login_with_unactivated_username() {
         logger.info("TC08_Verify_User can't login with an account hasn't been activated");
         logger.info("Step 1: Login with an account that is not activated");
         loginPage.login(email, Constant.PASSWORD);

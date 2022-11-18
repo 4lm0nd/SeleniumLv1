@@ -1,12 +1,12 @@
 <suite name="Suite">
     <test name="Test">
         <classes>
-            <class name="Railway.VerifyAdditionalPagesDisplayAfterLogin"/>
-            <class name="Railway.VerifyManageTicket"/>
-            <class name = "Railway.VerifyLogin"/>
-            <class name ="Railway.VerifyLoginWithUnactivatedEmail"/>
-            <class name ="Railway.VerifyCreateNewAccount"/>
-            <class name ="Railway.VerifyChangePassword"/>.
+            <class name="railway.TestCaseAdditionalPagesDisplayAfterLogin"/>
+            <class name="railway.TestCaseManageTicket"/>
+            <class name = "railway.TestCaseLogin"/>
+            <class name ="railway.TestCaseLoginWithUnactivatedEmail"/>
+            <class name ="railway.TestCaseCreateNewAccount"/>
+            <class name ="railway.TestCaseChangePassword"/>.
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -1,10 +1,11 @@
-package Railway;
+package railway;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 
 public class BookTicketPage extends GeneralPage {
+
     //Locator
     private By listDepartDate = By.xpath("//select[@name = 'Date']");
     private By btnBookTicket = By.xpath("//input[@value ='Book ticket']");
@@ -45,7 +46,7 @@ public class BookTicketPage extends GeneralPage {
 
     public void bookTicket(String departDate, String departStation, String arriveStation, String seatType, String ticketAmount) {
         goToTab("Book ticket");
-        scrollDown();
+        scrollToFindElement(getBtnBookTicket());
         selectItemFromList(listDepartDate, departDate);
         selectItemFromList(listDepartFrom, departStation);
         waitForControl(listArriveAt, 3);

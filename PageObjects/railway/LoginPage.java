@@ -1,4 +1,4 @@
-package Railway;
+package railway;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -33,7 +33,7 @@ public class LoginPage extends GeneralPage {
     //Method
     public void login(String email, String pass) {
         goToTab("Login");
-        scrollDown();
+        scrollToFindElement(getBtnLogin());
         getTxtEmail().click();
         getTxtEmail().sendKeys(email);
         getTxtPassword().click();
@@ -43,7 +43,7 @@ public class LoginPage extends GeneralPage {
 
     public void multipleLogin(String email, String pass, int time) {
         goToTab("Login");
-        scrollDown();
+        scrollToFindElement(getBtnLogin());
         for (int i = 0; i < time; i++) {
             login(email, pass);
         }

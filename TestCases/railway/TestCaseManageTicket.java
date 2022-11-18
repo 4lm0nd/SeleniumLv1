@@ -1,10 +1,10 @@
-package Railway;
+package railway;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class VerifyManageTicket {
+public class TestCaseManageTicket {
     String email = "al" + Utilities.convertDateToString() + "@yopmail.com";
     Utilities utilities = new Utilities();
     MyTicketPage myTicketPage = new MyTicketPage();
@@ -28,24 +28,24 @@ public class VerifyManageTicket {
     }
 
     @Test
-    public void TC14() {
+    public void TC14_BookTicket_with_valid_data() {
         logger.info("TC14_Verify_User can book 1 ticket at a time");
         logger.info("Step 1: Login");
         loginPage.login(email, Constant.PASSWORD);
         logger.info("Step 2: Book a ticket");
-        bookTicketPage.bookTicket("11/20/2022", "Quảng Ngãi", "Nha Trang", "Soft seat with air conditioner", "1");
+        bookTicketPage.bookTicket(utilities.getDateLaterFromCurrentDate(7), "Quảng Ngãi", "Nha Trang", "Soft seat with air conditioner", "1");
         String expectedMsg = "Ticket booked successfully!";
         logger.info("Verify book ticket successfully");
         utilities.checkTextContent(bookTicketPage.getSuccessMsg(), expectedMsg);
         utilities.checkTextContent(bookTicketPage.getBookTicketInfo("Depart Station"), "Quảng Ngãi");
         utilities.checkTextContent(bookTicketPage.getBookTicketInfo("Arrive Station"), "Nha Trang");
         utilities.checkTextContent(bookTicketPage.getBookTicketInfo("Seat Type"), "Soft seat with air conditioner");
-        utilities.checkTextContent(bookTicketPage.getBookTicketInfo("Depart Date"), "11/20/2022");
+        utilities.checkTextContent(bookTicketPage.getBookTicketInfo("Depart Date"), utilities.getDateLaterFromCurrentDate(7));
         utilities.checkTextContent(bookTicketPage.getBookTicketInfo("Amount"), "1");
     }
 
     @Test
-    public void TC15() {
+    public void TC15_Open_BookTicketPage_from_TrainTimeTable() {
         logger.info("TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page");
         logger.info("Step 1: Login");
         loginPage.login(email, Constant.PASSWORD);
@@ -60,7 +60,7 @@ public class VerifyManageTicket {
     }
 
     @Test
-    public void TC16() {
+    public void TC16_Cancel_ticket() {
         logger.info("TC16_Verify_User can cancel a ticket");
         logger.info("Step 1: Login");
         loginPage.login(email, Constant.PASSWORD);

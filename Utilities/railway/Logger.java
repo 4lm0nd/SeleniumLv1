@@ -1,4 +1,4 @@
-package Railway;
+package railway;
 
 import org.apache.log4j.LogManager;
 import org.apache.log4j.PropertyConfigurator;
@@ -12,7 +12,7 @@ public class Logger {
         PropertyConfigurator.configure(log4jConfPath);
     }
 
-    public static void info(String message) {
+    public void info(String message) {
         logger.info(String.format(message));
     }
 
