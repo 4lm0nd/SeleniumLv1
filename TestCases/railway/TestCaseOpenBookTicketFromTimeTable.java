@@ -23,7 +23,7 @@ public class TestCaseOpenBookTicketFromTimeTable {
     @AfterMethod
     public void afterMethod() {
         Constant.DRIVER.quit();
-    }
+   }
 
     @Test
     public void TC15_Open_BookTicketPage_from_TrainTimeTable() {
@@ -32,11 +32,12 @@ public class TestCaseOpenBookTicketFromTimeTable {
         loginPage.login(email, password);
         logger.info("Step 2: Go to Timetable page");
         generalPage.goToTab("Timetable");
-        generalPage.scrollDown();
         logger.info("Step 3: Click on book ticket button routed from Hue to Nha Trang");
+        generalPage.scrollPageDown();
         timetablePage.selectTrainFromTrainTimeTable("Huế", "Nha Trang");
         logger.info("Check book ticket page is loaded with correct Depart From and Arrive At");
         utilities.checkSelectedItem(bookTicketPage.getListDepartFrom(), "Huế");
         utilities.checkSelectedItem(bookTicketPage.getListArriveAt(), "Nha Trang");
     }
 }
+

@@ -4,16 +4,17 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.safari.SafariDriver;
+
 import java.util.concurrent.TimeUnit;
 
 public class BrowserManager {
 
     public static void openBrowser(String browserName, String webDriver, String driverPath) {
         driverBrowser(browserName, webDriver, driverPath);
-        Constant.DRIVER.manage().window().maximize();
-        Constant.DRIVER.manage().deleteAllCookies();
-        Constant.DRIVER.manage().timeouts().pageLoadTimeout(Constant.WAIT_SHORT_TIME, TimeUnit.SECONDS);
-        Constant.DRIVER.manage().timeouts().implicitlyWait(Constant.WAIT_SHORT_TIME, TimeUnit.SECONDS);
+        maximizeWindow();
+        deleteAllCookies();
+        setImplicitlyWait(Constant.WAIT_SHORT_TIME);
+        setPageLoadTimeout(Constant.WAIT_SHORT_TIME);
     }
 
     public static void driverBrowser(String browserName, String webDriver, String driverPath) {
@@ -33,5 +34,23 @@ public class BrowserManager {
                 break;
         }
     }
+
+    public static void maximizeWindow() {
+        Constant.DRIVER.manage().window().maximize();
+    }
+
+    public static void deleteAllCookies() {
+        Constant.DRIVER.manage().deleteAllCookies();
+    }
+
+    public static void setImplicitlyWait(int timeToWait) {
+        Constant.DRIVER.manage().timeouts().implicitlyWait(timeToWait, TimeUnit.SECONDS);
+    }
+
+    public static void setPageLoadTimeout(int timeToWait) {
+        Constant.DRIVER.manage().timeouts().pageLoadTimeout(timeToWait, TimeUnit.SECONDS);
+    }
+
+
 }
 

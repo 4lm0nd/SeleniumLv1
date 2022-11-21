@@ -2,7 +2,6 @@ package railway;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -31,7 +30,7 @@ public class GeneralPage {
     }
 
     //Method
-    public void scrollDown() {
+    public void scrollPageDown() {
         JavascriptExecutor js = (JavascriptExecutor) Constant.DRIVER;
         js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
     }
@@ -75,18 +74,9 @@ public class GeneralPage {
         return getCellTable(table, column, row).getText();
     }
 
-    public int getTableRow(String table, String departStation, String arriveStation, int rows) {
-        for (int i = 1; i <= rows; i++) {
-            if (getTableCellValue(table, "Depart Station", i).equals(departStation))
-                if (getTableCellValue(table, "Arrive Station", i).equals(arriveStation)) {
-                    return i;
-                }
-        }
-        return 0;
-    }
-
     public void scrollToFindElement(WebElement element) {
-        element.sendKeys(Keys.PAGE_DOWN);
+        JavascriptExecutor js = (JavascriptExecutor) Constant.DRIVER;
+        js.executeScript("arguments[0].scrollIntoView();", element);
     }
 }
 
