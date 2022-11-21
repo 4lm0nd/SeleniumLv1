@@ -7,25 +7,26 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 import java.time.Duration;
 
 public class GeneralPage {
 
     //Locator
-    String tabMenu = "//span[text()='%s']/ancestor::a";
-    String cellTable = "//table[@class='%s']//tr[%d]/td[count(//tr[@class='TableSmallHeader']/th[contains(text(),'%s')]/preceding-sibling::th)+1]";
-    private static By pageTitle = By.xpath("//div[@id='content']/h1");
+    private final String tabMenu = "//span[text()='%s']/ancestor::a";
+    private final String cellTable = "//table[@class='%s']//tr[%d]/td[count(//tr[@class='TableSmallHeader']/th[contains(text(),'%s')]/preceding-sibling::th)+1]";
+    private final By pageTitle = By.xpath("//div[@id='content']/h1");
 
     //Element
-    WebElement getTabMenu(String tabName) {
+    public WebElement getTabMenu(String tabName) {
         return Constant.DRIVER.findElement(By.xpath(String.format(tabMenu, tabName)));
     }
 
-    WebElement getPageTitle() {
+    public WebElement getPageTitle() {
         return Constant.DRIVER.findElement(pageTitle);
     }
 
-    WebElement getCellTable(String table, String column, int row) {
+    public WebElement getCellTable(String table, String column, int row) {
         return Constant.DRIVER.findElement(By.xpath(String.format(cellTable, table, row, column)));
     }
 
@@ -61,8 +62,7 @@ public class GeneralPage {
     }
 
     public String getTitlePage() {
-        String titlePage = getPageTitle().getText().toString();
-        return titlePage;
+        return getPageTitle().getText();
     }
 
     public void openSite(String site) {
@@ -72,8 +72,7 @@ public class GeneralPage {
     }
 
     public String getTableCellValue(String table, String column, int row) {
-        String cellValue = getCellTable(table, column, row).getText().toString();
-        return cellValue;
+        return getCellTable(table, column, row).getText();
     }
 
     public int getTableRow(String table, String departStation, String arriveStation, int rows) {

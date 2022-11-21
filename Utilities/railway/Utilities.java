@@ -1,38 +1,26 @@
 package railway;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Utilities {
 
-    //Variation
-    String tabMenu = "//span[text()='%s']/ancestor::a";
-
-    //Element
-    WebElement getTabMenu(String tabName) {
-        return Constant.DRIVER.findElement(By.xpath(String.format(tabMenu, tabName)));
-    }
-
     //Method
     public static String convertDateToString() {
-        java.util.Date date = new java.util.Date();
-        DateFormat dateFormat = new SimpleDateFormat("yyymmmddhhmmss");
-        String strDate = dateFormat.format(date);
+        DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern(Constant.FULL_DATETIME);
+        LocalDateTime localDate = LocalDateTime.now();
+        String strDate = dateFormat.format(localDate);
         return strDate;
     }
 
-    public void checkTextContent(String actualMsg, String expectedMsg) {
+    public static void checkTextContent(String actualMsg, String expectedMsg) {
         SoftAssert softAssert = new SoftAssert();
         try {
             softAssert.assertEquals(actualMsg, expectedMsg);
@@ -44,7 +32,7 @@ public class Utilities {
         }
     }
 
-    public boolean doesElementDisplay(WebElement element) {
+    public static boolean doesElementDisplay(WebElement element) {
         try {
             element.isDisplayed();
         } catch (NoSuchElementException ex) {
@@ -54,7 +42,7 @@ public class Utilities {
         return true;
     }
 
-    public void checkElementExist(WebElement element) {
+    public static void checkElementExist(WebElement element) {
         try {
 
             Assert.assertTrue(doesElementDisplay(element));
@@ -65,10 +53,10 @@ public class Utilities {
         }
     }
 
-    public void checkSelectedItemList(WebElement selection, String option) {
+    public static void checkSelectedItem(WebElement selection, String option) {
         Select selectedValue = new Select(selection);
         WebElement optionA = selectedValue.getFirstSelectedOption();
-        String selectedOption = optionA.getText().toString();
+        String selectedOption = optionA.getText();
         try {
             Assert.assertEquals(selectedOption, option);
         } catch (AssertionError ex) {
@@ -77,22 +65,22 @@ public class Utilities {
         }
     }
 
-    public void checkElementDoesNotExist(WebElement element) {
+    public static void checkElementDoesNotExist(WebElement element) {
         try {
-            Assert.assertFalse(doesElementDisplay(element) == true);
+            Assert.assertFalse(doesElementDisplay(element));
         } catch (AssertionError e) {
             System.out.println(e.getMessage());
         }
     }
 
-    public String getDateLaterFromCurrentDate(int days) {
-        DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
-        Calendar cal = Calendar.getInstance();
-        cal.add(Calendar.DATE, days);
-        Date fromDate = cal.getTime();
-        String fromDateFormat = dateFormat.format(fromDate);
+    public static String getDateLaterFromCurrentDate(int days) {
+        DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern(Constant.SHORT_DATE_US);
+        LocalDate localDate = LocalDate.now().plusDays(days);
+        String fromDateFormat = dateFormat.format(localDate);
         return fromDateFormat;
     }
- }
+}
+
+
 
 

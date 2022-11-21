@@ -6,6 +6,7 @@
             <class name = "railway.TestCaseLogin"/>
             <class name ="railway.TestCaseLoginWithUnactivatedEmail"/>
             <class name ="railway.TestCaseCreateNewAccount"/>
+            <class name ="railway.TestCaseOpenBookTicketFromTimeTable"/>
             <class name ="railway.TestCaseChangePassword"/>.
         </classes>
     </test> <!-- Test -->

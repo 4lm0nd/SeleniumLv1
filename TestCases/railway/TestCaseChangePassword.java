@@ -6,32 +6,37 @@ import org.testng.annotations.Test;
 
 public class TestCaseChangePassword {
 
-    String email = "al" + Utilities.convertDateToString() + "@yopmail.com";
-    GeneralPage generalPage = new GeneralPage();
-    Utilities utilities = new Utilities();
-    ChangePasswordPage changePasswordPage = new ChangePasswordPage();
-    LoginPage loginPage = new LoginPage();
-    RegisterPage registerPage = new RegisterPage();
-    Logger logger = new Logger();
+    private static final String email = "al" + Utilities.convertDateToString() + "@yopmail.com";
+    private static final String password = ReadFileJson.getJsonValue("Register.json", "password");
+    private static final String password2 = ReadFileJson.getJsonValue("Register.json", "password2");
+    private static final String confirmPass = ReadFileJson.getJsonValue("Register.json", "confirm password");
+    private static final String PID = ReadFileJson.getJsonValue("Register.json", "pid password");
+    private static final GeneralPage generalPage = new GeneralPage();
+    private static final Utilities utilities = new Utilities();
+    private static final ChangePasswordPage changePasswordPage = new ChangePasswordPage();
+    private static final LoginPage loginPage = new LoginPage();
+    private static final RegisterPage registerPage = new RegisterPage();
+    private static final Logger logger = new Logger();
 
     @BeforeMethod
     public void beforeMethod() {
         generalPage.openSite(Constant.RAILWAY_SITE);
-        registerPage.register(email, Constant.PASSWORD, Constant.PASSWORD, Constant.PASSWORD);
+        logger.info("Preconditions: Register new account");
+        registerPage.register(email, password, confirmPass, PID);
     }
 
     @AfterMethod
     public void afterMethod() {
-        Constant.DRIVER.close();
+        Constant.DRIVER.quit();
     }
 
     @Test
-    public void TC09_Change_password() {
+    public void TC09_Verify_User_Can_Change_password() {
         logger.info("TC06_Verify_User can change password");
         logger.info("Step 1: Login");
-        loginPage.login(email, Constant.PASSWORD);
+        loginPage.login(email, password);
         logger.info("Step 2: Change password");
-        changePasswordPage.changePassword(Constant.PASSWORD, Constant.PASSWORD2, Constant.PASSWORD2);
+        changePasswordPage.changePassword(password, password2, password2);
         logger.info("Check success message appear");
         utilities.checkTextContent(changePasswordPage.getSuccessMsg(), "Your password has been updated!");
     }

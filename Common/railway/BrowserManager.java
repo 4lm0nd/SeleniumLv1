@@ -12,8 +12,8 @@ public class BrowserManager {
         driverBrowser(browserName, webDriver, driverPath);
         Constant.DRIVER.manage().window().maximize();
         Constant.DRIVER.manage().deleteAllCookies();
-        Constant.DRIVER.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
-        Constant.DRIVER.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        Constant.DRIVER.manage().timeouts().pageLoadTimeout(Constant.WAIT_SHORT_TIME, TimeUnit.SECONDS);
+        Constant.DRIVER.manage().timeouts().implicitlyWait(Constant.WAIT_SHORT_TIME, TimeUnit.SECONDS);
     }
 
     public static void driverBrowser(String browserName, String webDriver, String driverPath) {

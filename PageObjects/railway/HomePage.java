@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 public class HomePage {
 
     //Locators
-    private static By lblWelcomeMessage = By.xpath("//div[@class ='account']/strong");
+    private static final By lblWelcomeMessage = By.xpath("//div[@class ='account']/strong");
 
     //Elements
     public final WebElement getLblWelcomeMessage() {
@@ -14,7 +14,6 @@ public class HomePage {
     }
 
     public String getWelcomeMsg() {
-        String welcomeMsg = getLblWelcomeMessage().getText().toString();
-        return welcomeMsg;
+        return getLblWelcomeMessage().getText();
     }
 }

@@ -7,11 +7,10 @@ import org.openqa.selenium.WebElement;
 public class LoginPage extends GeneralPage {
 
     //Locator
-    private By txtEmail = By.id("username");
-    private By txtPassword = By.id("password");
-    private By btnLogin = By.xpath("//input[@title='Login']");
-    private By msgError = By.xpath("//p[@class = 'message error LoginForm']");
-    private By pageTitle = By.xpath("//div[@id='content']/h1");
+    private static final By txtEmail = By.id("username");
+    private static final By txtPassword = By.id("password");
+    private static final By btnLogin = By.xpath("//input[@title='Login']");
+    private static final By msgError = By.xpath("//p[@class = 'message error LoginForm']");
 
     //Element
     public WebElement getTxtEmail() {
@@ -50,12 +49,7 @@ public class LoginPage extends GeneralPage {
     }
 
     public String getErrorMsg() {
-        String errorMsg = getMsgError().getText().toString();
-        return errorMsg;
+        return getMsgError().getText();
     }
 
-    public String getLoginPageTitle(){
-      String pageTitle =  getTitlePage();
-        return pageTitle;
-    }
 }

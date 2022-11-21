@@ -7,12 +7,14 @@ import java.util.Properties;
 
 public class GetConfigProperties {
     public static String getProperty(String key) {
+
         String configPropertiesPath = "Resources/config.properties";
+
         try (InputStream input = new FileInputStream(configPropertiesPath)) {
             Properties prop = new Properties();
             // load a properties file
             prop.load(input);
-            String propertyValue = prop.getProperty(key).toString();
+            String propertyValue = prop.getProperty(key);
             return propertyValue;
         } catch (IOException ex) {
             ex.printStackTrace();

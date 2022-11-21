@@ -7,13 +7,13 @@ import org.openqa.selenium.WebElement;
 public class BookTicketPage extends GeneralPage {
 
     //Locator
-    private By listDepartDate = By.xpath("//select[@name = 'Date']");
-    private By btnBookTicket = By.xpath("//input[@value ='Book ticket']");
-    private By listDepartFrom = By.xpath("//select[@name ='DepartStation']");
-    private By listArriveAt = By.xpath("//select[@name ='ArriveStation']");
-    private By listSeatType = By.xpath("//select[@name ='SeatType']");
-    private By listTicketAmount = By.xpath("//select[@name ='TicketAmount']");
-    private By msgSuccess = By.xpath("//div[@id='content']/h1");
+    private static final By listDepartDate = By.xpath("//select[@name = 'Date']");
+    private static final By btnBookTicket = By.xpath("//input[@value ='Book ticket']");
+    private static final By listDepartFrom = By.xpath("//select[@name ='DepartStation']");
+    private static final By listArriveAt = By.xpath("//select[@name ='ArriveStation']");
+    private static final By listSeatType = By.xpath("//select[@name ='SeatType']");
+    private static final By listTicketAmount = By.xpath("//select[@name ='TicketAmount']");
+    private static final By msgSuccess = By.xpath("//div[@id='content']/h1");
 
     //Element
     public WebElement getListDepartDate() {
@@ -53,18 +53,16 @@ public class BookTicketPage extends GeneralPage {
         selectItemFromList(listArriveAt, arriveStation);
         selectItemFromList(listSeatType, seatType);
         selectItemFromList(listTicketAmount, ticketAmount);
-        waitForControl(btnBookTicket, 3);
+        waitForControl(btnBookTicket, Constant.WAIT_CONTROL_TIME);
         getBtnBookTicket().click();
     }
 
     public String getSuccessMsg() {
-        String successMsg = getMsgSuccess().getText().toString();
-        return successMsg;
+        return getMsgSuccess().getText();
     }
 
     public String getBookTicketInfo(String column) {
-        String value = getTableCellValue("MyTable WideTable", column, 2);
-        return value;
+        return getTableCellValue("MyTable WideTable", column, 2);
     }
 }
 

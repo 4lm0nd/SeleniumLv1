@@ -5,11 +5,17 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class TestCaseLogin {
-    LoginPage loginPage = new LoginPage();
-    HomePage homePage = new HomePage();
-    Utilities utilities = new Utilities();
-    GeneralPage generalPage = new GeneralPage();
-    Logger logger = new Logger();
+
+    private static final String email = ReadFileJson.getJsonValue("Login.json", "username");
+    private static final String password = ReadFileJson.getJsonValue("Login.json", "password");
+    private static final String errorLoginMsg = ReadFileJson.getJsonValue("Login.json", "msg login error");
+    private static final String validationMsg = ReadFileJson.getJsonValue("Login.json", "msg validation");
+    private static final String loginFailedMultipleTimeMsg = ReadFileJson.getJsonValue("Login.json", "msg login fail multiple times");
+    private static final LoginPage loginPage = new LoginPage();
+    private static final HomePage homePage = new HomePage();
+    private static final Utilities utilities = new Utilities();
+    private static final GeneralPage generalPage = new GeneralPage();
+    private static final Logger logger = new Logger();
 
     @BeforeMethod
     public void beforeMethod() {
@@ -18,53 +24,53 @@ public class TestCaseLogin {
 
     @AfterMethod
     public void afterMethod() {
-        Constant.DRIVER.close();
+        Constant.DRIVER.quit();
     }
 
     @Test
-    public void TC01_Login_with_valid_data() {
+    public void TC01_Verify_User_can_login_with_valid_data() {
         logger.info("TC01_Verify_User can log into Railway with valid username and password");
         logger.info("Step 1: Login with valid account");
-        loginPage.login(Constant.USER_NAME, Constant.PASSWORD);
-        String expectedMsg = "Welcome " + Constant.USER_NAME;
+        loginPage.login(email, password);
+        String expectedMsg = "Welcome " + ReadFileJson.getJsonValue("Login.json", "username");
         logger.info("Check success message");
         utilities.checkTextContent(homePage.getWelcomeMsg(), expectedMsg);
     }
 
     @Test
-    public void TC02_Login_without_username() {
+    public void TC02_Verify_User_cannot_login_without_username() {
         logger.info("TC02_Verify_User cannot login with blank username");
         logger.info("Step 1: Login with blank user");
-        loginPage.login("", Constant.PASSWORD);
+        loginPage.login("", password);
         logger.info("Check error message appear");
-        utilities.checkTextContent(loginPage.getErrorMsg(), "There was a problem with your login and/or errors exist in your form.");
+        utilities.checkTextContent(loginPage.getErrorMsg(), errorLoginMsg);
     }
 
     @Test
-    public void TC03_Login_with_invalid_password() {
+    public void TC03_Verify_User_cannot_login_with_invalid_password() {
         logger.info("TC03_Verify_User cannot log into Railway with invalid password ");
         logger.info("Step 1: Login with invalid password");
-        loginPage.login(Constant.USER_NAME, "INVALID_PASSWORD");
+        loginPage.login(email, "INVALID_PASSWORD");
         logger.info("Check error message appear");
-        utilities.checkTextContent(loginPage.getErrorMsg(), "Invalid username or password. Please try again.");
+        utilities.checkTextContent(loginPage.getErrorMsg(), validationMsg);
     }
 
     @Test
-    public void TC04_LoginPage_displays_when_clicking_BookTicket_without_login() {
+    public void TC04_Verify_User_cannot_goto_BookTicket_without_login() {
         logger.info("TC04_Verify_Login page displays when un-logged User clicks on Book ticket tab");
         logger.info("Step 1: Go to the book ticket page without login");
         generalPage.goToTab("Book ticket");
         logger.info("Check Login page is displayed");
-        utilities.checkTextContent(loginPage.getLoginPageTitle(), "Login page");
+        utilities.checkTextContent(generalPage.getTitlePage(), "Login page");
     }
 
     @Test
-    public void TC05_Login_fails_multiple_times() {
+    public void TC05_Verify_Error_message_diplay_when_logging_in_fails_multiple_times() {
         logger.info("TC05_Verify_System shows message when user enters wrong password several times");
         logger.info("Step 1: Login multiple(6) times");
         loginPage.multipleLogin("INVALID_EMAIL", "INVALID_PASSWORD", 6);
         logger.info("Check error message appear");
-        utilities.checkTextContent(loginPage.getErrorMsg(), "You have used 4 out of 5 login attempts. After all 5 have been used, you will be unable to login for 15 minutes.");
+        utilities.checkTextContent(loginPage.getErrorMsg(), loginFailedMultipleTimeMsg);
     }
 }
 

@@ -759,3 +759,662 @@
 2022-11-17 23??25 - INFO: Step 1: Login
 2022-11-17 23??27 - INFO: Step 2: Change password
 2022-11-17 23??29 - INFO: Check success message appear
+2022-11-18 02??47 - INFO: TC06_Verify_Additional pages display once user logged in
+2022-11-18 02??47 - INFO: Step 1: Login with valid account
+2022-11-18 02??56 - INFO: Check My ticket tab is displayed
+2022-11-18 02??56 - INFO: Check user goes to My ticket page when clicking on My ticket tab
+2022-11-18 02??58 - INFO: check Change Password tab is displayed
+2022-11-18 02??58 - INFO: Check user goes to Change Password page when clicking on Change password tab
+2022-11-18 02??59 - INFO: Check Log out tab is displayed
+2022-11-18 03??04 - INFO: Preconditions: Register new account
+2022-11-18 03??07 - INFO: TC14_Verify_User can book 1 ticket at a time
+2022-11-18 03??07 - INFO: Step 1: Login
+2022-11-18 03??09 - INFO: Step 2: Book a ticket
+2022-11-18 03??18 - INFO: Verify book ticket successfully
+2022-11-18 03??23 - INFO: Preconditions: Register new account
+2022-11-18 03??25 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-18 03??25 - INFO: Step 1: Login
+2022-11-18 03??27 - INFO: Step 2: Go to Timetable page
+2022-11-18 03??28 - INFO: Step 3: Click on book ticket button routed from Hue to Nha Trang
+2022-11-18 03??29 - INFO: Check book ticket page is loaded with correct Depart From and Arrive At
+2022-11-18 03??35 - INFO: Preconditions: Register new account
+2022-11-18 03??37 - INFO: TC16_Verify_User can cancel a ticket
+2022-11-18 03??37 - INFO: Step 1: Login
+2022-11-18 03??39 - INFO: Step 2: go to My Ticket tab
+2022-11-18 03??40 - INFO: Step 3: Cancel ticket
+2022-11-18 03??40 - INFO: Check the ticket disappears
+2022-11-18 03??03 - INFO: TC01_Verify_User can log into Railway with valid username and password
+2022-11-18 03??03 - INFO: Step 1: Login with valid account
+2022-11-18 03??08 - INFO: Check success message
+2022-11-18 03??13 - INFO: TC02_Verify_User cannot login with blank username
+2022-11-18 03??13 - INFO: Step 1: Login with blank user
+2022-11-18 03??15 - INFO: Check error message appear
+2022-11-18 03??35 - INFO: TC03_Verify_User cannot log into Railway with invalid password 
+2022-11-18 03??35 - INFO: Step 1: Login with invalid password
+2022-11-18 03??37 - INFO: Check error message appear
+2022-11-18 03??43 - INFO: TC04_Verify_Login page displays when un-logged User clicks on Book ticket tab
+2022-11-18 03??43 - INFO: Step 1: Go to the book ticket page without login
+2022-11-18 03??44 - INFO: Check Login page is displayed
+2022-11-18 03??51 - INFO: TC05_Verify_System shows message when user enters wrong password several times
+2022-11-18 03??51 - INFO: Step 1: Login multiple(6) times
+2022-11-18 03??02 - INFO: Check error message appear
+2022-11-18 03??25 - INFO: Preconditions: Register new account
+2022-11-18 03??27 - INFO: TC08_Verify_User can't login with an account hasn't been activated
+2022-11-18 03??27 - INFO: Step 1: Login with an account that is not activated
+2022-11-18 03??29 - INFO: Check unsuccessfully login
+2022-11-18 03??35 - INFO: TC07_Verify_User can create new account
+2022-11-18 03??35 - INFO: Step 1: Create new account with valid data
+2022-11-18 03??38 - INFO: Check success message appear
+2022-11-18 03??45 - INFO: TC10_Verify_User can't create account with Confirm password is not the same with Password
+2022-11-18 03??45 - INFO: Step 1: Create new account with confirm password is not the same with password
+2022-11-18 03??47 - INFO: Check error message appear
+2022-11-18 03??55 - INFO: TC11_Verify_User can't create account while password and PID fields are empty
+2022-11-18 03??55 - INFO: Step 1: Create new account with blank password and pid
+2022-11-18 03??57 - INFO: Check error message appear
+2022-11-18 03??26 - INFO: Preconditions: Register new account
+2022-11-18 03??27 - INFO: TC06_Verify_User can change password
+2022-11-18 03??27 - INFO: Step 1: Login
+2022-11-18 03??30 - INFO: Step 2: Change password
+2022-11-18 03??33 - INFO: Check success message appear
+2022-11-18 03??34 - INFO: TC04_Verify_Login page displays when un-logged User clicks on Book ticket tab
+2022-11-18 03??34 - INFO: Step 1: Go to the book ticket page without login
+2022-11-18 03??35 - INFO: Check Login page is displayed
+2022-11-18 03??58 - INFO: TC06_Verify_Additional pages display once user logged in
+2022-11-18 03??58 - INFO: Step 1: Login with valid account
+2022-11-18 03??00 - INFO: Check My ticket tab is displayed
+2022-11-18 03??00 - INFO: Check user goes to My ticket page when clicking on My ticket tab
+2022-11-18 03??01 - INFO: check Change Password tab is displayed
+2022-11-18 03??01 - INFO: Check user goes to Change Password page when clicking on Change password tab
+2022-11-18 03??02 - INFO: Check Log out tab is displayed
+2022-11-18 03??08 - INFO: Preconditions: Register new account
+2022-11-18 03??12 - INFO: TC14_Verify_User can book 1 ticket at a time
+2022-11-18 03??12 - INFO: Step 1: Login
+2022-11-18 03??14 - INFO: Step 2: Book a ticket
+2022-11-18 03??24 - INFO: Verify book ticket successfully
+2022-11-18 03??32 - INFO: Preconditions: Register new account
+2022-11-18 03??34 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-18 03??34 - INFO: Step 1: Login
+2022-11-18 03??37 - INFO: Step 2: Go to Timetable page
+2022-11-18 03??37 - INFO: Step 3: Click on book ticket button routed from Hue to Nha Trang
+2022-11-18 03??39 - INFO: Check book ticket page is loaded with correct Depart From and Arrive At
+2022-11-18 03??44 - INFO: Preconditions: Register new account
+2022-11-18 03??46 - INFO: TC16_Verify_User can cancel a ticket
+2022-11-18 03??46 - INFO: Step 1: Login
+2022-11-18 03??48 - INFO: Step 2: go to My Ticket tab
+2022-11-18 03??49 - INFO: Step 3: Cancel ticket
+2022-11-18 03??49 - INFO: Check the ticket disappears
+2022-11-18 03??54 - INFO: TC01_Verify_User can log into Railway with valid username and password
+2022-11-18 03??54 - INFO: Step 1: Login with valid account
+2022-11-18 03??56 - INFO: Check success message
+2022-11-18 03??01 - INFO: TC02_Verify_User cannot login with blank username
+2022-11-18 03??01 - INFO: Step 1: Login with blank user
+2022-11-18 03??03 - INFO: Check error message appear
+2022-11-18 03??07 - INFO: TC03_Verify_User cannot log into Railway with invalid password 
+2022-11-18 03??07 - INFO: Step 1: Login with invalid password
+2022-11-18 03??09 - INFO: Check error message appear
+2022-11-18 03??14 - INFO: TC04_Verify_Login page displays when un-logged User clicks on Book ticket tab
+2022-11-18 03??14 - INFO: Step 1: Go to the book ticket page without login
+2022-11-18 03??15 - INFO: Check Login page is displayed
+2022-11-18 03??20 - INFO: TC05_Verify_System shows message when user enters wrong password several times
+2022-11-18 03??20 - INFO: Step 1: Login multiple(6) times
+2022-11-18 03??31 - INFO: Check error message appear
+2022-11-18 03??51 - INFO: Preconditions: Register new account
+2022-11-18 03??53 - INFO: TC08_Verify_User can't login with an account hasn't been activated
+2022-11-18 03??53 - INFO: Step 1: Login with an account that is not activated
+2022-11-18 03??56 - INFO: Check unsuccessfully login
+2022-11-18 03??02 - INFO: TC07_Verify_User can create new account
+2022-11-18 03??02 - INFO: Step 1: Create new account with valid data
+2022-11-18 03??05 - INFO: Check success message appear
+2022-11-18 03??10 - INFO: TC10_Verify_User can't create account with Confirm password is not the same with Password
+2022-11-18 03??10 - INFO: Step 1: Create new account with confirm password is not the same with password
+2022-11-18 03??13 - INFO: Check error message appear
+2022-11-18 03??19 - INFO: TC11_Verify_User can't create account while password and PID fields are empty
+2022-11-18 03??19 - INFO: Step 1: Create new account with blank password and pid
+2022-11-18 03??21 - INFO: Check error message appear
+2022-11-18 03??27 - INFO: Preconditions: Register new account
+2022-11-18 03??29 - INFO: TC06_Verify_User can change password
+2022-11-18 03??29 - INFO: Step 1: Login
+2022-11-18 03??31 - INFO: Step 2: Change password
+2022-11-18 03??33 - INFO: Check success message appear
+2022-11-18 03??21 - INFO: TC06_Verify_Additional pages display once user logged in
+2022-11-18 03??21 - INFO: Step 1: Login with valid account
+2022-11-18 03??24 - INFO: Check My ticket tab is displayed
+2022-11-18 03??24 - INFO: Check user goes to My ticket page when clicking on My ticket tab
+2022-11-18 03??25 - INFO: check Change Password tab is displayed
+2022-11-18 03??25 - INFO: Check user goes to Change Password page when clicking on Change password tab
+2022-11-18 03??25 - INFO: Check Log out tab is displayed
+2022-11-18 03??29 - INFO: Preconditions: Register new account
+2022-11-18 03??31 - INFO: TC14_Verify_User can book 1 ticket at a time
+2022-11-18 03??31 - INFO: Step 1: Login
+2022-11-18 03??33 - INFO: Step 2: Book a ticket
+2022-11-18 03??42 - INFO: Verify book ticket successfully
+2022-11-18 03??46 - INFO: Preconditions: Register new account
+2022-11-18 03??47 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-18 03??47 - INFO: Step 1: Login
+2022-11-18 03??50 - INFO: Step 2: Go to Timetable page
+2022-11-18 03??50 - INFO: Step 3: Click on book ticket button routed from Hue to Nha Trang
+2022-11-18 03??52 - INFO: Check book ticket page is loaded with correct Depart From and Arrive At
+2022-11-18 03??57 - INFO: Preconditions: Register new account
+2022-11-18 03??59 - INFO: TC16_Verify_User can cancel a ticket
+2022-11-18 03??59 - INFO: Step 1: Login
+2022-11-18 03??01 - INFO: Step 2: go to My Ticket tab
+2022-11-18 03??02 - INFO: Step 3: Cancel ticket
+2022-11-18 03??02 - INFO: Check the ticket disappears
+2022-11-18 03??07 - INFO: TC01_Verify_User can log into Railway with valid username and password
+2022-11-18 03??07 - INFO: Step 1: Login with valid account
+2022-11-18 03??09 - INFO: Check success message
+2022-11-18 03??16 - INFO: TC02_Verify_User cannot login with blank username
+2022-11-18 03??16 - INFO: Step 1: Login with blank user
+2022-11-18 03??18 - INFO: Check error message appear
+2022-11-18 03??25 - INFO: TC03_Verify_User cannot log into Railway with invalid password 
+2022-11-18 03??25 - INFO: Step 1: Login with invalid password
+2022-11-18 03??27 - INFO: Check error message appear
+2022-11-18 03??32 - INFO: TC04_Verify_Login page displays when un-logged User clicks on Book ticket tab
+2022-11-18 03??32 - INFO: Step 1: Go to the book ticket page without login
+2022-11-18 03??33 - INFO: Check Login page is displayed
+2022-11-18 03??37 - INFO: TC05_Verify_System shows message when user enters wrong password several times
+2022-11-18 03??37 - INFO: Step 1: Login multiple(6) times
+2022-11-18 03??49 - INFO: Check error message appear
+2022-11-18 03??55 - INFO: Preconditions: Register new account
+2022-11-18 03??57 - INFO: TC08_Verify_User can't login with an account hasn't been activated
+2022-11-18 03??57 - INFO: Step 1: Login with an account that is not activated
+2022-11-18 03??00 - INFO: Check unsuccessfully login
+2022-11-18 03??05 - INFO: TC07_Verify_User can create new account
+2022-11-18 03??05 - INFO: Step 1: Create new account with valid data
+2022-11-18 03??07 - INFO: Check success message appear
+2022-11-18 03??11 - INFO: TC10_Verify_User can't create account with Confirm password is not the same with Password
+2022-11-18 03??11 - INFO: Step 1: Create new account with confirm password is not the same with password
+2022-11-18 03??13 - INFO: Check error message appear
+2022-11-18 03??18 - INFO: TC11_Verify_User can't create account while password and PID fields are empty
+2022-11-18 03??18 - INFO: Step 1: Create new account with blank password and pid
+2022-11-18 03??20 - INFO: Check error message appear
+2022-11-18 03??24 - INFO: Preconditions: Register new account
+2022-11-18 03??26 - INFO: TC06_Verify_User can change password
+2022-11-18 03??26 - INFO: Step 1: Login
+2022-11-18 03??29 - INFO: Step 2: Change password
+2022-11-18 03??30 - INFO: Check success message appear
+2022-11-18 11??59 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-18 11??57 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-18 11??03 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-18 11??17 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-18 11??59 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-18 11??57 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-18 11??36 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-18 11??24 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-18 11??06 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-18 11??42 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-18 12??36 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-18 12??08 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-18 12??36 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-18 12??40 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-18 12??11 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-18 12??11 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-18 12??53 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-18 12??16 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-18 12??21 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-18 12??06 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-18 12??23 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-18 12??01 - INFO: Preconditions: Register new account
+2022-11-18 12??18 - INFO: TC14_Verify_User can book 1 ticket at a time
+2022-11-18 12??18 - INFO: Step 1: Login
+2022-11-18 12??21 - INFO: Step 2: Book a ticket
+2022-11-18 12??29 - INFO: Verify book ticket successfully
+2022-11-18 12??34 - INFO: Preconditions: Register new account
+2022-11-18 12??35 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-18 12??35 - INFO: Step 1: Login
+2022-11-18 12??38 - INFO: Step 2: Go to Timetable page
+2022-11-18 12??38 - INFO: Step 3: Click on book ticket button routed from Hue to Nha Trang
+2022-11-18 12??40 - INFO: Check book ticket page is loaded with correct Depart From and Arrive At
+2022-11-18 12??47 - INFO: Preconditions: Register new account
+2022-11-18 12??48 - INFO: TC16_Verify_User can cancel a ticket
+2022-11-18 12??48 - INFO: Step 1: Login
+2022-11-18 12??50 - INFO: Step 2: go to My Ticket tab
+2022-11-18 12??51 - INFO: Step 3: Cancel ticket
+2022-11-18 12??51 - INFO: Check the ticket disappears
+2022-11-18 12??27 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-18 12??31 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-18 12??40 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-18 12??39 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-18 12??42 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-18 12??14 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-18 12??01 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-18 12??19 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-18 13??20 - INFO: TC06_Verify_Additional pages display once user logged in
+2022-11-18 13??20 - INFO: Step 1: Login with valid account
+2022-11-18 13??22 - INFO: Check My ticket tab is displayed
+2022-11-18 13??23 - INFO: Check user goes to My ticket page when clicking on My ticket tab
+2022-11-18 13??23 - INFO: check Change Password tab is displayed
+2022-11-18 13??23 - INFO: Check user goes to Change Password page when clicking on Change password tab
+2022-11-18 13??24 - INFO: Check Log out tab is displayed
+2022-11-18 13??29 - INFO: Preconditions: Register new account
+2022-11-18 13??31 - INFO: TC14_Verify_User can book 1 ticket at a time
+2022-11-18 13??31 - INFO: Step 1: Login
+2022-11-18 13??33 - INFO: Step 2: Book a ticket
+2022-11-18 13??39 - INFO: Preconditions: Register new account
+2022-11-18 13??41 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-18 13??41 - INFO: Step 1: Login
+2022-11-18 13??43 - INFO: Step 2: Go to Timetable page
+2022-11-18 13??44 - INFO: Step 3: Click on book ticket button routed from Hue to Nha Trang
+2022-11-18 13??45 - INFO: Check book ticket page is loaded with correct Depart From and Arrive At
+2022-11-18 13??50 - INFO: Preconditions: Register new account
+2022-11-18 13??52 - INFO: TC16_Verify_User can cancel a ticket
+2022-11-18 13??52 - INFO: Step 1: Login
+2022-11-18 13??54 - INFO: Step 2: go to My Ticket tab
+2022-11-18 13??55 - INFO: Step 3: Cancel ticket
+2022-11-18 13??31 - INFO: TC01_Verify_User can log into Railway with valid username and password
+2022-11-18 13??31 - INFO: Step 1: Login with valid account
+2022-11-18 13??33 - INFO: Check success message
+2022-11-18 13??38 - INFO: TC02_Verify_User cannot login with blank username
+2022-11-18 13??38 - INFO: Step 1: Login with blank user
+2022-11-18 13??40 - INFO: Check error message appear
+2022-11-18 13??44 - INFO: TC03_Verify_User cannot log into Railway with invalid password 
+2022-11-18 13??44 - INFO: Step 1: Login with invalid password
+2022-11-18 13??46 - INFO: Check error message appear
+2022-11-18 13??17 - INFO: TC04_Verify_Login page displays when un-logged User clicks on Book ticket tab
+2022-11-18 13??17 - INFO: Step 1: Go to the book ticket page without login
+2022-11-18 13??18 - INFO: Check Login page is displayed
+2022-11-18 13??22 - INFO: TC05_Verify_System shows message when user enters wrong password several times
+2022-11-18 13??22 - INFO: Step 1: Login multiple(6) times
+2022-11-18 13??33 - INFO: Check error message appear
+2022-11-18 13??38 - INFO: Preconditions: Register new account
+2022-11-18 13??40 - INFO: TC08_Verify_User can't login with an account hasn't been activated
+2022-11-18 13??40 - INFO: Step 1: Login with an account that is not activated
+2022-11-18 13??42 - INFO: Check unsuccessfully login
+2022-11-18 13??46 - INFO: TC07_Verify_User can create new account
+2022-11-18 13??46 - INFO: Step 1: Create new account with valid data
+2022-11-18 13??48 - INFO: Check success message appear
+2022-11-18 13??54 - INFO: TC10_Verify_User can't create account with Confirm password is not the same with Password
+2022-11-18 13??54 - INFO: Step 1: Create new account with confirm password is not the same with password
+2022-11-18 13??56 - INFO: Check error message appear
+2022-11-18 14??01 - INFO: TC11_Verify_User can't create account while password and PID fields are empty
+2022-11-18 14??01 - INFO: Step 1: Create new account with blank password and pid
+2022-11-18 14??03 - INFO: Check error message appear
+2022-11-18 14??24 - INFO: Preconditions: Register new account
+2022-11-18 14??26 - INFO: TC06_Verify_User can change password
+2022-11-18 14??26 - INFO: Step 1: Login
+2022-11-18 14??28 - INFO: Step 2: Change password
+2022-11-18 14??29 - INFO: Check success message appear
+2022-11-18 14??08 - INFO: Preconditions: Register new account
+2022-11-18 14??10 - INFO: TC14_Verify_User can book 1 ticket at a time
+2022-11-18 14??10 - INFO: Step 1: Login
+2022-11-18 14??12 - INFO: Step 2: Book a ticket
+2022-11-18 14??17 - INFO: Preconditions: Register new account
+2022-11-18 14??19 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-18 14??19 - INFO: Step 1: Login
+2022-11-18 14??21 - INFO: Step 2: Go to Timetable page
+2022-11-18 14??22 - INFO: Step 3: Click on book ticket button routed from Hue to Nha Trang
+2022-11-18 14??23 - INFO: Check book ticket page is loaded with correct Depart From and Arrive At
+2022-11-18 14??43 - INFO: Preconditions: Register new account
+2022-11-18 14??45 - INFO: TC16_Verify_User can cancel a ticket
+2022-11-18 14??45 - INFO: Step 1: Login
+2022-11-18 14??47 - INFO: Step 2: go to My Ticket tab
+2022-11-18 14??48 - INFO: Step 3: Cancel ticket
+2022-11-18 14??31 - INFO: TC14_Verify_User can book 1 ticket at a time
+2022-11-18 14??31 - INFO: Step 1: Login
+2022-11-18 14??38 - INFO: Step 2: Book a ticket
+2022-11-18 14??20 - INFO: TC14_Verify_User can book 1 ticket at a time
+2022-11-18 14??20 - INFO: Step 1: Login
+2022-11-18 14??27 - INFO: Step 2: Book a ticket
+2022-11-18 14??47 - INFO: TC06_Verify_Additional pages display once user logged in
+2022-11-18 14??47 - INFO: Step 1: Login with valid account
+2022-11-18 14??51 - INFO: Check My ticket tab is displayed
+2022-11-18 14??51 - INFO: Check user goes to My ticket page when clicking on My ticket tab
+2022-11-18 14??52 - INFO: check Change Password tab is displayed
+2022-11-18 14??52 - INFO: Check user goes to Change Password page when clicking on Change password tab
+2022-11-18 14??52 - INFO: Check Log out tab is displayed
+2022-11-18 14??56 - INFO: Preconditions: Register new account
+2022-11-18 14??58 - INFO: TC14_Verify_User can book 1 ticket at a time
+2022-11-18 14??58 - INFO: Step 1: Login
+2022-11-18 14??00 - INFO: Step 2: Book a ticket
+2022-11-18 14??09 - INFO: Verify book ticket successfully
+2022-11-18 14??13 - INFO: Preconditions: Register new account
+2022-11-18 14??14 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-18 14??14 - INFO: Step 1: Login
+2022-11-18 14??17 - INFO: Step 2: Go to Timetable page
+2022-11-18 14??17 - INFO: Step 3: Click on book ticket button routed from Hue to Nha Trang
+2022-11-18 14??19 - INFO: Check book ticket page is loaded with correct Depart From and Arrive At
+2022-11-18 14??23 - INFO: Preconditions: Register new account
+2022-11-18 14??25 - INFO: TC16_Verify_User can cancel a ticket
+2022-11-18 14??25 - INFO: Step 1: Login
+2022-11-18 14??28 - INFO: Step 2: go to My Ticket tab
+2022-11-18 14??29 - INFO: Step 3: Cancel ticket
+2022-11-18 14??29 - INFO: Check the ticket disappears
+2022-11-18 14??49 - INFO: TC01_Verify_User can log into Railway with valid username and password
+2022-11-18 14??49 - INFO: Step 1: Login with valid account
+2022-11-18 14??51 - INFO: Check success message
+2022-11-18 14??11 - INFO: TC02_Verify_User cannot login with blank username
+2022-11-18 14??11 - INFO: Step 1: Login with blank user
+2022-11-18 14??13 - INFO: Check error message appear
+2022-11-18 14??16 - INFO: TC03_Verify_User cannot log into Railway with invalid password 
+2022-11-18 14??16 - INFO: Step 1: Login with invalid password
+2022-11-18 14??18 - INFO: Check error message appear
+2022-11-18 14??22 - INFO: TC04_Verify_Login page displays when un-logged User clicks on Book ticket tab
+2022-11-18 14??22 - INFO: Step 1: Go to the book ticket page without login
+2022-11-18 14??23 - INFO: Check Login page is displayed
+2022-11-18 14??26 - INFO: TC05_Verify_System shows message when user enters wrong password several times
+2022-11-18 14??26 - INFO: Step 1: Login multiple(6) times
+2022-11-18 14??38 - INFO: Check error message appear
+2022-11-18 14??43 - INFO: Preconditions: Register new account
+2022-11-18 14??44 - INFO: TC08_Verify_User can't login with an account hasn't been activated
+2022-11-18 14??44 - INFO: Step 1: Login with an account that is not activated
+2022-11-18 14??47 - INFO: Check unsuccessfully login
+2022-11-18 14??51 - INFO: TC07_Verify_User can create new account
+2022-11-18 14??51 - INFO: Step 1: Create new account with valid data
+2022-11-18 14??53 - INFO: Check success message appear
+2022-11-18 14??13 - INFO: TC10_Verify_User can't create account with Confirm password is not the same with Password
+2022-11-18 14??13 - INFO: Step 1: Create new account with confirm password is not the same with password
+2022-11-18 14??14 - INFO: Check error message appear
+2022-11-18 14??19 - INFO: TC11_Verify_User can't create account while password and PID fields are empty
+2022-11-18 14??19 - INFO: Step 1: Create new account with blank password and pid
+2022-11-18 14??21 - INFO: Check error message appear
+2022-11-18 14??41 - INFO: Preconditions: Register new account
+2022-11-18 14??43 - INFO: TC06_Verify_User can change password
+2022-11-18 14??43 - INFO: Step 1: Login
+2022-11-18 14??46 - INFO: Step 2: Change password
+2022-11-18 14??48 - INFO: Check success message appear
+2022-11-18 14??58 - INFO: TC06_Verify_Additional pages display once user logged in
+2022-11-18 14??58 - INFO: Step 1: Login with valid account
+2022-11-18 14??00 - INFO: Check My ticket tab is displayed
+2022-11-18 14??00 - INFO: Check user goes to My ticket page when clicking on My ticket tab
+2022-11-18 14??01 - INFO: check Change Password tab is displayed
+2022-11-18 14??01 - INFO: Check user goes to Change Password page when clicking on Change password tab
+2022-11-18 14??01 - INFO: Check Log out tab is displayed
+2022-11-18 14??21 - INFO: Preconditions: Register new account
+2022-11-18 14??23 - INFO: TC14_Verify_User can book 1 ticket at a time
+2022-11-18 14??23 - INFO: Step 1: Login
+2022-11-18 14??26 - INFO: Step 2: Book a ticket
+2022-11-18 14??34 - INFO: Verify book ticket successfully
+2022-11-18 14??38 - INFO: Preconditions: Register new account
+2022-11-18 14??40 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-18 14??40 - INFO: Step 1: Login
+2022-11-18 14??42 - INFO: Step 2: Go to Timetable page
+2022-11-18 14??43 - INFO: Step 3: Click on book ticket button routed from Hue to Nha Trang
+2022-11-18 14??44 - INFO: Check book ticket page is loaded with correct Depart From and Arrive At
+2022-11-18 14??49 - INFO: Preconditions: Register new account
+2022-11-18 14??51 - INFO: TC16_Verify_User can cancel a ticket
+2022-11-18 14??51 - INFO: Step 1: Login
+2022-11-18 14??53 - INFO: Step 2: go to My Ticket tab
+2022-11-18 14??54 - INFO: Step 3: Cancel ticket
+2022-11-18 14??54 - INFO: Check the ticket disappears
+2022-11-18 14??58 - INFO: TC01_Verify_User can log into Railway with valid username and password
+2022-11-18 14??58 - INFO: Step 1: Login with valid account
+2022-11-18 14??01 - INFO: Check success message
+2022-11-18 14??05 - INFO: TC02_Verify_User cannot login with blank username
+2022-11-18 14??05 - INFO: Step 1: Login with blank user
+2022-11-18 14??07 - INFO: Check error message appear
+2022-11-18 14??27 - INFO: TC03_Verify_User cannot log into Railway with invalid password 
+2022-11-18 14??27 - INFO: Step 1: Login with invalid password
+2022-11-18 14??28 - INFO: Check error message appear
+2022-11-18 14??32 - INFO: TC04_Verify_Login page displays when un-logged User clicks on Book ticket tab
+2022-11-18 14??32 - INFO: Step 1: Go to the book ticket page without login
+2022-11-18 14??33 - INFO: Check Login page is displayed
+2022-11-18 14??37 - INFO: TC05_Verify_System shows message when user enters wrong password several times
+2022-11-18 14??37 - INFO: Step 1: Login multiple(6) times
+2022-11-18 14??48 - INFO: Check error message appear
+2022-11-18 14??52 - INFO: Preconditions: Register new account
+2022-11-18 14??54 - INFO: TC08_Verify_User can't login with an account hasn't been activated
+2022-11-18 14??54 - INFO: Step 1: Login with an account that is not activated
+2022-11-18 14??56 - INFO: Check unsuccessfully login
+2022-11-18 14??00 - INFO: TC07_Verify_User can create new account
+2022-11-18 14??00 - INFO: Step 1: Create new account with valid data
+2022-11-18 14??02 - INFO: Check success message appear
+2022-11-18 14??06 - INFO: TC10_Verify_User can't create account with Confirm password is not the same with Password
+2022-11-18 14??06 - INFO: Step 1: Create new account with confirm password is not the same with password
+2022-11-18 14??07 - INFO: Check error message appear
+2022-11-18 14??12 - INFO: TC11_Verify_User can't create account while password and PID fields are empty
+2022-11-18 14??12 - INFO: Step 1: Create new account with blank password and pid
+2022-11-18 14??14 - INFO: Check error message appear
+2022-11-18 14??18 - INFO: Preconditions: Register new account
+2022-11-18 14??20 - INFO: TC06_Verify_User can change password
+2022-11-18 14??20 - INFO: Step 1: Login
+2022-11-18 14??22 - INFO: Step 2: Change password
+2022-11-18 14??24 - INFO: Check success message appear
+2022-11-19 05??12 - INFO: TC06_Verify_Additional pages display once user logged in
+2022-11-19 05??12 - INFO: Step 1: Login with valid account
+2022-11-19 05??15 - INFO: Check My ticket tab is displayed
+2022-11-19 05??15 - INFO: Check user goes to My ticket page when clicking on My ticket tab
+2022-11-19 05??16 - INFO: check Change Password tab is displayed
+2022-11-19 05??16 - INFO: Check user goes to Change Password page when clicking on Change password tab
+2022-11-19 05??17 - INFO: Check Log out tab is displayed
+2022-11-19 05??22 - INFO: Preconditions: Register new account
+2022-11-19 05??24 - INFO: TC14_Verify_User can book 1 ticket at a time
+2022-11-19 05??24 - INFO: Step 1: Login
+2022-11-19 05??26 - INFO: Step 2: Book a ticket
+2022-11-19 05??35 - INFO: Verify book ticket successfully
+2022-11-19 05??55 - INFO: Preconditions: Register new account
+2022-11-19 05??57 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-19 05??57 - INFO: Step 1: Login
+2022-11-19 05??59 - INFO: Step 2: Go to Timetable page
+2022-11-19 05??00 - INFO: Step 3: Click on book ticket button routed from Hue to Nha Trang
+2022-11-19 05??01 - INFO: Check book ticket page is loaded with correct Depart From and Arrive At
+2022-11-19 05??05 - INFO: Preconditions: Register new account
+2022-11-19 05??07 - INFO: TC16_Verify_User can cancel a ticket
+2022-11-19 05??07 - INFO: Step 1: Login
+2022-11-19 05??09 - INFO: Step 2: go to My Ticket tab
+2022-11-19 05??10 - INFO: Step 3: Cancel ticket
+2022-11-19 05??10 - INFO: Check the ticket disappears
+2022-11-19 05??14 - INFO: TC01_Verify_User can log into Railway with valid username and password
+2022-11-19 05??14 - INFO: Step 1: Login with valid account
+2022-11-19 05??17 - INFO: Check success message
+2022-11-19 05??21 - INFO: TC02_Verify_User cannot login with blank username
+2022-11-19 05??21 - INFO: Step 1: Login with blank user
+2022-11-19 05??23 - INFO: Check error message appear
+2022-11-19 05??27 - INFO: TC03_Verify_User cannot log into Railway with invalid password 
+2022-11-19 05??27 - INFO: Step 1: Login with invalid password
+2022-11-19 05??29 - INFO: Check error message appear
+2022-11-19 05??33 - INFO: TC04_Verify_Login page displays when un-logged User clicks on Book ticket tab
+2022-11-19 05??33 - INFO: Step 1: Go to the book ticket page without login
+2022-11-19 05??34 - INFO: Check Login page is displayed
+2022-11-19 05??39 - INFO: TC05_Verify_System shows message when user enters wrong password several times
+2022-11-19 05??39 - INFO: Step 1: Login multiple(6) times
+2022-11-19 05??49 - INFO: Check error message appear
+2022-11-19 05??54 - INFO: Preconditions: Register new account
+2022-11-19 05??55 - INFO: TC08_Verify_User can't login with an account hasn't been activated
+2022-11-19 05??55 - INFO: Step 1: Login with an account that is not activated
+2022-11-19 05??57 - INFO: Check unsuccessfully login
+2022-11-19 06??02 - INFO: TC07_Verify_User can create new account
+2022-11-19 06??02 - INFO: Step 1: Create new account with valid data
+2022-11-19 06??04 - INFO: Check success message appear
+2022-11-19 06??09 - INFO: TC10_Verify_User can't create account with Confirm password is not the same with Password
+2022-11-19 06??09 - INFO: Step 1: Create new account with confirm password is not the same with password
+2022-11-19 06??11 - INFO: Check error message appear
+2022-11-19 06??15 - INFO: TC11_Verify_User can't create account while password and PID fields are empty
+2022-11-19 06??15 - INFO: Step 1: Create new account with blank password and pid
+2022-11-19 06??17 - INFO: Check error message appear
+2022-11-19 06??22 - INFO: Preconditions: Register new account
+2022-11-19 06??24 - INFO: TC06_Verify_User can change password
+2022-11-19 06??24 - INFO: Step 1: Login
+2022-11-19 06??26 - INFO: Step 2: Change password
+2022-11-19 06??28 - INFO: Check success message appear
+2022-11-21 02??15 - INFO: TC06_Verify_Additional pages display once user logged in
+2022-11-21 02??15 - INFO: Step 1: Login with valid account
+2022-11-21 02??18 - INFO: Check My ticket tab is displayed
+2022-11-21 02??18 - INFO: Check user goes to My ticket page when clicking on My ticket tab
+2022-11-21 02??19 - INFO: check Change Password tab is displayed
+2022-11-21 02??19 - INFO: Check user goes to Change Password page when clicking on Change password tab
+2022-11-21 02??20 - INFO: Check Log out tab is displayed
+2022-11-21 02??27 - INFO: Preconditions: Register new account
+2022-11-21 02??40 - INFO: TC01_Verify_User can log into Railway with valid username and password
+2022-11-21 02??40 - INFO: Step 1: Login with valid account
+2022-11-21 02??42 - INFO: Check success message
+2022-11-21 02??54 - INFO: TC02_Verify_User cannot login with blank username
+2022-11-21 02??54 - INFO: Step 1: Login with blank user
+2022-11-21 02??58 - INFO: Check error message appear
+2022-11-21 02??07 - INFO: TC03_Verify_User cannot log into Railway with invalid password 
+2022-11-21 02??07 - INFO: Step 1: Login with invalid password
+2022-11-21 02??09 - INFO: Check error message appear
+2022-11-21 02??18 - INFO: TC04_Verify_Login page displays when un-logged User clicks on Book ticket tab
+2022-11-21 02??18 - INFO: Step 1: Go to the book ticket page without login
+2022-11-21 02??19 - INFO: Check Login page is displayed
+2022-11-21 02??35 - INFO: TC05_Verify_System shows message when user enters wrong password several times
+2022-11-21 02??35 - INFO: Step 1: Login multiple(6) times
+2022-11-21 02??47 - INFO: Check error message appear
+2022-11-21 02??01 - INFO: Preconditions: Register new account
+2022-11-21 02??24 - INFO: TC08_Verify_User can't login with an account hasn't been activated
+2022-11-21 02??24 - INFO: Step 1: Login with an account that is not activated
+2022-11-21 02??27 - INFO: Check unsuccessfully login
+2022-11-21 02??45 - INFO: TC07_Verify_User can create new account
+2022-11-21 02??45 - INFO: Step 1: Create new account with valid data
+2022-11-21 02??49 - INFO: Check success message appear
+2022-11-21 02??59 - INFO: TC10_Verify_User can't create account with Confirm password is not the same with Password
+2022-11-21 02??59 - INFO: Step 1: Create new account with confirm password is not the same with password
+2022-11-21 02??01 - INFO: Check error message appear
+2022-11-21 02??06 - INFO: TC11_Verify_User can't create account while password and PID fields are empty
+2022-11-21 02??06 - INFO: Step 1: Create new account with blank password and pid
+2022-11-21 02??08 - INFO: Check error message appear
+2022-11-21 02??15 - INFO: Preconditions: Register new account
+2022-11-21 02??17 - INFO: TC06_Verify_User can change password
+2022-11-21 02??17 - INFO: Step 1: Login
+2022-11-21 02??20 - INFO: Step 2: Change password
+2022-11-21 02??22 - INFO: Check success message appear
+2022-11-21 02??12 - INFO: TC07_Verify_User can create new account
+2022-11-21 02??12 - INFO: Step 1: Create new account with valid data
+2022-11-21 02??15 - INFO: Check success message appear
+2022-11-21 02??52 - INFO: Preconditions: Register new account
+2022-11-21 02??54 - INFO: TC14_Verify_User can book 1 ticket at a time
+2022-11-21 02??54 - INFO: Step 1: Login
+2022-11-21 02??56 - INFO: Step 2: Book a ticket
+2022-11-21 02??06 - INFO: Verify book ticket successfully
+2022-11-21 02??11 - INFO: Preconditions: Register new account
+2022-11-21 02??13 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-21 02??13 - INFO: Step 1: Login
+2022-11-21 02??15 - INFO: Step 2: Go to Timetable page
+2022-11-21 02??16 - INFO: Step 3: Click on book ticket button routed from Hue to Nha Trang
+2022-11-21 02??17 - INFO: Check book ticket page is loaded with correct Depart From and Arrive At
+2022-11-21 02??24 - INFO: Preconditions: Register new account
+2022-11-21 02??26 - INFO: TC16_Verify_User can cancel a ticket
+2022-11-21 02??26 - INFO: Step 1: Login
+2022-11-21 02??29 - INFO: Step 2: go to My Ticket tab
+2022-11-21 02??29 - INFO: Step 3: Cancel ticket
+2022-11-21 02??30 - INFO: Check the ticket disappears
+2022-11-21 02??20 - INFO: TC14_Verify_User can book 1 ticket at a time
+2022-11-21 02??20 - INFO: Preconditions: Register a new account
+2022-11-21 02??22 - INFO: Step 1: Login
+2022-11-21 02??25 - INFO: Step 2: Book a ticket
+2022-11-21 02??33 - INFO: Verify book ticket successfully
+2022-11-21 02??44 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-21 02??44 - INFO: Step 1: Login
+2022-11-21 02??47 - INFO: Step 2: Go to Timetable page
+2022-11-21 02??48 - INFO: Step 3: Click on book ticket button routed from Hue to Nha Trang
+2022-11-21 02??49 - INFO: Check book ticket page is loaded with correct Depart From and Arrive At
+2022-11-21 02??56 - INFO: TC16_Verify_User can cancel a ticket
+2022-11-21 02??56 - INFO: Step 1: Login
+2022-11-21 02??59 - INFO: Step 2: go to My Ticket tab
+2022-11-21 02??59 - INFO: Step 3: Cancel ticket
+2022-11-21 03??00 - INFO: Check the ticket disappears
+2022-11-21 03??21 - INFO: TC06_Verify_Additional pages display once user logged in
+2022-11-21 03??21 - INFO: Step 1: Login with valid account
+2022-11-21 03??23 - INFO: Check My ticket tab is displayed
+2022-11-21 03??23 - INFO: Check user goes to My ticket page when clicking on My ticket tab
+2022-11-21 03??24 - INFO: check Change Password tab is displayed
+2022-11-21 03??24 - INFO: Check user goes to Change Password page when clicking on Change password tab
+2022-11-21 03??25 - INFO: Check Log out tab is displayed
+2022-11-21 03??31 - INFO: TC14_Verify_User can book 1 ticket at a time
+2022-11-21 03??31 - INFO: Preconditions: Register a new account
+2022-11-21 03??33 - INFO: Step 1: Login
+2022-11-21 03??35 - INFO: Step 2: Book a ticket
+2022-11-21 03??44 - INFO: Verify book ticket successfully
+2022-11-21 03??57 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-21 03??57 - INFO: Step 1: Login
+2022-11-21 03??07 - INFO: Step 2: Go to Timetable page
+2022-11-21 03??09 - INFO: Step 3: Click on book ticket button routed from Hue to Nha Trang
+2022-11-21 03??12 - INFO: Check book ticket page is loaded with correct Depart From and Arrive At
+2022-11-21 03??22 - INFO: TC16_Verify_User can cancel a ticket
+2022-11-21 03??22 - INFO: Step 1: Login
+2022-11-21 03??24 - INFO: Step 2: go to My Ticket tab
+2022-11-21 03??25 - INFO: Step 3: Cancel ticket
+2022-11-21 03??25 - INFO: Check the ticket disappears
+2022-11-21 03??33 - INFO: TC01_Verify_User can log into Railway with valid username and password
+2022-11-21 03??33 - INFO: Step 1: Login with valid account
+2022-11-21 03??36 - INFO: Check success message
+2022-11-21 03??41 - INFO: TC02_Verify_User cannot login with blank username
+2022-11-21 03??41 - INFO: Step 1: Login with blank user
+2022-11-21 03??43 - INFO: Check error message appear
+2022-11-21 03??48 - INFO: TC03_Verify_User cannot log into Railway with invalid password 
+2022-11-21 03??48 - INFO: Step 1: Login with invalid password
+2022-11-21 03??50 - INFO: Check error message appear
+2022-11-21 03??55 - INFO: TC04_Verify_Login page displays when un-logged User clicks on Book ticket tab
+2022-11-21 03??55 - INFO: Step 1: Go to the book ticket page without login
+2022-11-21 03??56 - INFO: Check Login page is displayed
+2022-11-21 03??03 - INFO: TC05_Verify_System shows message when user enters wrong password several times
+2022-11-21 03??03 - INFO: Step 1: Login multiple(6) times
+2022-11-21 03??16 - INFO: Check error message appear
+2022-11-21 03??20 - INFO: Preconditions: Register new account
+2022-11-21 03??22 - INFO: TC08_Verify_User can't login with an account hasn't been activated
+2022-11-21 03??22 - INFO: Step 1: Login with an account that is not activated
+2022-11-21 03??24 - INFO: Check unsuccessfully login
+2022-11-21 03??28 - INFO: TC07_Verify_User can create new account
+2022-11-21 03??28 - INFO: Step 1: Create new account with valid data
+2022-11-21 03??30 - INFO: Check success message appear
+2022-11-21 03??34 - INFO: TC10_Verify_User can't create account with Confirm password is not the same with Password
+2022-11-21 03??34 - INFO: Step 1: Create new account with confirm password is not the same with password
+2022-11-21 03??36 - INFO: Check error message appear
+2022-11-21 03??41 - INFO: TC11_Verify_User can't create account while password and PID fields are empty
+2022-11-21 03??41 - INFO: Step 1: Create new account with blank password and pid
+2022-11-21 03??43 - INFO: Check error message appear
+2022-11-21 03??47 - INFO: Preconditions: Register new account
+2022-11-21 03??49 - INFO: TC06_Verify_User can change password
+2022-11-21 03??49 - INFO: Step 1: Login
+2022-11-21 03??51 - INFO: Step 2: Change password
+2022-11-21 03??53 - INFO: Check success message appear
+2022-11-21 03??22 - INFO: TC14_Verify_User can book 1 ticket at a time
+2022-11-21 03??22 - INFO: Preconditions: Register a new account
+2022-11-21 03??26 - INFO: Step 1: Login
+2022-11-21 03??30 - INFO: Step 2: Book a ticket
+2022-11-21 03??42 - INFO: Verify book ticket successfully
+2022-11-21 03??58 - INFO: Preconditions: Register a new account
+2022-11-21 03??01 - INFO: TC14_Verify_User can book 1 ticket at a time
+2022-11-21 03??01 - INFO: Step 1: Login
+2022-11-21 03??03 - INFO: Step 2: Book a ticket
+2022-11-21 03??13 - INFO: Verify book ticket successfully
+2022-11-21 03??13 - INFO: TC16_Verify_User can cancel a ticket
+2022-11-21 03??13 - INFO: Step 1: Go to My Ticket tab
+2022-11-21 03??13 - INFO: Step 3: Cancel ticket
+2022-11-21 03??14 - INFO: Check the ticket disappears
+2022-11-21 03??17 - INFO: TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page
+2022-11-21 03??17 - INFO: Step 1: Login
+2022-11-21 03??19 - INFO: Step 2: Go to Timetable page
+2022-11-21 03??20 - INFO: Step 3: Click on book ticket button routed from Hue to Nha Trang
+2022-11-21 03??21 - INFO: Check book ticket page is loaded with correct Depart From and Arrive At
+2022-11-21 03??49 - INFO: TC07_Verify_User can create new account
+2022-11-21 03??49 - INFO: Step 1: Create new account with valid data
+2022-11-21 03??59 - INFO: Check success message appear
+2022-11-21 03??07 - INFO: TC10_Verify_User can't create account with Confirm password is not the same with Password
+2022-11-21 03??07 - INFO: Step 1: Create new account with confirm password is not the same with password
+2022-11-21 03??09 - INFO: Check error message appear
+2022-11-21 03??18 - INFO: TC11_Verify_User can't create account while password and PID fields are empty
+2022-11-21 03??18 - INFO: Step 1: Create new account with blank password and pid
+2022-11-21 03??20 - INFO: Check error message appear
+2022-11-21 03??17 - INFO: Preconditions: Register new account
+2022-11-21 03??19 - INFO: TC06_Verify_User can change password
+2022-11-21 03??19 - INFO: Step 1: Login
+2022-11-21 03??21 - INFO: Step 2: Change password
+2022-11-21 03??23 - INFO: Check success message appear
+2022-11-21 03??42 - INFO: TC01_Verify_User can log into Railway with valid username and password
+2022-11-21 03??42 - INFO: Step 1: Login with valid account
+2022-11-21 03??44 - INFO: Check success message
+2022-11-21 03??48 - INFO: TC02_Verify_User cannot login with blank username
+2022-11-21 03??48 - INFO: Step 1: Login with blank user
+2022-11-21 03??50 - INFO: Check error message appear
+2022-11-21 03??54 - INFO: TC03_Verify_User cannot log into Railway with invalid password 
+2022-11-21 03??54 - INFO: Step 1: Login with invalid password
+2022-11-21 03??56 - INFO: Check error message appear
+2022-11-21 03??01 - INFO: TC04_Verify_Login page displays when un-logged User clicks on Book ticket tab
+2022-11-21 03??01 - INFO: Step 1: Go to the book ticket page without login
+2022-11-21 03??03 - INFO: Check Login page is displayed
+2022-11-21 03??09 - INFO: TC05_Verify_System shows message when user enters wrong password several times
+2022-11-21 03??09 - INFO: Step 1: Login multiple(6) times
+2022-11-21 03??21 - INFO: Check error message appear
+2022-11-21 03??09 - INFO: Preconditions: Register new account
+2022-11-21 03??12 - INFO: TC08_Verify_User can't login with an account hasn't been activated
+2022-11-21 03??12 - INFO: Step 1: Login with an account that is not activated
+2022-11-21 03??14 - INFO: Check unsuccessfully login
+2022-11-21 04??31 - INFO: Preconditions: Register a new account
+2022-11-21 04??34 - INFO: TC14_Verify_User can book 1 ticket at a time
+2022-11-21 04??34 - INFO: Step 1: Login
+2022-11-21 04??37 - INFO: Step 2: Book a ticket
+2022-11-21 04??45 - INFO: Verify book ticket successfully
+2022-11-21 04??46 - INFO: TC16_Verify_User can cancel a ticket
+2022-11-21 04??46 - INFO: Step 1: Go to My Ticket tab
+2022-11-21 04??46 - INFO: Step 3: Cancel ticket
+2022-11-21 04??46 - INFO: Check the ticket disappears

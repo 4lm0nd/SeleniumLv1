@@ -6,17 +6,18 @@ import org.openqa.selenium.WebElement;
 public class ChangePasswordPage extends GeneralPage {
 
     //Locator
-    private By txtCurrentPassword = By.id("currentPassword");
-    private By txtNewPassword = By.id("newPassword");
-    private By txtConfirmPassword = By.id("confirmPassword");
-    private By btnChangePassword = By.xpath("//input[@title='Change password']");
-    private By msgSuccess = By.xpath("//p[@class='message success']");
+    private static final By txtCurrentPassword = By.id("currentPassword");
+    private static final By txtNewPassword = By.id("newPassword");
+    private static final By txtConfirmPassword = By.id("confirmPassword");
+    private static final By btnChangePassword = By.xpath("//input[@title='Change password']");
+    private static final By msgSuccess = By.xpath("//p[@class='message success']");
 
 
     //Element
     public WebElement getTxtCurrentPassword() {
         return Constant.DRIVER.findElement(txtCurrentPassword);
     }
+
     public WebElement getTxtNewPassword() {
         return Constant.DRIVER.findElement(txtNewPassword);
     }
@@ -29,7 +30,7 @@ public class ChangePasswordPage extends GeneralPage {
         return Constant.DRIVER.findElement(btnChangePassword);
     }
 
-    public WebElement getMsgSuccess(){
+    public WebElement getMsgSuccess() {
         return Constant.DRIVER.findElement(msgSuccess);
     }
 
@@ -42,13 +43,7 @@ public class ChangePasswordPage extends GeneralPage {
         getBtnChangePassword().click();
     }
 
-    public String getChangePasswordPageTitle(){
-        String pageTitle =  getTitlePage();
-        return pageTitle;
-    }
-
-    public String getSuccessMsg(){
-        String successMsg = getMsgSuccess().getText().toString();
-        return successMsg;
+    public String getSuccessMsg() {
+        return getMsgSuccess().getText();
     }
 }

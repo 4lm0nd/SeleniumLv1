@@ -5,71 +5,62 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class TestCaseManageTicket {
-    String email = "al" + Utilities.convertDateToString() + "@yopmail.com";
-    Utilities utilities = new Utilities();
-    MyTicketPage myTicketPage = new MyTicketPage();
-    LoginPage loginPage = new LoginPage();
-    RegisterPage registerPage = new RegisterPage();
-    BookTicketPage bookTicketPage = new BookTicketPage();
-    TimetablePage timetablePage = new TimetablePage();
-    GeneralPage generalPage = new GeneralPage();
-    Logger logger = new Logger();
+    private static final String email = "al" + Utilities.convertDateToString() + "@yopmail.com";
+    private static final String password = ReadFileJson.getJsonValue("Register.json", "password");
+    private static final String confirmPass= ReadFileJson.getJsonValue("Register.json", "confirm password");
+    private static final String PID = ReadFileJson.getJsonValue("Register.json", "pid password");
+    private static final String departStation = ReadFileJson.getJsonValue("BookTicket.json", "depart station");
+    private static final String arriveStation = ReadFileJson.getJsonValue("BookTicket.json", "arrive station");
+    private static final String seatType = ReadFileJson.getJsonValue("BookTicket.json", "seat type");
+    private static final String amount = ReadFileJson.getJsonValue("BookTicket.json", "amount");
+    private static final String bookingSuccessMsg = ReadFileJson.getJsonValue("BookTicket.json", "msg book ticket success");
+    private static final Utilities utilities = new Utilities();
+    private static final MyTicketPage myTicketPage = new MyTicketPage();
+    private static final LoginPage loginPage = new LoginPage();
+    private static final RegisterPage registerPage = new RegisterPage();
+    private static final BookTicketPage bookTicketPage = new BookTicketPage();
+    private static final GeneralPage generalPage = new GeneralPage();
+    private static final Logger logger = new Logger();
 
     @BeforeMethod
     public void beforeMethod() {
         generalPage.openSite(Constant.RAILWAY_SITE);
-        logger.info("Preconditions: Register new account");
-        registerPage.register(email, Constant.PASSWORD, Constant.PASSWORD, Constant.PASSWORD);
     }
 
     @AfterMethod
     public void afterMethod() {
-        Constant.DRIVER.close();
+        Constant.DRIVER.quit();
     }
 
     @Test
-    public void TC14_BookTicket_with_valid_data() {
+    public void TC14_TC16_Book_and_Cancel_Ticket() {
+        logger.info("Preconditions: Register a new account");
+        registerPage.register(email, password, confirmPass, PID);
         logger.info("TC14_Verify_User can book 1 ticket at a time");
         logger.info("Step 1: Login");
-        loginPage.login(email, Constant.PASSWORD);
+        loginPage.login(email, password);
         logger.info("Step 2: Book a ticket");
-        bookTicketPage.bookTicket(utilities.getDateLaterFromCurrentDate(7), "Quảng Ngãi", "Nha Trang", "Soft seat with air conditioner", "1");
-        String expectedMsg = "Ticket booked successfully!";
+        bookTicketPage.bookTicket(
+                utilities.getDateLaterFromCurrentDate(7), departStation, arriveStation, seatType, amount);
         logger.info("Verify book ticket successfully");
-        utilities.checkTextContent(bookTicketPage.getSuccessMsg(), expectedMsg);
-        utilities.checkTextContent(bookTicketPage.getBookTicketInfo("Depart Station"), "Quảng Ngãi");
-        utilities.checkTextContent(bookTicketPage.getBookTicketInfo("Arrive Station"), "Nha Trang");
-        utilities.checkTextContent(bookTicketPage.getBookTicketInfo("Seat Type"), "Soft seat with air conditioner");
+        utilities.checkTextContent(bookTicketPage.getSuccessMsg(), bookingSuccessMsg);
+        utilities.checkTextContent(bookTicketPage.getBookTicketInfo("Depart Station"), departStation);
+        utilities.checkTextContent(bookTicketPage.getBookTicketInfo("Arrive Station"), arriveStation);
+        utilities.checkTextContent(bookTicketPage.getBookTicketInfo("Seat Type"), seatType);
         utilities.checkTextContent(bookTicketPage.getBookTicketInfo("Depart Date"), utilities.getDateLaterFromCurrentDate(7));
-        utilities.checkTextContent(bookTicketPage.getBookTicketInfo("Amount"), "1");
-    }
-
-    @Test
-    public void TC15_Open_BookTicketPage_from_TrainTimeTable() {
-        logger.info("TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page");
-        logger.info("Step 1: Login");
-        loginPage.login(email, Constant.PASSWORD);
-        logger.info("Step 2: Go to Timetable page");
-        generalPage.goToTab("Timetable");
-        generalPage.scrollDown();
-        logger.info("Step 3: Click on book ticket button routed from Hue to Nha Trang");
-        timetablePage.selectTrainFromTrainTimeTable("Huế", "Nha Trang");
-        logger.info("Check book ticket page is loaded with correct Depart From and Arrive At");
-        utilities.checkSelectedItemList(bookTicketPage.getListDepartFrom(), "Huế");
-        utilities.checkSelectedItemList(bookTicketPage.getListArriveAt(), "Nha Trang");
-    }
-
-    @Test
-    public void TC16_Cancel_ticket() {
+        utilities.checkTextContent(bookTicketPage.getBookTicketInfo("Amount"), amount);
         logger.info("TC16_Verify_User can cancel a ticket");
-        logger.info("Step 1: Login");
-        loginPage.login(email, Constant.PASSWORD);
-        logger.info("Step 2: go to My Ticket tab");
+        logger.info("Step 1: Go to My Ticket tab");
         generalPage.goToTab("My ticket");
         logger.info("Step 3: Cancel ticket");
         myTicketPage.cancelTicket();
         logger.info("Check the ticket disappears");
         utilities.checkElementDoesNotExist(myTicketPage.getMyTable());
+
     }
 }
+
+
+
+
 
