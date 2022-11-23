@@ -4,7 +4,7 @@
             <class name="railway.TestCaseAdditionalPagesDisplayAfterLogin"/>
             <class name="railway.TestCaseManageTicket"/>
             <class name = "railway.TestCaseLogin"/>
-            <class name ="railway.TestCaseLoginWithUnactivatedEmail"/>
+            <class name ="railway.TestCaseLoginWithNoneExistentAccount"/>
             <class name ="railway.TestCaseCreateNewAccount"/>
             <class name ="railway.TestCaseOpenBookTicketFromTimeTable"/>
             <class name ="railway.TestCaseChangePassword"/>.

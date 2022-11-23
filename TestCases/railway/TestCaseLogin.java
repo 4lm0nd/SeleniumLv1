@@ -6,16 +6,16 @@ import org.testng.annotations.Test;
 
 public class TestCaseLogin {
 
-    private static final String email = ReadFileJson.getJsonValue("Login.json", "username");
-    private static final String password = ReadFileJson.getJsonValue("Login.json", "password");
-    private static final String errorLoginMsg = ReadFileJson.getJsonValue("Login.json", "msg login error");
-    private static final String validationMsg = ReadFileJson.getJsonValue("Login.json", "msg validation");
-    private static final String loginFailedMultipleTimeMsg = ReadFileJson.getJsonValue("Login.json", "msg login fail multiple times");
-    private static final LoginPage loginPage = new LoginPage();
-    private static final HomePage homePage = new HomePage();
-    private static final Utilities utilities = new Utilities();
-    private static final GeneralPage generalPage = new GeneralPage();
-    private static final Logger logger = new Logger();
+    private final String email = ReadFileJson.getJsonValue("Login.json", "username");
+    private final String password = ReadFileJson.getJsonValue("Login.json", "password");
+    private final String errorLoginMsg = ReadFileJson.getJsonValue("Login.json", "msg login error");
+    private final String validationMsg = ReadFileJson.getJsonValue("Login.json", "msg validation");
+    private final String loginFailedMultipleTimeMsg = ReadFileJson.getJsonValue("Login.json", "msg login fail multiple times");
+    private final LoginPage loginPage = new LoginPage();
+    private final HomePage homePage = new HomePage();
+    private final Utilities utilities = new Utilities();
+    private final GeneralPage generalPage = new GeneralPage();
+    private final Logger logger = new Logger();
 
     @BeforeMethod
     public void beforeMethod() {
@@ -24,7 +24,7 @@ public class TestCaseLogin {
 
     @AfterMethod
     public void afterMethod() {
-        Constant.DRIVER.quit();
+        BrowserManager.DRIVER.quit();
     }
 
     @Test
@@ -32,7 +32,7 @@ public class TestCaseLogin {
         logger.info("TC01_Verify_User can log into Railway with valid username and password");
         logger.info("Step 1: Login with valid account");
         loginPage.login(email, password);
-        String expectedMsg = "Welcome " + ReadFileJson.getJsonValue("Login.json", "username");
+        String expectedMsg = "Welcome " + email;
         logger.info("Check success message");
         utilities.checkTextContent(homePage.getWelcomeMsg(), expectedMsg);
     }
@@ -43,7 +43,7 @@ public class TestCaseLogin {
         logger.info("Step 1: Login with blank user");
         loginPage.login("", password);
         logger.info("Check error message appear");
-        utilities.checkTextContent(loginPage.getErrorMsg(), errorLoginMsg);
+        utilities.checkTextContent(loginPage.getLoginErrorMsg(), errorLoginMsg);
     }
 
     @Test
@@ -52,7 +52,7 @@ public class TestCaseLogin {
         logger.info("Step 1: Login with invalid password");
         loginPage.login(email, "INVALID_PASSWORD");
         logger.info("Check error message appear");
-        utilities.checkTextContent(loginPage.getErrorMsg(), validationMsg);
+        utilities.checkTextContent(loginPage.getLoginErrorMsg(), validationMsg);
     }
 
     @Test
@@ -70,7 +70,7 @@ public class TestCaseLogin {
         logger.info("Step 1: Login multiple(6) times");
         loginPage.multipleLogin("INVALID_EMAIL", "INVALID_PASSWORD", 6);
         logger.info("Check error message appear");
-        utilities.checkTextContent(loginPage.getErrorMsg(), loginFailedMultipleTimeMsg);
+        utilities.checkTextContent(loginPage.getLoginErrorMsg(), loginFailedMultipleTimeMsg);
     }
 }
 

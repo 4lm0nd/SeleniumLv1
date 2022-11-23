@@ -6,11 +6,11 @@ import org.openqa.selenium.WebElement;
 public class HomePage {
 
     //Locators
-    private static final By lblWelcomeMessage = By.xpath("//div[@class ='account']/strong");
+    private final By lblWelcomeMessage = By.xpath("//div[@class ='account']/strong");
 
     //Elements
-    public final WebElement getLblWelcomeMessage() {
-        return Constant.DRIVER.findElement(lblWelcomeMessage);
+    private final WebElement getLblWelcomeMessage() {
+        return BrowserManager.DRIVER.findElement(lblWelcomeMessage);
     }
 
     public String getWelcomeMsg() {

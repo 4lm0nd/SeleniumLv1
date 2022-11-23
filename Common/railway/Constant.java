@@ -1,10 +1,7 @@
 package railway;
 
-import org.openqa.selenium.WebDriver;
-
 public class Constant {
 
-    public static WebDriver DRIVER;
     public static String RAILWAY_SITE = GetConfigProperties.getProperty("RAILWAY_SITE");
     public static String WEB_DRIVER = GetConfigProperties.getProperty("WEB_DRIVER");
     public static String DRIVER_PATH = GetConfigProperties.getProperty("DRIVER_PATH");
@@ -13,5 +10,5 @@ public class Constant {
     public static int WAIT_CONTROL_TIME = 3;
     public static String SHORT_DATE_US = GetConfigProperties.getProperty("SHORT_DATE_US");
     public static String FULL_DATETIME = GetConfigProperties.getProperty("FULL_DATETIME");
-   }
+}
 

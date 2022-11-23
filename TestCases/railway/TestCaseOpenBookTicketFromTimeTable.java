@@ -6,14 +6,14 @@ import org.testng.annotations.Test;
 
 public class TestCaseOpenBookTicketFromTimeTable {
 
-    private static final String email = ReadFileJson.getJsonValue("Login.json", "username");
-    private static final String password = ReadFileJson.getJsonValue("Login.json", "password");
-    private static final Utilities utilities = new Utilities();
-    private static final LoginPage loginPage = new LoginPage();
-    private static final BookTicketPage bookTicketPage = new BookTicketPage();
-    private static final TimetablePage timetablePage = new TimetablePage();
-    private static final GeneralPage generalPage = new GeneralPage();
-    private static final Logger logger = new Logger();
+    private final String email = ReadFileJson.getJsonValue("Login.json", "username");
+    private final String password = ReadFileJson.getJsonValue("Login.json", "password");
+    private final Utilities utilities = new Utilities();
+    private final LoginPage loginPage = new LoginPage();
+    private final BookTicketPage bookTicketPage = new BookTicketPage();
+    private final TimetablePage timetablePage = new TimetablePage();
+    private final GeneralPage generalPage = new GeneralPage();
+    private final Logger logger = new Logger();
 
     @BeforeMethod
     public void beforeMethod() {
@@ -22,11 +22,11 @@ public class TestCaseOpenBookTicketFromTimeTable {
 
     @AfterMethod
     public void afterMethod() {
-        Constant.DRIVER.quit();
+        BrowserManager.DRIVER.quit();
    }
 
     @Test
-    public void TC15_Open_BookTicketPage_from_TrainTimeTable() {
+    public void TC15_Verify_User_can_open_BookTicketPage_from_TrainTimeTable() {
         logger.info("TC15_Verify_User can open Book ticket page by clicking on Book ticket link in Train timetable page");
         logger.info("Step 1: Login");
         loginPage.login(email, password);
@@ -36,8 +36,8 @@ public class TestCaseOpenBookTicketFromTimeTable {
         generalPage.scrollPageDown();
         timetablePage.selectTrainFromTrainTimeTable("Huế", "Nha Trang");
         logger.info("Check book ticket page is loaded with correct Depart From and Arrive At");
-        utilities.checkSelectedItem(bookTicketPage.getListDepartFrom(), "Huế");
-        utilities.checkSelectedItem(bookTicketPage.getListArriveAt(), "Nha Trang");
+        utilities.checkTextContent(bookTicketPage.getDepartStation(),"Huế");
+        utilities.checkTextContent(bookTicketPage.getArriveStation(),"Nha Trang");
     }
 }
 

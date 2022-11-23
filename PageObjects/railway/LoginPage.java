@@ -7,26 +7,26 @@ import org.openqa.selenium.WebElement;
 public class LoginPage extends GeneralPage {
 
     //Locator
-    private static final By txtEmail = By.id("username");
-    private static final By txtPassword = By.id("password");
-    private static final By btnLogin = By.xpath("//input[@title='Login']");
-    private static final By msgError = By.xpath("//p[@class = 'message error LoginForm']");
+    private final By txtEmail = By.id("username");
+    private final By txtPassword = By.id("password");
+    private final By btnLogin = By.xpath("//input[@title='Login']");
+    private final By msgError = By.xpath("//p[@class = 'message error LoginForm']");
 
     //Element
-    public WebElement getTxtEmail() {
-        return Constant.DRIVER.findElement(txtEmail);
+    private WebElement getTxtEmail() {
+        return BrowserManager.DRIVER.findElement(txtEmail);
     }
 
-    public WebElement getTxtPassword() {
-        return Constant.DRIVER.findElement(txtPassword);
+    private WebElement getTxtPassword() {
+        return BrowserManager.DRIVER.findElement(txtPassword);
     }
 
-    public WebElement getBtnLogin() {
-        return Constant.DRIVER.findElement(btnLogin);
+    private WebElement getBtnLogin() {
+        return BrowserManager.DRIVER.findElement(btnLogin);
     }
 
-    public WebElement getMsgError() {
-        return Constant.DRIVER.findElement(msgError);
+    private WebElement getMsgError() {
+        return BrowserManager.DRIVER.findElement(msgError);
     }
 
     //Method
@@ -48,7 +48,7 @@ public class LoginPage extends GeneralPage {
         }
     }
 
-    public String getErrorMsg() {
+    public String getLoginErrorMsg() {
         return getMsgError().getText();
     }
 

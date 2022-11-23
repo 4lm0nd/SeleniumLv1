@@ -6,17 +6,17 @@ import org.testng.annotations.Test;
 
 public class TestCaseChangePassword {
 
-    private static final String email = "al" + Utilities.convertDateToString() + "@yopmail.com";
-    private static final String password = ReadFileJson.getJsonValue("Register.json", "password");
-    private static final String password2 = ReadFileJson.getJsonValue("Register.json", "password2");
-    private static final String confirmPass = ReadFileJson.getJsonValue("Register.json", "confirm password");
-    private static final String PID = ReadFileJson.getJsonValue("Register.json", "pid password");
-    private static final GeneralPage generalPage = new GeneralPage();
-    private static final Utilities utilities = new Utilities();
-    private static final ChangePasswordPage changePasswordPage = new ChangePasswordPage();
-    private static final LoginPage loginPage = new LoginPage();
-    private static final RegisterPage registerPage = new RegisterPage();
-    private static final Logger logger = new Logger();
+    private final String email = "alTC09" + Utilities.convertDateToString() + "@yopmail.com";
+    private final String password = ReadFileJson.getJsonValue("Register.json", "password");
+    private final String password2 = ReadFileJson.getJsonValue("Register.json", "password2");
+    private final String confirmPass = ReadFileJson.getJsonValue("Register.json", "confirm password");
+    private final String PID = ReadFileJson.getJsonValue("Register.json", "pid password");
+    private final GeneralPage generalPage = new GeneralPage();
+    private final Utilities utilities = new Utilities();
+    private final ChangePasswordPage changePasswordPage = new ChangePasswordPage();
+    private final LoginPage loginPage = new LoginPage();
+    private final RegisterPage registerPage = new RegisterPage();
+    private final Logger logger = new Logger();
 
     @BeforeMethod
     public void beforeMethod() {
@@ -27,11 +27,11 @@ public class TestCaseChangePassword {
 
     @AfterMethod
     public void afterMethod() {
-        Constant.DRIVER.quit();
+        BrowserManager.DRIVER.quit();
     }
 
     @Test
-    public void TC09_Verify_User_Can_Change_password() {
+    public void TC09_Verify_User_can_change_password() {
         logger.info("TC06_Verify_User can change password");
         logger.info("Step 1: Login");
         loginPage.login(email, password);

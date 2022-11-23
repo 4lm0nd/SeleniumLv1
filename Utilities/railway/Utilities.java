@@ -44,12 +44,12 @@ public class Utilities {
 
     public static void checkElementExist(WebElement element) {
         try {
-
             Assert.assertTrue(doesElementDisplay(element));
+        } catch (NoSuchElementException exception) {
+            System.out.println(exception.getMessage());
+        } catch (AssertionError error) {
+            System.out.println(error.getMessage());
 
-        } catch (AssertionError ex) {
-
-            System.out.println(ex.getMessage());
         }
     }
 
@@ -60,16 +60,18 @@ public class Utilities {
         try {
             Assert.assertEquals(selectedOption, option);
         } catch (AssertionError ex) {
-
             System.out.println(ex.getMessage());
         }
     }
 
     public static void checkElementDoesNotExist(WebElement element) {
+
         try {
             Assert.assertFalse(doesElementDisplay(element));
-        } catch (AssertionError e) {
+        } catch (NoSuchElementException e) {
             System.out.println(e.getMessage());
+        } catch (AssertionError error) {
+            System.out.println(error.getMessage());
         }
     }
 
@@ -79,7 +81,21 @@ public class Utilities {
         String fromDateFormat = dateFormat.format(localDate);
         return fromDateFormat;
     }
+
+    public static void checkTextDoesNotContent(String actualMsg, String expectedMsg) {
+        try {
+            Assert.assertFalse(actualMsg.contains(expectedMsg));
+
+        } catch (AssertionError ex) {
+
+            System.out.println(ex.getMessage());
+        } catch (StringIndexOutOfBoundsException exception) {
+            System.out.println(exception.getMessage());
+        }
+    }
 }
+
+
 
 
 

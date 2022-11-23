@@ -1,5 +1,6 @@
 package railway;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -17,21 +18,21 @@ public class GeneralPage {
     private final By pageTitle = By.xpath("//div[@id='content']/h1");
 
     //Element
-    public WebElement getTabMenu(String tabName) {
-        return Constant.DRIVER.findElement(By.xpath(String.format(tabMenu, tabName)));
+    protected WebElement getTabMenu(String tabName) {
+        return BrowserManager.DRIVER.findElement(By.xpath(String.format(tabMenu, tabName)));
     }
 
-    public WebElement getPageTitle() {
-        return Constant.DRIVER.findElement(pageTitle);
+    protected WebElement getPageTitle() {
+        return BrowserManager.DRIVER.findElement(pageTitle);
     }
 
-    public WebElement getCellTable(String table, String column, int row) {
-        return Constant.DRIVER.findElement(By.xpath(String.format(cellTable, table, row, column)));
+    protected WebElement getCellTable(String table, String column, int row) {
+        return BrowserManager.DRIVER.findElement(By.xpath(String.format(cellTable, table, row, column)));
     }
 
     //Method
     public void scrollPageDown() {
-        JavascriptExecutor js = (JavascriptExecutor) Constant.DRIVER;
+        JavascriptExecutor js = (JavascriptExecutor) BrowserManager.DRIVER;
         js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
     }
 
@@ -40,12 +41,12 @@ public class GeneralPage {
     }
 
     public void selectItemFromList(By list, String option) {
-        Select mySelect = new Select(Constant.DRIVER.findElement(list));
+        Select mySelect = new Select(BrowserManager.DRIVER.findElement(list));
         mySelect.selectByVisibleText(option);
     }
 
     public void waitForControl(By element, int timeoutInSeconds) {
-        WebElement myElement = new WebDriverWait(Constant.DRIVER, Duration.ofSeconds(timeoutInSeconds))
+        WebElement myElement = new WebDriverWait(BrowserManager.DRIVER, Duration.ofSeconds(timeoutInSeconds))
                 .until(ExpectedConditions.elementToBeClickable(element));
         boolean check = false;
         for (int i = 0; i < timeoutInSeconds; i++) {
@@ -66,8 +67,8 @@ public class GeneralPage {
 
     public void openSite(String site) {
         BrowserManager.openBrowser(Constant.BROWSER, Constant.WEB_DRIVER, Constant.DRIVER_PATH);
-        Constant.DRIVER.get(site);
-        Constant.DRIVER.navigate();
+        BrowserManager.DRIVER.get(site);
+        BrowserManager.DRIVER.navigate();
     }
 
     public String getTableCellValue(String table, String column, int row) {
@@ -75,8 +76,24 @@ public class GeneralPage {
     }
 
     public void scrollToFindElement(WebElement element) {
-        JavascriptExecutor js = (JavascriptExecutor) Constant.DRIVER;
+        JavascriptExecutor js = (JavascriptExecutor) BrowserManager.DRIVER;
         js.executeScript("arguments[0].scrollIntoView();", element);
+    }
+
+    public static String getSelectedItem(WebElement selection) {
+        Select selectedValue = new Select(selection);
+        WebElement optionA = selectedValue.getFirstSelectedOption();
+        return optionA.getText();
+    }
+
+    public static void acceptAlert() {
+        Alert alert = BrowserManager.DRIVER.switchTo().alert();
+        alert.accept();
+    }
+
+    public static void rejectAlert() {
+        Alert alert = BrowserManager.DRIVER.switchTo().alert();
+        alert.dismiss();
     }
 }
 

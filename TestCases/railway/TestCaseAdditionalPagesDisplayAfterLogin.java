@@ -5,12 +5,12 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class TestCaseAdditionalPagesDisplayAfterLogin {
-    private static final String email = ReadFileJson.getJsonValue("Login.json", "username");
-    private static final String password = ReadFileJson.getJsonValue("Login.json", "password");
-    private static final GeneralPage generalPage = new GeneralPage();
-    private static final LoginPage loginPage = new LoginPage();
-    private static final Utilities utilities = new Utilities();
-    private static final Logger logger = new Logger();
+    private final String email = ReadFileJson.getJsonValue("Login.json", "username");
+    private final String password = ReadFileJson.getJsonValue("Login.json", "password");
+    private final GeneralPage generalPage = new GeneralPage();
+    private final LoginPage loginPage = new LoginPage();
+    private final Utilities utilities = new Utilities();
+    private final Logger logger = new Logger();
 
     @BeforeMethod
     public void beforeMethod() {
@@ -19,7 +19,7 @@ public class TestCaseAdditionalPagesDisplayAfterLogin {
 
     @AfterMethod
     public void afterMethod() {
-        Constant.DRIVER.quit();
+        BrowserManager.DRIVER.quit();
     }
 
     @Test

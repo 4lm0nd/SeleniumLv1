@@ -7,41 +7,41 @@ import org.openqa.selenium.WebElement;
 public class BookTicketPage extends GeneralPage {
 
     //Locator
-    private static final By listDepartDate = By.xpath("//select[@name = 'Date']");
-    private static final By btnBookTicket = By.xpath("//input[@value ='Book ticket']");
-    private static final By listDepartFrom = By.xpath("//select[@name ='DepartStation']");
-    private static final By listArriveAt = By.xpath("//select[@name ='ArriveStation']");
-    private static final By listSeatType = By.xpath("//select[@name ='SeatType']");
-    private static final By listTicketAmount = By.xpath("//select[@name ='TicketAmount']");
-    private static final By msgSuccess = By.xpath("//div[@id='content']/h1");
+    private final By listDepartDate = By.xpath("//select[@name = 'Date']");
+    private final By btnBookTicket = By.xpath("//input[@value ='Book ticket']");
+    private final By listDepartFrom = By.xpath("//select[@name ='DepartStation']");
+    private final By listArriveAt = By.xpath("//select[@name ='ArriveStation']");
+    private final By listSeatType = By.xpath("//select[@name ='SeatType']");
+    private final By listTicketAmount = By.xpath("//select[@name ='TicketAmount']");
+    private final By msgSuccess = By.xpath("//div[@id='content']/h1");
 
     //Element
-    public WebElement getListDepartDate() {
-        return Constant.DRIVER.findElement(listDepartDate);
+    private WebElement getListDepartDate() {
+        return BrowserManager.DRIVER.findElement(listDepartDate);
     }
 
-    public WebElement getBtnBookTicket() {
-        return Constant.DRIVER.findElement(btnBookTicket);
+    private WebElement getBtnBookTicket() {
+        return BrowserManager.DRIVER.findElement(btnBookTicket);
     }
 
-    public WebElement getListDepartFrom() {
-        return Constant.DRIVER.findElement(listDepartFrom);
+    private WebElement getListDepartFrom() {
+        return BrowserManager.DRIVER.findElement(listDepartFrom);
     }
 
-    public WebElement getListArriveAt() {
-        return Constant.DRIVER.findElement(listArriveAt);
+    private WebElement getListArriveAt() {
+        return BrowserManager.DRIVER.findElement(listArriveAt);
     }
 
-    public WebElement getListSeatType() {
-        return Constant.DRIVER.findElement(listSeatType);
+    private WebElement getListSeatType() {
+        return BrowserManager.DRIVER.findElement(listSeatType);
     }
 
-    public WebElement getListTicketAmount() {
-        return Constant.DRIVER.findElement(listTicketAmount);
+    private WebElement getListTicketAmount() {
+        return BrowserManager.DRIVER.findElement(listTicketAmount);
     }
 
-    public WebElement getMsgSuccess() {
-        return Constant.DRIVER.findElement(msgSuccess);
+    private WebElement getMsgSuccess() {
+        return BrowserManager.DRIVER.findElement(msgSuccess);
     }
 
     public void bookTicket(String departDate, String departStation, String arriveStation, String seatType, String ticketAmount) {
@@ -49,7 +49,7 @@ public class BookTicketPage extends GeneralPage {
         scrollToFindElement(getBtnBookTicket());
         selectItemFromList(listDepartDate, departDate);
         selectItemFromList(listDepartFrom, departStation);
-        waitForControl(listArriveAt, 3);
+        waitForControl(listArriveAt, Constant.WAIT_CONTROL_TIME);
         selectItemFromList(listArriveAt, arriveStation);
         selectItemFromList(listSeatType, seatType);
         selectItemFromList(listTicketAmount, ticketAmount);
@@ -64,6 +64,15 @@ public class BookTicketPage extends GeneralPage {
     public String getBookTicketInfo(String column) {
         return getTableCellValue("MyTable WideTable", column, 2);
     }
+
+    public String getDepartStation() {
+        return getSelectedItem(getListDepartFrom());
+    }
+
+    public String getArriveStation() {
+        return getSelectedItem(getListArriveAt());
+    }
+
 }
 
 
