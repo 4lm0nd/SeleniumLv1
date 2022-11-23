@@ -6,11 +6,8 @@ import org.testng.annotations.Test;
 
 public class TestCaseLogin {
 
-    private final String email = ReadFileJson.getJsonValue("Login.json", "username");
-    private final String password = ReadFileJson.getJsonValue("Login.json", "password");
-    private final String errorLoginMsg = ReadFileJson.getJsonValue("Login.json", "msg login error");
-    private final String validationMsg = ReadFileJson.getJsonValue("Login.json", "msg validation");
-    private final String loginFailedMultipleTimeMsg = ReadFileJson.getJsonValue("Login.json", "msg login fail multiple times");
+    private final String email = "almond.dh@yopmail.com";
+    private final String password = "Password123";
     private final LoginPage loginPage = new LoginPage();
     private final HomePage homePage = new HomePage();
     private final Utilities utilities = new Utilities();
@@ -34,7 +31,7 @@ public class TestCaseLogin {
         loginPage.login(email, password);
         String expectedMsg = "Welcome " + email;
         logger.info("Check success message");
-        utilities.checkTextContent(homePage.getWelcomeMsg(), expectedMsg);
+        utilities.checkTextContain(homePage.getWelcomeMsg(), expectedMsg);
     }
 
     @Test
@@ -43,7 +40,7 @@ public class TestCaseLogin {
         logger.info("Step 1: Login with blank user");
         loginPage.login("", password);
         logger.info("Check error message appear");
-        utilities.checkTextContent(loginPage.getLoginErrorMsg(), errorLoginMsg);
+        utilities.checkTextContain(loginPage.getLoginErrorMsg(), utilities.getExpectedMSg("MessageToVerify.json", "msg login error"));
     }
 
     @Test
@@ -52,7 +49,7 @@ public class TestCaseLogin {
         logger.info("Step 1: Login with invalid password");
         loginPage.login(email, "INVALID_PASSWORD");
         logger.info("Check error message appear");
-        utilities.checkTextContent(loginPage.getLoginErrorMsg(), validationMsg);
+        utilities.checkTextContain(loginPage.getLoginErrorMsg(),utilities.getExpectedMSg("MessageToVerify.json", "msg validation"));
     }
 
     @Test
@@ -61,7 +58,7 @@ public class TestCaseLogin {
         logger.info("Step 1: Go to the book ticket page without login");
         generalPage.goToTab("Book ticket");
         logger.info("Check Login page is displayed");
-        utilities.checkTextContent(generalPage.getTitlePage(), "Login page");
+        utilities.checkTextContain(generalPage.getTitlePage(), "Login page");
     }
 
     @Test
@@ -70,7 +67,8 @@ public class TestCaseLogin {
         logger.info("Step 1: Login multiple(6) times");
         loginPage.multipleLogin("INVALID_EMAIL", "INVALID_PASSWORD", 6);
         logger.info("Check error message appear");
-        utilities.checkTextContent(loginPage.getLoginErrorMsg(), loginFailedMultipleTimeMsg);
+        utilities.checkTextContain(loginPage.getLoginErrorMsg(),
+                utilities.getExpectedMSg("MessageToVerify.json", "msg login fail multiple times"));
     }
 }
 

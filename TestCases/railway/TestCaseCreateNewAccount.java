@@ -10,15 +10,11 @@ public class TestCaseCreateNewAccount {
     private final String emailTC10 = "al10" + Utilities.convertDateToString() + "@yopmail.com";
     private final String emailTC11 = "al11" + Utilities.convertDateToString() + "@yopmail.com";
 
-    private final String password = ReadFileJson.getJsonValue("Register.json", "password");
-    private final String password2 = ReadFileJson.getJsonValue("Register.json", "password2");
-    private final String confirmPass = ReadFileJson.getJsonValue("Register.json", "confirm password");
-    private final String PID = ReadFileJson.getJsonValue("Register.json", "pid password");
-    private final String successMsg = ReadFileJson.getJsonValue("Register.json", "mgs register success");
-    private final String errorMsg = ReadFileJson.getJsonValue("Register.json", "msg register error");
-    private final String passwordError = ReadFileJson.getJsonValue("Register.json", "msg password validation");
-    private final String PIDError = ReadFileJson.getJsonValue("Register.json", "msg pid validation");
-    private final GeneralPage generalPage = new GeneralPage();
+    private final String password = "Password123";
+    private final String password2 = "Password1234";
+    private final String confirmPass = "Password123";
+    private final String PID = "Password123";
+     private final GeneralPage generalPage = new GeneralPage();
     private final RegisterPage registerPage = new RegisterPage();
     private final Utilities utilities = new Utilities();
     private final Logger logger = new Logger();
@@ -39,7 +35,8 @@ public class TestCaseCreateNewAccount {
         logger.info("Step 1: Create new account with valid data");
         registerPage.register(emailTC07, password, confirmPass, PID);
         logger.info("Check success message appear");
-        utilities.checkTextContent(registerPage.getSuccessMsg(), successMsg);
+        utilities.checkTextContain(registerPage.getSuccessMsg(),
+                utilities.getExpectedMSg("MessageToVerify.json", "mgs register success"));
     }
 
     @Test
@@ -48,7 +45,8 @@ public class TestCaseCreateNewAccount {
         logger.info("Step 1: Create new account with confirm password is not the same with password");
         registerPage.register(emailTC10, password, password2, PID);
         logger.info("Check error message appear");
-        utilities.checkTextContent(registerPage.getRegisterErrorMsg(), errorMsg);
+        utilities.checkTextContain(registerPage.getRegisterErrorMsg(),
+                utilities.getExpectedMSg("MessageToVerify.json", "msg register error"));
     }
 
     @Test
@@ -57,8 +55,11 @@ public class TestCaseCreateNewAccount {
         logger.info("Step 1: Create new account with blank password and pid");
         registerPage.register(emailTC11, "", "", "");
         logger.info("Check error message appear");
-        utilities.checkTextContent(registerPage.getRegisterErrorMsg(), errorMsg);
-        utilities.checkTextContent(registerPage.getPasswordErrorMsg(), passwordError);
-        utilities.checkTextContent(registerPage.getPIDErrorMsg(), PIDError);
+        utilities.checkTextContain(registerPage.getRegisterErrorMsg(),
+                utilities.getExpectedMSg("MessageToVerify.json", "msg register error"));
+        utilities.checkTextContain(registerPage.getPasswordErrorMsg(),
+                utilities.getExpectedMSg("MessageToVerify.json", "msg password validation"));
+        utilities.checkTextContain(registerPage.getPIDErrorMsg(),
+                utilities.getExpectedMSg("MessageToVerify.json", "msg pid validation"));
     }
 }

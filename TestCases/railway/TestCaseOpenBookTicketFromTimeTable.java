@@ -6,8 +6,8 @@ import org.testng.annotations.Test;
 
 public class TestCaseOpenBookTicketFromTimeTable {
 
-    private final String email = ReadFileJson.getJsonValue("Login.json", "username");
-    private final String password = ReadFileJson.getJsonValue("Login.json", "password");
+    private final String email = "almond.dh@yopmail.com";
+    private final String password = "Password123";
     private final Utilities utilities = new Utilities();
     private final LoginPage loginPage = new LoginPage();
     private final BookTicketPage bookTicketPage = new BookTicketPage();
@@ -36,8 +36,8 @@ public class TestCaseOpenBookTicketFromTimeTable {
         generalPage.scrollPageDown();
         timetablePage.selectTrainFromTrainTimeTable("Huế", "Nha Trang");
         logger.info("Check book ticket page is loaded with correct Depart From and Arrive At");
-        utilities.checkTextContent(bookTicketPage.getDepartStation(),"Huế");
-        utilities.checkTextContent(bookTicketPage.getArriveStation(),"Nha Trang");
+        utilities.checkTextContain(bookTicketPage.getDepartStation(),"Huế");
+        utilities.checkTextContain(bookTicketPage.getArriveStation(),"Nha Trang");
     }
 }
 

@@ -6,8 +6,7 @@ import org.testng.annotations.Test;
 
 public class TestCaseLoginWithNoneExistentAccount {
     private final String email = "alTC08" + Utilities.convertDateToString() + "@yopmail.com";
-    private final String password = ReadFileJson.getJsonValue("Login.json", "password");
-    private final String errorLoginMsg = ReadFileJson.getJsonValue("Login.json", "msg validation");
+    private final String password = "Password123";
     private final GeneralPage generalPage = new GeneralPage();
     private final Utilities utilities = new Utilities();
     private final LoginPage loginPage = new LoginPage();
@@ -29,6 +28,6 @@ public class TestCaseLoginWithNoneExistentAccount {
         logger.info("Step 1: Login with an account that hasn't been registered");
         loginPage.login(email, password);
         logger.info("Check unsuccessfully login");
-        utilities.checkTextContent(loginPage.getLoginErrorMsg(), errorLoginMsg);
+        utilities.checkTextContain(loginPage.getLoginErrorMsg(), utilities.getExpectedMSg("MessageToVerify.json", "msg validation"));
     }
 }

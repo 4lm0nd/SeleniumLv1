@@ -45,14 +45,15 @@ public class BookTicketPage extends GeneralPage {
     }
 
     public void bookTicket(String departDate, String departStation, String arriveStation, String seatType, String ticketAmount) {
+        BookTicket bookTicket = new BookTicket (departDate,departStation, arriveStation, seatType, ticketAmount);
         goToTab("Book ticket");
         scrollToFindElement(getBtnBookTicket());
-        selectItemFromList(listDepartDate, departDate);
-        selectItemFromList(listDepartFrom, departStation);
+        selectItemFromList(listDepartDate, bookTicket.getDepartDate(departDate));
+        selectItemFromList(listDepartFrom, bookTicket.getDepartStation(departStation));
         waitForControl(listArriveAt, Constant.WAIT_CONTROL_TIME);
-        selectItemFromList(listArriveAt, arriveStation);
-        selectItemFromList(listSeatType, seatType);
-        selectItemFromList(listTicketAmount, ticketAmount);
+        selectItemFromList(listArriveAt, bookTicket.getArriveStation(arriveStation));
+        selectItemFromList(listSeatType, bookTicket.getSeatType(seatType));
+        selectItemFromList(listTicketAmount, bookTicket.getTicketAmount(ticketAmount));
         waitForControl(btnBookTicket, Constant.WAIT_CONTROL_TIME);
         getBtnBookTicket().click();
     }

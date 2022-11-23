@@ -6,14 +6,13 @@ import org.testng.annotations.Test;
 
 public class TestCaseManageTicket {
     private final String email = "alTC14" + Utilities.convertDateToString() + "@yopmail.com";
-    private final String password = ReadFileJson.getJsonValue("Register.json", "password");
-    private final String confirmPass = ReadFileJson.getJsonValue("Register.json", "confirm password");
-    private final String PID = ReadFileJson.getJsonValue("Register.json", "pid password");
-    private final String departStation = ReadFileJson.getJsonValue("BookTicket.json", "depart station");
-    private final String arriveStation = ReadFileJson.getJsonValue("BookTicket.json", "arrive station");
-    private final String seatType = ReadFileJson.getJsonValue("BookTicket.json", "seat type");
-    private final String amount = ReadFileJson.getJsonValue("BookTicket.json", "amount");
-    private final String bookingSuccessMsg = ReadFileJson.getJsonValue("BookTicket.json", "msg book ticket success");
+    private final String password = "Password123";
+    private final String confirmPass = "Password123";
+    private final String PID = "Password123";
+    private final String departStation = "Quảng Ngãi";
+    private final String arriveStation = "Nha Trang";
+    private final String seatType = "Soft seat with air conditioner";
+    private final String amount = "1";
     private final Utilities utilities = new Utilities();
     private final MyTicketPage myTicketPage = new MyTicketPage();
     private final LoginPage loginPage = new LoginPage();
@@ -43,22 +42,21 @@ public class TestCaseManageTicket {
         bookTicketPage.bookTicket(
                 utilities.getDateLaterFromCurrentDate(7), departStation, arriveStation, seatType, amount);
         logger.info("Verify book ticket successfully");
-        utilities.checkTextContent(bookTicketPage.getSuccessMsg(), bookingSuccessMsg);
-        utilities.checkTextContent(bookTicketPage.getBookTicketInfo("Depart Station"), departStation);
-        utilities.checkTextContent(bookTicketPage.getBookTicketInfo("Arrive Station"), arriveStation);
-        utilities.checkTextContent(bookTicketPage.getBookTicketInfo("Seat Type"), seatType);
-        utilities.checkTextContent(bookTicketPage.getBookTicketInfo("Depart Date"),
-                utilities.getDateLaterFromCurrentDate(7));
-        utilities.checkTextContent(bookTicketPage.getBookTicketInfo("Amount"), amount);
+        utilities.checkTextContain(bookTicketPage.getSuccessMsg(),utilities.getExpectedMSg("MessageToVerify.json", "msg book ticket success"));
+        utilities.checkTextContain(bookTicketPage.getBookTicketInfo("Depart Station"), departStation);
+        utilities.checkTextContain(bookTicketPage.getBookTicketInfo("Arrive Station"), arriveStation);
+        utilities.checkTextContain(bookTicketPage.getBookTicketInfo("Seat Type"), seatType);
+        utilities.checkTextContain(bookTicketPage.getBookTicketInfo("Depart Date"),utilities.getDateLaterFromCurrentDate(7));
+        utilities.checkTextContain(bookTicketPage.getBookTicketInfo("Amount"), amount);
         logger.info("TC16_Verify_User can cancel a ticket");
         logger.info("Step 1: Go to My Ticket tab");
         generalPage.goToTab("My ticket");
         logger.info("Step 3: Cancel ticket");
         myTicketPage.cancelTicket();
         logger.info("Check the ticket disappears");
-        String ticketInfo = departStation +" "+ arriveStation +" "+ seatType +" "+ utilities.getDateLaterFromCurrentDate(7).toString();
+        String ticketInfo = departStation + " " + arriveStation + " " + seatType + " " + utilities.getDateLaterFromCurrentDate(7);
         String myTableInfo = myTicketPage.getMyTableTextContent();
-        utilities.checkTextDoesNotContent(myTableInfo,ticketInfo);
+        utilities.checkTextDoesNotContain(myTableInfo, ticketInfo);
     }
 }
 

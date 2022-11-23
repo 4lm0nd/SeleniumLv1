@@ -30,26 +30,28 @@ public class LoginPage extends GeneralPage {
     }
 
     //Method
-    public void login(String email, String pass) {
+    public void login(String email, String password) {
+        Account account = new Account(email,password);
         goToTab("Login");
         scrollToFindElement(getBtnLogin());
         getTxtEmail().click();
-        getTxtEmail().sendKeys(email);
+        getTxtEmail().sendKeys(account.getEmail(email));
         getTxtPassword().click();
-        getTxtPassword().sendKeys(pass);
+        getTxtPassword().sendKeys(account.getPass(password));
         getBtnLogin().click();
     }
 
-    public void multipleLogin(String email, String pass, int time) {
+    public void multipleLogin(String email, String password, int time) {
         goToTab("Login");
         scrollToFindElement(getBtnLogin());
         for (int i = 0; i < time; i++) {
-            login(email, pass);
+            login(email, password);
         }
     }
 
     public String getLoginErrorMsg() {
         return getMsgError().getText();
     }
+
 
 }

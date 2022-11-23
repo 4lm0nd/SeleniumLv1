@@ -7,10 +7,10 @@ import org.testng.annotations.Test;
 public class TestCaseChangePassword {
 
     private final String email = "alTC09" + Utilities.convertDateToString() + "@yopmail.com";
-    private final String password = ReadFileJson.getJsonValue("Register.json", "password");
-    private final String password2 = ReadFileJson.getJsonValue("Register.json", "password2");
-    private final String confirmPass = ReadFileJson.getJsonValue("Register.json", "confirm password");
-    private final String PID = ReadFileJson.getJsonValue("Register.json", "pid password");
+    private final String password = "Password123";
+    private final String password2 = "Password12345";
+    private final String confirmPass = "Password123";
+    private final String PID = "Password123";
     private final GeneralPage generalPage = new GeneralPage();
     private final Utilities utilities = new Utilities();
     private final ChangePasswordPage changePasswordPage = new ChangePasswordPage();
@@ -38,6 +38,6 @@ public class TestCaseChangePassword {
         logger.info("Step 2: Change password");
         changePasswordPage.changePassword(password, password2, password2);
         logger.info("Check success message appear");
-        utilities.checkTextContent(changePasswordPage.getSuccessMsg(), "Your password has been updated!");
+        utilities.checkTextContain(changePasswordPage.getSuccessMsg(), utilities.getExpectedMSg("MessageToVerify.json","msg change password success"));
     }
 }

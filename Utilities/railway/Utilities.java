@@ -20,7 +20,7 @@ public class Utilities {
         return strDate;
     }
 
-    public static void checkTextContent(String actualMsg, String expectedMsg) {
+    public static void checkTextContain(String actualMsg, String expectedMsg) {
         SoftAssert softAssert = new SoftAssert();
         try {
             softAssert.assertEquals(actualMsg, expectedMsg);
@@ -82,7 +82,7 @@ public class Utilities {
         return fromDateFormat;
     }
 
-    public static void checkTextDoesNotContent(String actualMsg, String expectedMsg) {
+    public static void checkTextDoesNotContain(String actualMsg, String expectedMsg) {
         try {
             Assert.assertFalse(actualMsg.contains(expectedMsg));
 
@@ -92,6 +92,10 @@ public class Utilities {
         } catch (StringIndexOutOfBoundsException exception) {
             System.out.println(exception.getMessage());
         }
+    }
+    public String getExpectedMSg(String fileData, String jsNote) {
+        String message = ReadFileJson.getJsonValue(fileData, jsNote);
+        return message;
     }
 }
 
