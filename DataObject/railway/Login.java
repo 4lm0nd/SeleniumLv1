@@ -1,12 +1,12 @@
 package railway;
 
 
-public class Account {
+public class Login {
 
     private String email;
     private String pass;
 
-    public Account (String username, String password) {
+    public Login(String username, String password) {
         this.email = getEmail(username);
         this.pass = getPass(password);
     }

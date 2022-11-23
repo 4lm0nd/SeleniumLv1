@@ -31,7 +31,7 @@ public class LoginPage extends GeneralPage {
 
     //Method
     public void login(String email, String password) {
-        Account account = new Account(email,password);
+        Login account = new Login(email,password);
         goToTab("Login");
         scrollToFindElement(getBtnLogin());
         getTxtEmail().click();

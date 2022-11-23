@@ -59,12 +59,13 @@ public class RegisterPage extends GeneralPage {
     }
 
     public void register(String email, String password, String confirmPassword, String PID) {
+        Register register = new Register(email,password,confirmPassword,PID);
         goToTab("Register");
         scrollToFindElement(getBtnRegister());
-        getTxtEmail().sendKeys(email);
-        getTxtPassword().sendKeys(password);
-        getTxtConfirmPassword().sendKeys(confirmPassword);
-        getTxtPID().sendKeys(PID);
+        getTxtEmail().sendKeys(register.getEmail(email));
+        getTxtPassword().sendKeys(register.getPassword(password));
+        getTxtConfirmPassword().sendKeys(register.getConfirmPassword(confirmPassword));
+        getTxtPID().sendKeys(register.getPID(PID));
         getBtnRegister().click();
     }
 

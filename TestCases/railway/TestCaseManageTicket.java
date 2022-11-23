@@ -42,11 +42,13 @@ public class TestCaseManageTicket {
         bookTicketPage.bookTicket(
                 utilities.getDateLaterFromCurrentDate(7), departStation, arriveStation, seatType, amount);
         logger.info("Verify book ticket successfully");
-        utilities.checkTextContain(bookTicketPage.getSuccessMsg(),utilities.getExpectedMSg("MessageToVerify.json", "msg book ticket success"));
+        utilities.checkTextContain(bookTicketPage.getSuccessMsg(),
+                utilities.getExpectedMSg("MessageToVerify.json", "msg book ticket success"));
         utilities.checkTextContain(bookTicketPage.getBookTicketInfo("Depart Station"), departStation);
         utilities.checkTextContain(bookTicketPage.getBookTicketInfo("Arrive Station"), arriveStation);
         utilities.checkTextContain(bookTicketPage.getBookTicketInfo("Seat Type"), seatType);
-        utilities.checkTextContain(bookTicketPage.getBookTicketInfo("Depart Date"),utilities.getDateLaterFromCurrentDate(7));
+        utilities.checkTextContain(bookTicketPage.getBookTicketInfo("Depart Date"),
+                utilities.getDateLaterFromCurrentDate(7));
         utilities.checkTextContain(bookTicketPage.getBookTicketInfo("Amount"), amount);
         logger.info("TC16_Verify_User can cancel a ticket");
         logger.info("Step 1: Go to My Ticket tab");
@@ -56,7 +58,7 @@ public class TestCaseManageTicket {
         logger.info("Check the ticket disappears");
         String ticketInfo = departStation + " " + arriveStation + " " + seatType + " " + utilities.getDateLaterFromCurrentDate(7);
         String myTableInfo = myTicketPage.getMyTableTextContent();
-        utilities.checkTextDoesNotContain(myTableInfo, ticketInfo);
+        utilities.checkTextDoesNotContain(myTableInfo,ticketInfo);
     }
 }
 

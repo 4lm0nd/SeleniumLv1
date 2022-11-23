@@ -28,6 +28,7 @@ public class TestCaseLoginWithNoneExistentAccount {
         logger.info("Step 1: Login with an account that hasn't been registered");
         loginPage.login(email, password);
         logger.info("Check unsuccessfully login");
-        utilities.checkTextContain(loginPage.getLoginErrorMsg(), utilities.getExpectedMSg("MessageToVerify.json", "msg validation"));
+        utilities.checkTextContain(loginPage.getLoginErrorMsg(),
+                utilities.getExpectedMSg("MessageToVerify.json", "msg validation"));
     }
 }

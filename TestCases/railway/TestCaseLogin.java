@@ -40,7 +40,8 @@ public class TestCaseLogin {
         logger.info("Step 1: Login with blank user");
         loginPage.login("", password);
         logger.info("Check error message appear");
-        utilities.checkTextContain(loginPage.getLoginErrorMsg(), utilities.getExpectedMSg("MessageToVerify.json", "msg login error"));
+        utilities.checkTextContain(loginPage.getLoginErrorMsg(),
+                utilities.getExpectedMSg("MessageToVerify.json", "msg login error"));
     }
 
     @Test
@@ -49,7 +50,8 @@ public class TestCaseLogin {
         logger.info("Step 1: Login with invalid password");
         loginPage.login(email, "INVALID_PASSWORD");
         logger.info("Check error message appear");
-        utilities.checkTextContain(loginPage.getLoginErrorMsg(),utilities.getExpectedMSg("MessageToVerify.json", "msg validation"));
+        utilities.checkTextContain(loginPage.getLoginErrorMsg(),
+                utilities.getExpectedMSg("MessageToVerify.json", "msg validation"));
     }
 
     @Test
