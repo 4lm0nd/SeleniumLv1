@@ -18,48 +18,43 @@ public class RegisterPage extends GeneralPage {
 
     //Element
     private WebElement getTxtEmail() {
-
         return BrowserManager.DRIVER.findElement(txtEmail);
     }
 
     private WebElement getTxtPassword() {
-
         return BrowserManager.DRIVER.findElement(txtPassword);
     }
 
-    private  WebElement getTxtConfirmPassword() {
-
+    private WebElement getTxtConfirmPassword() {
         return BrowserManager.DRIVER.findElement(txtConfirmPassword);
     }
 
-    private  WebElement getTxtPID() {
+    private WebElement getTxtPID() {
         return BrowserManager.DRIVER.findElement(txtPID);
     }
 
-    private  WebElement getBtnRegister() {
-
+    private WebElement getBtnRegister() {
         return BrowserManager.DRIVER.findElement(btnRegister);
     }
 
-    private  WebElement getMsgError() {
-
+    private WebElement getMsgError() {
         return BrowserManager.DRIVER.findElement(msgError);
     }
 
-    private  WebElement getMsgSuccess() {
+    private WebElement getMsgSuccess() {
         return BrowserManager.DRIVER.findElement(msgSuccess);
     }
 
-    private  WebElement getMsgPIDError() {
+    private WebElement getMsgPIDError() {
         return BrowserManager.DRIVER.findElement(msgPIDError);
     }
 
-    private  WebElement getMsgPasswordError() {
+    private WebElement getMsgPasswordError() {
         return BrowserManager.DRIVER.findElement(msgPasswordError);
     }
 
     public void register(String email, String password, String confirmPassword, String PID) {
-        Register register = new Register(email,password,confirmPassword,PID);
+        Register register = new Register(email, password, confirmPassword, PID);
         goToTab("Register");
         scrollToFindElement(getBtnRegister());
         getTxtEmail().sendKeys(register.getEmail(email));
@@ -85,3 +80,5 @@ public class RegisterPage extends GeneralPage {
         return getMsgError().getText();
     }
 }
+
+

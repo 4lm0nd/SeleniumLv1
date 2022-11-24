@@ -7,24 +7,24 @@ import java.io.FileReader;
 
 public class ReadFileJson {
 
-    public static String getJsonValue(String dataFileName, String jsonText) {
+    public static String getJsonValue(String dataFileName, String jsNode) {
         try {
             JSONParser jsonParse = new JSONParser();
 
             //parsing the content of json file
-            JSONObject jsonObject = (JSONObject) jsonParse.parse(new FileReader("TestData" + "/" + dataFileName));
+            JSONObject jsonObject = (JSONObject) jsonParse.parse(new FileReader("Resources" + "/" + dataFileName));
 
             //reading the data from the json file
-            String js = (String) jsonObject.get(jsonText);
+            String js = (String) jsonObject.get(jsNode);
             return js;
 
         } catch (Exception exception) {
             System.out.println(exception.getMessage());
             return null;
         }
-
     }
 }
+
 
 
 

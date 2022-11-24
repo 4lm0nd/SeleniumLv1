@@ -1,43 +1,59 @@
 package railway;
 
 public class BookTicket {
-    private String DepartDate;
-    private String DepartStation;
-    private String ArriveStation;
-    private String SeatType;
-    private String TicketAmount;
 
-    public BookTicket(String departDate, String departStation, String arriveStation, String seatType, String ticketAmount) {
-        this.DepartDate = getDepartDate(departDate);
-        this.DepartStation = getDepartStation(departStation);
-        this.ArriveStation = getArriveStation(arriveStation);
-        this.SeatType = getSeatType(seatType);
-        this.TicketAmount = getTicketAmount(ticketAmount);
-
+    public String getDepartDate(String departDate) {
+        return departDate;
     }
 
-    public String getDepartDate(String departDate){
-       DepartDate = departDate;
-        return DepartDate;
+    public String getDepartStation(String departStation) {
+        return departStation;
     }
 
-    public String getDepartStation(String departStation){
-        DepartStation = departStation;
-        return  DepartStation;
+    public String getArriveStation(String arriveStation) {
+        return arriveStation;
     }
 
-    public String getArriveStation(String arriveStation){
-        ArriveStation = arriveStation;
-        return ArriveStation;
+    public String getSeatType(String seatType) {
+        return seatType;
     }
 
-    public String getSeatType ( String seatType){
-        SeatType = seatType;
-        return SeatType;
+    public String getTicketAmount(String ticketAmount) {
+        return ticketAmount;
     }
 
-    public String getTicketAmount (String ticketAmount){
-        TicketAmount = ticketAmount;
-        return TicketAmount;
+    public void setDepartDate(String departDate) {
+        departDate = departDate;
     }
+
+    public void setDepartStation(String departStation) {
+        departStation = departStation;
+    }
+
+    public void setArriveStation(String arriveStation) {
+        arriveStation = arriveStation;
+    }
+
+    public void setSeatType(String seatType) {
+        seatType = seatType;
+    }
+
+    public void setTicketAmount(String ticketAmount) {
+        ticketAmount = ticketAmount;
+    }
+
+    public BookTicket(String date, String departAt, String arriveAt, String seat, String amount) {
+        this.dateDepart = date;
+        this.departAt = departAt;
+        this.arriveAt = arriveAt;
+        this.seatType = seat;
+        this.amount = amount;
+    }
+    private String dateDepart;
+    private String departAt;
+    private String arriveAt;
+    private String seatType;
+    private String amount;
 }
+
+

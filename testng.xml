@@ -1,13 +1,32 @@
 <suite name="Suite">
     <test name="Test">
         <classes>
-            <class name="railway.TestCaseAdditionalPagesDisplayAfterLogin"/>
-            <class name="railway.TestCaseManageTicket"/>
-            <class name = "railway.TestCaseLogin"/>
-            <class name ="railway.TestCaseLoginWithNoneExistentAccount"/>
-            <class name ="railway.TestCaseCreateNewAccount"/>
-            <class name ="railway.TestCaseOpenBookTicketFromTimeTable"/>
-            <class name ="railway.TestCaseChangePassword"/>.
+            <class name="railway.TestCaseAdditionalPagesDisplayAfterLogin">
+                <method name='TC01_Verify_User_can_login_with_valid_data'/>
+                <method name="TC06_Verify_AdditionalPages_display_after_login"/>
+            </class>
+            <class name="railway.TestCaseManageTicket">
+                <method name="TC14_TC16_Verify_User_can_book_and_cancel_for_A_ticket"/>
+            </class>
+            <class name="railway.TestCaseLogin">
+                <method name="TC01_Verify_User_can_login_with_valid_data"/>
+                <method name="TC02_Verify_User_cannot_login_without_username"/>
+                <method name="TC03_Verify_User_cannot_login_with_invalid_password"/>
+                <method name="TC04_Verify_User_cannot_goto_BookTicket_without_login"/>
+                <method name="TC05_Verify_Error_message_display_when_logging_in_fails_multiple_times"/>
+            </class>
+            <class name="railway.TestCaseCreateNewAccount">
+                <method name="TC07_Verify_User_can_create_account_with_valid_data"/>
+                <method name="TC10_Verify_User_cannot_create_account_with_mismatched_passwords"/>
+                <method name="TC11_Verify_User_cannot_create_account_without_PID"/>
+            </class>
+            <class name="railway.TestCaseOpenBookTicketFromTimeTable">
+                <method name="TC15_Verify_User_can_open_BookTicketPage_from_TrainTimeTable"/>
+            </class>
+            <class name="railway.TestCaseChangePassword">
+                <method name="TC09_Verify_User_can_change_password"/>
+            </class>
+            <class name="railway.TestCaseLoginWithNoneExistentAccount"/>
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->

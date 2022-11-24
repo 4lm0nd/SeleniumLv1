@@ -36,7 +36,7 @@ public class TestCaseCreateNewAccount {
         registerPage.register(emailTC07, password, confirmPass, PID);
         logger.info("Check success message appear");
         utilities.checkTextContain(registerPage.getSuccessMsg(),
-                utilities.getExpectedMSg("MessageToVerify.json", "mgs register success"));
+                utilities.getExpectedMSg( "mgs register success"));
     }
 
     @Test
@@ -46,7 +46,7 @@ public class TestCaseCreateNewAccount {
         registerPage.register(emailTC10, password, password2, PID);
         logger.info("Check error message appear");
         utilities.checkTextContain(registerPage.getRegisterErrorMsg(),
-                utilities.getExpectedMSg("MessageToVerify.json", "msg register error"));
+                utilities.getExpectedMSg( "msg register error"));
     }
 
     @Test
@@ -56,10 +56,10 @@ public class TestCaseCreateNewAccount {
         registerPage.register(emailTC11, "", "", "");
         logger.info("Check error message appear");
         utilities.checkTextContain(registerPage.getRegisterErrorMsg(),
-                utilities.getExpectedMSg("MessageToVerify.json", "msg register error"));
+                utilities.getExpectedMSg( "msg register error"));
         utilities.checkTextContain(registerPage.getPasswordErrorMsg(),
-                utilities.getExpectedMSg("MessageToVerify.json", "msg password validation"));
+                utilities.getExpectedMSg( "msg password validation"));
         utilities.checkTextContain(registerPage.getPIDErrorMsg(),
-                utilities.getExpectedMSg("MessageToVerify.json", "msg pid validation"));
+                utilities.getExpectedMSg( "msg pid validation"));
     }
 }

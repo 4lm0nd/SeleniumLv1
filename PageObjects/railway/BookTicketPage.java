@@ -7,12 +7,12 @@ import org.openqa.selenium.WebElement;
 public class BookTicketPage extends GeneralPage {
 
     //Locator
-    private final By listDepartDate = By.xpath("//select[@name = 'Date']");
+    private final By listDepartDate = By.name("Date");
     private final By btnBookTicket = By.xpath("//input[@value ='Book ticket']");
-    private final By listDepartFrom = By.xpath("//select[@name ='DepartStation']");
-    private final By listArriveAt = By.xpath("//select[@name ='ArriveStation']");
-    private final By listSeatType = By.xpath("//select[@name ='SeatType']");
-    private final By listTicketAmount = By.xpath("//select[@name ='TicketAmount']");
+    private final By listDepartFrom = By.name("DepartStation");
+    private final By listArriveAt = By.name("ArriveStation");
+    private final By listSeatType = By.name("SeatType");
+    private final By listTicketAmount = By.name("TicketAmount");
     private final By msgSuccess = By.xpath("//div[@id='content']/h1");
 
     //Element
@@ -45,7 +45,7 @@ public class BookTicketPage extends GeneralPage {
     }
 
     public void bookTicket(String departDate, String departStation, String arriveStation, String seatType, String ticketAmount) {
-        BookTicket bookTicket = new BookTicket (departDate,departStation, arriveStation, seatType, ticketAmount);
+        BookTicket bookTicket = new BookTicket(departDate,departStation, arriveStation, seatType, ticketAmount);
         goToTab("Book ticket");
         scrollToFindElement(getBtnBookTicket());
         selectItemFromList(listDepartDate, bookTicket.getDepartDate(departDate));
@@ -73,8 +73,8 @@ public class BookTicketPage extends GeneralPage {
     public String getArriveStation() {
         return getSelectedItem(getListArriveAt());
     }
-
 }
+
 
 
 

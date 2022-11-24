@@ -29,6 +29,6 @@ public class TestCaseLoginWithNoneExistentAccount {
         loginPage.login(email, password);
         logger.info("Check unsuccessfully login");
         utilities.checkTextContain(loginPage.getLoginErrorMsg(),
-                utilities.getExpectedMSg("MessageToVerify.json", "msg validation"));
+                utilities.getExpectedMSg( "msg validation"));
     }
 }

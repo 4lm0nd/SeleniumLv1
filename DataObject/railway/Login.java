@@ -1,27 +1,29 @@
 package railway;
 
-
 public class Login {
 
-    private String email;
-    private String pass;
-
-    public Login(String username, String password) {
-        this.email = getEmail(username);
-        this.pass = getPass(password);
+    public Login(String email, String pass) {
+        this.email = email;
+        this.pass = pass;
     }
 
-    public String getEmail(String username)
-    {
-       email = username;
-        return email;
+    public String getEmail(String email) {
+        return this.email;
     }
 
-    public String getPass (String password)
-    {
-        pass = password;
+    public String getPass(String password) {
         return pass;
     }
 
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setPass(String pass) {
+        this.pass = pass;
+    }
+
+    private String email;
+    private String pass;
 }
 

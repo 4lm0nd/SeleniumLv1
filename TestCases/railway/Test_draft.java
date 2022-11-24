@@ -23,8 +23,7 @@ public class Test_draft {
 
         generalPage.openSite(Constant.RAILWAY_SITE);
         loginPage.login(email, password);
-        for (int i = 0; i < 6; i++)
-        {
+        for (int i = 0; i < 6; i++) {
             bookTicketPage.bookTicket(
                     utilities.getDateLaterFromCurrentDate(7), departStation, arriveStation, seatType, amount);
         }

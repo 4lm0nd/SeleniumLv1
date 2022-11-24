@@ -8,11 +8,12 @@ public class TestCaseLogin {
 
     private final String email = "almond.dh@yopmail.com";
     private final String password = "Password123";
-    private final LoginPage loginPage = new LoginPage();
+
     private final HomePage homePage = new HomePage();
     private final Utilities utilities = new Utilities();
     private final GeneralPage generalPage = new GeneralPage();
     private final Logger logger = new Logger();
+    private final LoginPage loginPage = new LoginPage();
 
     @BeforeMethod
     public void beforeMethod() {
@@ -41,7 +42,7 @@ public class TestCaseLogin {
         loginPage.login("", password);
         logger.info("Check error message appear");
         utilities.checkTextContain(loginPage.getLoginErrorMsg(),
-                utilities.getExpectedMSg("MessageToVerify.json", "msg login error"));
+                utilities.getExpectedMSg( "msg login error"));
     }
 
     @Test
@@ -51,7 +52,7 @@ public class TestCaseLogin {
         loginPage.login(email, "INVALID_PASSWORD");
         logger.info("Check error message appear");
         utilities.checkTextContain(loginPage.getLoginErrorMsg(),
-                utilities.getExpectedMSg("MessageToVerify.json", "msg validation"));
+                utilities.getExpectedMSg( "msg validation"));
     }
 
     @Test
@@ -64,13 +65,13 @@ public class TestCaseLogin {
     }
 
     @Test
-    public void TC05_Verify_Error_message_diplay_when_logging_in_fails_multiple_times() {
+    public void TC05_Verify_Error_message_display_when_logging_in_fails_multiple_times() {
         logger.info("TC05_Verify_System shows message when user enters wrong password several times");
         logger.info("Step 1: Login multiple(6) times");
         loginPage.multipleLogin("INVALID_EMAIL", "INVALID_PASSWORD", 6);
         logger.info("Check error message appear");
         utilities.checkTextContain(loginPage.getLoginErrorMsg(),
-                utilities.getExpectedMSg("MessageToVerify.json", "msg login fail multiple times"));
+                utilities.getExpectedMSg("msg login fail multiple times"));
     }
 }
 

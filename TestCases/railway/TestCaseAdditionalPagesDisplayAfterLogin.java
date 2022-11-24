@@ -7,10 +7,11 @@ import org.testng.annotations.Test;
 public class TestCaseAdditionalPagesDisplayAfterLogin {
     private final String email = "almond.dh@yopmail.com";
     private final String password = "Password123";
-    private final GeneralPage generalPage = new GeneralPage();
+
     private final LoginPage loginPage = new LoginPage();
     private final Utilities utilities = new Utilities();
     private final Logger logger = new Logger();
+    private final GeneralPage generalPage = new GeneralPage();
 
     @BeforeMethod
     public void beforeMethod() {

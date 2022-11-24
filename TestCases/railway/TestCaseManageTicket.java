@@ -43,7 +43,7 @@ public class TestCaseManageTicket {
                 utilities.getDateLaterFromCurrentDate(7), departStation, arriveStation, seatType, amount);
         logger.info("Verify book ticket successfully");
         utilities.checkTextContain(bookTicketPage.getSuccessMsg(),
-                utilities.getExpectedMSg("MessageToVerify.json", "msg book ticket success"));
+                utilities.getExpectedMSg("msg book ticket success"));
         utilities.checkTextContain(bookTicketPage.getBookTicketInfo("Depart Station"), departStation);
         utilities.checkTextContain(bookTicketPage.getBookTicketInfo("Arrive Station"), arriveStation);
         utilities.checkTextContain(bookTicketPage.getBookTicketInfo("Seat Type"), seatType);

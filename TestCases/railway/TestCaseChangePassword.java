@@ -38,6 +38,7 @@ public class TestCaseChangePassword {
         logger.info("Step 2: Change password");
         changePasswordPage.changePassword(password, password2, password2);
         logger.info("Check success message appear");
-        utilities.checkTextContain(changePasswordPage.getSuccessMsg(), utilities.getExpectedMSg("MessageToVerify.json","msg change password success"));
+        utilities.checkTextContain(changePasswordPage.getSuccessMsg(),
+                utilities.getExpectedMSg("msg change password success"));
     }
 }

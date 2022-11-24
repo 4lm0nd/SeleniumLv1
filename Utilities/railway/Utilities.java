@@ -49,7 +49,6 @@ public class Utilities {
             System.out.println(exception.getMessage());
         } catch (AssertionError error) {
             System.out.println(error.getMessage());
-
         }
     }
 
@@ -93,9 +92,11 @@ public class Utilities {
             System.out.println(exception.getMessage());
         }
     }
-    public String getExpectedMSg(String fileData, String jsNote) {
-        String message = ReadFileJson.getJsonValue(fileData, jsNote);
-        return message;
+
+    public String getExpectedMSg(String jsNode) {
+         Message message = new Message("MessageToVerify.json", jsNode);
+         message.jsNode = ReadFileJson.getJsonValue("MessageToVerify.json", jsNode);
+         return message.jsNode;
     }
 }
 
