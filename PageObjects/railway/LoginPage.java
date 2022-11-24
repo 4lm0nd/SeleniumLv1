@@ -52,6 +52,7 @@ public class LoginPage extends GeneralPage {
     public String getLoginErrorMsg() {
         return getMsgError().getText();
     }
-
-
 }
+
+
+

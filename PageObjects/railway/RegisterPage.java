@@ -16,7 +16,6 @@ public class RegisterPage extends GeneralPage {
     private final By msgPIDError = By.xpath("//label[@for='pid' and @class='validation-error']");
     private final By msgPasswordError = By.xpath("//label[@for='password' and @class='validation-error']");
 
-    //Element
     private WebElement getTxtEmail() {
         return BrowserManager.DRIVER.findElement(txtEmail);
     }

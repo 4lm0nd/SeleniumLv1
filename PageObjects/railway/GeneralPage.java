@@ -11,13 +11,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class GeneralPage {
-
-    //Locator
     private final String tabMenu = "//span[text()='%s']/ancestor::a";
     private final String cellTable = "//table[@class='%s']//tr[%d]/td[count(//tr[@class='TableSmallHeader']/th[contains(text(),'%s')]/preceding-sibling::th)+1]";
     private final By pageTitle = By.xpath("//div[@id='content']/h1");
 
-    //Element
     protected WebElement getTabMenu(String tabName) {
         return BrowserManager.DRIVER.findElement(By.xpath(String.format(tabMenu, tabName)));
     }
@@ -30,7 +27,6 @@ public class GeneralPage {
         return BrowserManager.DRIVER.findElement(By.xpath(String.format(cellTable, table, row, column)));
     }
 
-    //Method
     public void scrollPageDown() {
         JavascriptExecutor js = (JavascriptExecutor) BrowserManager.DRIVER;
         js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
@@ -96,6 +92,7 @@ public class GeneralPage {
         alert.dismiss();
     }
 }
+
 
 
 

@@ -9,7 +9,6 @@ public class TestCaseCreateNewAccount {
     private final String emailTC07 = "al07" + Utilities.convertDateToString() + "@yopmail.com";
     private final String emailTC10 = "al10" + Utilities.convertDateToString() + "@yopmail.com";
     private final String emailTC11 = "al11" + Utilities.convertDateToString() + "@yopmail.com";
-
     private final String password = "Password123";
     private final String password2 = "Password1234";
     private final String confirmPass = "Password123";

@@ -12,3 +12,4 @@ public class Constant {
     public static String FULL_DATETIME = GetConfigProperties.getProperty("FULL_DATETIME");
 }
 
+

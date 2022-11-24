@@ -9,7 +9,6 @@ public class Test_draft {
     private static Utilities utilities = new Utilities();
     private static BookTicketPage bookTicketPage = new BookTicketPage();
     private static MyTicketPage myTicketPage = new MyTicketPage();
-
     private final String departStation = "Quảng Ngãi";
     private final String arriveStation = "Nha Trang";
     private final String seatType = "Soft seat with air conditioner";

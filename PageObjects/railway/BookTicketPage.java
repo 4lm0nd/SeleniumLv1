@@ -5,8 +5,6 @@ import org.openqa.selenium.WebElement;
 
 
 public class BookTicketPage extends GeneralPage {
-
-    //Locator
     private final By listDepartDate = By.name("Date");
     private final By btnBookTicket = By.xpath("//input[@value ='Book ticket']");
     private final By listDepartFrom = By.name("DepartStation");
@@ -15,7 +13,6 @@ public class BookTicketPage extends GeneralPage {
     private final By listTicketAmount = By.name("TicketAmount");
     private final By msgSuccess = By.xpath("//div[@id='content']/h1");
 
-    //Element
     private WebElement getListDepartDate() {
         return BrowserManager.DRIVER.findElement(listDepartDate);
     }
@@ -45,7 +42,7 @@ public class BookTicketPage extends GeneralPage {
     }
 
     public void bookTicket(String departDate, String departStation, String arriveStation, String seatType, String ticketAmount) {
-        BookTicket bookTicket = new BookTicket(departDate,departStation, arriveStation, seatType, ticketAmount);
+        BookTicket bookTicket = new BookTicket(departDate, departStation, arriveStation, seatType, ticketAmount);
         goToTab("Book ticket");
         scrollToFindElement(getBtnBookTicket());
         selectItemFromList(listDepartDate, bookTicket.getDepartDate(departDate));

@@ -22,3 +22,4 @@ public class GetConfigProperties {
         return null;
     }
 }
+

@@ -8,7 +8,6 @@ public class TestCaseLogin {
 
     private final String email = "almond.dh@yopmail.com";
     private final String password = "Password123";
-
     private final HomePage homePage = new HomePage();
     private final Utilities utilities = new Utilities();
     private final GeneralPage generalPage = new GeneralPage();

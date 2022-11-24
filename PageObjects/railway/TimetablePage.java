@@ -5,7 +5,6 @@ import org.openqa.selenium.WebElement;
 
 public class TimetablePage extends GeneralPage {
 
-    //Locator
     private final String timeTable = "MyTable WideTable";
     private final String bookTicketBtn = "//table[@class='%s']//tr[%d]/td[last()]/a";
 
@@ -33,6 +32,7 @@ public class TimetablePage extends GeneralPage {
         }
     }
 }
+
 
 
 
